@@ -7,7 +7,7 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from shoppal_pcs_schema import ProductBase
+from .product_detail import ProductBase
 
 
 class GoogleSearchResult(BaseModel):
