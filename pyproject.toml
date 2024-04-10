@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "shoppal-pcs-schema"
+version = "0.1.0"
+description = ""
+authors = ["hezhe <hezhe@shoppal.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "2.6.4"
+pydantic-settings = "2.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
