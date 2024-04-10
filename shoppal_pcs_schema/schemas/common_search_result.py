@@ -7,7 +7,7 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-import product_detail
+from shoppal_pcs_schema import ProductBase
 
 
 class GoogleSearchResult(BaseModel):
@@ -108,7 +108,7 @@ class CommonSearchResults(BaseModel):
     related_searches: Optional[list[str]] = None
 
 
-class CommonSearchProductResult(product_detail.ProductBase):
+class CommonSearchProductResult(ProductBase):
     """
     common search product result model
     """
