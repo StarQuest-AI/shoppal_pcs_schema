@@ -9,10 +9,7 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from .common_search_result import GoogleSearchResult, PageSource
-from .product_detail import ProductDetail
-from .video_detail import VideoBaseInfos
-
+from shoppal_pcs_schema.schemas import GoogleSearchResult, PageSource, ProductDetail, VideoBaseInfos
 
 class ItemType(Enum):
     """
