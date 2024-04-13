@@ -178,6 +178,7 @@ class ProductBase(BaseModel):
     platform: ProductType = ProductType.AMAZON
     id: Optional[str] = None  # "asin" for amazon
     title: str
+    link: Optional[str] = None
 
 
 class ProductDetail(ProductBase):
