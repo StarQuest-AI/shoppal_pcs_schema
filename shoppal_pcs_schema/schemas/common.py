@@ -22,7 +22,7 @@ SESSION_START_QUESTIONS = [
         "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
         "action": {
             "router": "pros_and_cons",
-            "type": "shoppal_pcs_schemaapp.schemas.common.ProsConsRequest",
+            "type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
         },
     },
     {
