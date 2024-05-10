@@ -9,7 +9,58 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from shoppal_pcs_schema.schemas import GoogleSearchResult, PageSource, ProductDetail, VideoBaseInfos
+from shoppal_pcs_schema.schemas.common_search_result import (
+    GoogleSearchResult,
+    PageSource,
+)
+from shoppal_pcs_schema.schemas.product_detail import ProductDetail
+from shoppal_pcs_schema.schemas.video_detail import VideoBaseInfos
+
+SESSION_START_QUESTIONS = [
+    {
+        "question": "Pros & cons of the product",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
+        "action": {
+            "router": "pros_and_cons",
+            "type": "shoppal_pcs_schemaapp.schemas.common.ProsConsRequest",
+        },
+    },
+    {
+        "question": "Top expert opinions",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fworth.png",
+        "action": {
+            "router": "reviews_feed",
+            "type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
+        },
+    },
+    {
+        "question": "Other popular choices",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fpopular.png",
+        "action": {
+            "router": "product_recommendation",
+            "type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
+        },
+    },
+]
+
+
+class SragLLM(Enum):
+    """
+    llm platform
+    """
+
+    OPENAI = "openai"
+    CLAUDE = "claude"
+
+
+class LLMPlatform(Enum):
+    """
+    llm engine
+    """
+
+    PPLX = "pplx"
+    SRAG = "srag"
+
 
 class ItemType(Enum):
     """
@@ -36,7 +87,7 @@ class BaseRequest(BaseModel):
     Base Request
     """
 
-    use_cache: Optional[bool] = False
+    use_cache: Optional[bool] = True
 
 
 class BaseResponse(BaseModel):
