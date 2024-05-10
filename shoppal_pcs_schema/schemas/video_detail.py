@@ -42,7 +42,9 @@ class VideoBaseInfos(BaseModel):
         time_start: Optional[int] = None
 
     title: Optional[str] = None
+    link: Optional[str] = None
     thumbnail: Optional[str] = None
+    cover_image: Optional[str] = None
     channel: Optional[Channel] = None
     views: Optional[str] = None
     extracted_views: Optional[int] = None

@@ -5,4 +5,3 @@ from shoppal_pcs_schema.schemas.product_search_result import *
 from shoppal_pcs_schema.schemas.product_detail import *
 from shoppal_pcs_schema.schemas.common_search_result import *
 from shoppal_pcs_schema.schemas.common import *
-
