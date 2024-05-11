@@ -114,7 +114,16 @@ class FunctionCallRequestBase(BaseRequest):
         text: str
         role: str
 
+    class Page(BaseModel):
+        """
+        Page
+        """
+
+        start: int
+        num: int
+
     content: Optional[str] = None
+    pages: Optional[Page] = None
     history_content: Optional[list[Message]] = None
     prompt: Optional[str] = ""
     params: Optional[dict] = None
