@@ -52,6 +52,7 @@ class VideoBaseInfos(BaseModel):
     published_date: Optional[str] = None
     description: Optional[Description] = None
     chapters: Optional[list[Chapter]] = None
+    images: Optional[list[str]] = None
 
 
 class RelatedVideo(BaseModel):
