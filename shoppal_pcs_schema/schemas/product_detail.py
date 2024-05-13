@@ -175,7 +175,7 @@ class ProductBase(BaseModel):
     """
 
     global_id: Optional[str] = None  # shoppal global id for product
-    platform: ProductType = ProductType.AMAZON
+    platform: str = ProductType.AMAZON.value
     id: Optional[str] = None  # "asin" for amazon
     title: str
     link: Optional[str] = None
