@@ -208,7 +208,7 @@ class SummaryProsCons(BaseModel):
     Summary Pros Cons
     """
 
-    review_type: ReviewType = ReviewType.NEUTRAL
+    review_type: str = ReviewType.NEUTRAL.value
     keyword: Optional[str]
     content: Optional[str] = None
     color: Optional[str] = "#000000"
