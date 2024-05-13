@@ -96,7 +96,7 @@ class BaseResponse(BaseModel):
     """
 
     latency: Optional[float] = None
-    data_format: Optional[DataFormat] = None
+    data_format: Optional[str] = None
     content: Optional[str] = None
     end_content: Optional[str] = None
 
@@ -260,7 +260,7 @@ class CompareResult(BaseResponse):
     """
 
     result: Optional[str] = None
-    data_format: Optional[DataFormat] = DataFormat.MARKDOWN
+    data_format: Optional[str] = DataFormat.MARKDOWN.value
 
 
 class RecommendProductResult(BaseModel):

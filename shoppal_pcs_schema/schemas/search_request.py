@@ -54,5 +54,5 @@ class SearchRequest(BaseModel):
     q: str
     limit: Optional[int] = 10
     offset: Optional[int] = 0
-    source: Optional[SearchSource] = None
+    source: Optional[str] = None
     filter: Optional[SearchFilter] = None
