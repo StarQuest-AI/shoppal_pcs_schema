@@ -19,7 +19,7 @@ class SearchData(BaseModel):
     offset: Optional[int] = 0
 
 
-class ProductType(str, Enum):
+class ProductPlatForm(str, Enum):
     """
     product type Enum
     """
@@ -175,7 +175,8 @@ class ProductBase(BaseModel):
     """
 
     global_id: Optional[str] = None  # shoppal global id for product
-    platform: str = ProductType.AMAZON.value
+    external_platform: str = ProductPlatForm.AMAZON.value
+    platform: str = ProductPlatForm.AMAZON.value
     id: Optional[str] = None  # "asin" for amazon
     title: str
     link: Optional[str] = None
