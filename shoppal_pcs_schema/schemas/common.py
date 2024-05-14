@@ -119,8 +119,8 @@ class FunctionCallRequestBase(BaseRequest):
         Page
         """
 
-        start: int
-        num: int
+        start: int = 0
+        num: int = 2
 
     content: Optional[str] = None
     pages: Optional[Page] = None
