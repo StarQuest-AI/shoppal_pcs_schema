@@ -99,7 +99,7 @@ class BaseResponse(BaseModel):
     data_format: Optional[str] = None
     content: Optional[str] = None
     end_content: Optional[str] = None
-
+    sources: Optional[list[PageSource]] = None
 
 class FunctionCallRequestBase(BaseRequest):
     """
