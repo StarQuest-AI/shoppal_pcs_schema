@@ -91,9 +91,9 @@ class PageSource(BaseModel):
     page source model
     """
 
-    name: str
-    favicon: str
-    url: str
+    name: Optional[str] = None
+    favicon: Optional[str] = None
+    url: Optional[str] = None
     title: Optional[str] = None
 
 
