@@ -94,6 +94,7 @@ class PageSource(BaseModel):
     name: str
     favicon: str
     url: str
+    title: Optional[str] = None
 
 
 class CommonSearchResults(BaseModel):
