@@ -13,10 +13,12 @@ class MasterProduct(BaseModel):
     """
     master product model
     """
+
     class ExternalInfo(BaseModel):
         """
         external info model
         """
+
         platform: str = ProductPlatForm.AMAZON.value
         id: str
         url: str
@@ -26,6 +28,7 @@ class MasterProduct(BaseModel):
         """
         inner info model
         """
+
         detail: Optional[ProductDetail]
 
     global_id: str

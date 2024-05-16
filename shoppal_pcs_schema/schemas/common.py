@@ -67,6 +67,7 @@ WEBPAGE_EXCLUDE_SITES = [
     "youtube.com",
 ]
 
+
 class SragLLM(Enum):
     """
     llm platform
@@ -123,6 +124,7 @@ class BaseResponse(BaseModel):
     content: Optional[str] = None
     end_content: Optional[str] = None
     sources: Optional[list[PageSource]] = None
+
 
 class FunctionCallRequestBase(BaseRequest):
     """

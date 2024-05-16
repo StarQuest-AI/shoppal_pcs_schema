@@ -7,12 +7,15 @@ from typing import Optional
 from pydantic import BaseModel
 from shoppal_pcs_schema.schemas.product_detail import ReviewInfo, ProductPlatForm
 
+
 class EcommercePlatformReview(BaseModel):
     """
     e-commerce platform review model
     """
+
     platform: str = ProductPlatForm.AMAZON.value
     review: ReviewInfo
+
 
 class ThirdPartyReview(BaseModel):
     """
@@ -29,4 +32,3 @@ class YoutubeReviews(ThirdPartyReview):
     """
     youtube reviews
     """
-    

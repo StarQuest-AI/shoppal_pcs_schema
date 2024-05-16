@@ -11,6 +11,17 @@ from shoppal_pcs_schema.schemas import product_detail
 
 DEFAULT_WEBSITE_ICON = "https://images.shoppal.ai/icon%2Flogo%E5%9C%B0%E7%90%83icon.png"
 DEFAULT_YOUTUBE_ICON = "https://images.shoppal.ai/icon%2Fyoutube_website_icon.png"
+DEFAULT_WEBSITE_ICONS = [
+    "https://images.shoppal.ai/icon%2Flogo%E5%9C%B0%E7%90%83icon.png",
+    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F1.png",
+    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F2.png",
+    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F3.png",
+    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F4.png",
+    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F5.png",
+    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F6.png",
+]
+
+
 class GoogleSearchResult(BaseModel):
     """
     Google search result model
