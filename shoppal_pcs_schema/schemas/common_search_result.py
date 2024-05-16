@@ -9,6 +9,7 @@ from pydantic import BaseModel
 
 from shoppal_pcs_schema.schemas import product_detail
 
+DEFAULT_WEBSITE_ICON = "https://images.shoppal.ai/icon%2Flogo%E5%9C%B0%E7%90%83icon.png"
 
 class GoogleSearchResult(BaseModel):
     """
@@ -92,7 +93,7 @@ class PageSource(BaseModel):
     """
 
     name: Optional[str] = None
-    favicon: Optional[str] = None
+    favicon: Optional[str] = DEFAULT_ICON
     url: Optional[str] = None
     title: Optional[str] = None
 
