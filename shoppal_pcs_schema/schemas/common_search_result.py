@@ -96,6 +96,7 @@ class PageSource(BaseModel):
     favicon: Optional[str] = DEFAULT_WEBSITE_ICON
     url: Optional[str] = None
     title: Optional[str] = None
+    snippet: Optional[str] = None
 
 
 class CommonSearchResults(BaseModel):
