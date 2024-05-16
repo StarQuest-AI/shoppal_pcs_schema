@@ -10,7 +10,7 @@ from pydantic import BaseModel
 from shoppal_pcs_schema.schemas import product_detail
 
 DEFAULT_WEBSITE_ICON = "https://images.shoppal.ai/icon%2Flogo%E5%9C%B0%E7%90%83icon.png"
-
+DEFAULT_YOUTUBE_ICON = "https://images.shoppal.ai/icon%2Fyoutube_website_icon.png"
 class GoogleSearchResult(BaseModel):
     """
     Google search result model
