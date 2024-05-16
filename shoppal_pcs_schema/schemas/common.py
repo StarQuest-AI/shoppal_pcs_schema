@@ -44,6 +44,29 @@ SESSION_START_QUESTIONS = [
 ]
 
 
+WEBPAGE_EXCLUDE_SITES = [
+    "amazon.*",
+    "ebay.com",
+    "temu.com",
+    "shein.com",
+    "walmart.com",
+    "target.com",
+    "newegg.com",
+    "costco.com",
+    "macys.com",
+    "shopify.com",
+    "craigslist.com",
+    "bestbuy.com",
+    "etsy.com",
+    "homedeopt.com",
+    "lowes.com",
+    "wayfair.com",
+    "taobao.com",
+    "jd.com",
+    "pinduoduo.com",
+    "youtube.com",
+]
+
 class SragLLM(Enum):
     """
     llm platform
