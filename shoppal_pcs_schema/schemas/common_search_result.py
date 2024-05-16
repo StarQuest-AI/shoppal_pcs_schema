@@ -93,7 +93,7 @@ class PageSource(BaseModel):
     """
 
     name: Optional[str] = None
-    favicon: Optional[str] = DEFAULT_ICON
+    favicon: Optional[str] = DEFAULT_WEBSITE_ICON
     url: Optional[str] = None
     title: Optional[str] = None
 
