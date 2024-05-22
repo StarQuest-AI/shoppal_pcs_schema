@@ -172,6 +172,7 @@ class BaseRequest(BaseModel):
 
     use_cache: Optional[bool] = True
     version: Optional[str] = None
+    post_id: Optional[str] = None
 
 
 class BaseResponse(BaseModel):
