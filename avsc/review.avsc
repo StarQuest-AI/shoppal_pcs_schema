@@ -18,6 +18,13 @@
                 "string",
                 "null"
             ]
+        },
+        {
+            "name": "parsed",
+            "type": [
+                "string",
+                "null"
+            ]
         }
     ]
 }
