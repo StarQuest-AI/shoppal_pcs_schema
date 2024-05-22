@@ -1,0 +1,30 @@
+{
+    "namespace": "spider.data",
+    "type": "record",
+    "name": "Product",
+    "doc": "Schema for a product",
+    "fields": [
+        {
+            "name": "product_id",
+            "type": "string"
+        },
+        {
+            "name": "platform",
+            "type": {
+                "type": "enum",
+                "name": "Platform",
+                "symbols": [
+                    "AMAZON",
+                    "EBAY"
+                ]
+            }
+        },
+        {
+            "name": "asin",
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    ]
+}

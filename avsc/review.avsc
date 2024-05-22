@@ -1,0 +1,23 @@
+{
+    "namespace": "spider.data",
+    "type": "record",
+    "name": "Review",
+    "doc": "Schema for a review of a product",
+    "fields": [
+        {
+            "name": "product_id",
+            "type": "string"
+        },
+        {
+            "name": "url",
+            "type": "string"
+        },
+        {
+            "name": "review_text",
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    ]
+}
