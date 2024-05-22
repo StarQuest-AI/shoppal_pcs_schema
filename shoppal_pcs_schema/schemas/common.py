@@ -43,6 +43,65 @@ SESSION_START_QUESTIONS = [
     },
 ]
 
+DEFAULT_THREAD_LIST = [
+    {
+        "question": "Pros & cons of the product",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
+        "action": {
+            "router": "pros_and_cons",
+            "type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
+        },
+    },
+    {
+        "question": "Top expert opinions",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fworth.png",
+        "action": {
+            "router": "reviews_feed",
+            "type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
+        },
+    },
+    {
+        "question": "Other popular choices",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fpopular.png",
+        "action": {
+            "router": "product_recommendation",
+            "type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
+        },
+    },
+    {
+        "question": "Quick overview of this product",
+        "icon_url": "",
+        "action": {
+            "router": "generic",
+            "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
+        }
+    },
+    {
+        "question": "How to choose",
+        "icon_url": "",
+        "action": {
+            "router": "generic",
+            "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
+        }
+    },
+    {
+        "question": "Best choice at each price",
+        "icon_url": "",
+        "action": {
+            "router": "generic",
+            "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
+        }
+    },
+    {
+        "question": "Product Demo",
+        "icon_url": "",
+        "action": {
+            "router": "generic",
+            "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
+        }
+    },
+]
+
 
 WEBPAGE_EXCLUDE_SITES = [
     "amazon.*",
@@ -112,6 +171,7 @@ class BaseRequest(BaseModel):
     """
 
     use_cache: Optional[bool] = True
+    version: Optional[str] = None
 
 
 class BaseResponse(BaseModel):
@@ -185,6 +245,15 @@ class SessionStartQuestionRequest(FunctionCallRequestBase):
     """
 
 
+class FunctionAction(BaseModel):
+    """
+    Function Action
+    """
+
+    router: Optional[str] = None
+    type: Optional[str] = None
+
+
 class SessionStartQuestionResult(BaseResponse):
     """
     Related Response
@@ -197,6 +266,9 @@ class SessionStartQuestionResult(BaseResponse):
 
         question: str
         icon_url: str
+        action: Optional[FunctionAction]
+        id: Optional[str] = None
+        image_url: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
