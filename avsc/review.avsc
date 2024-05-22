@@ -13,7 +13,7 @@
             "type": "string"
         },
         {
-            "name": "review_text",
+            "name": "raw_html",
             "type": [
                 "string",
                 "null"
