@@ -51,6 +51,7 @@ DEFAULT_THREAD_LIST = [
             "router": "pros_and_cons",
             "type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
         },
+        "template_id": "1",
     },
     {
         "question": "Top expert opinions",
@@ -59,6 +60,7 @@ DEFAULT_THREAD_LIST = [
             "router": "reviews_feed",
             "type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
         },
+        "template_id": "2",
     },
     {
         "question": "Other popular choices",
@@ -67,6 +69,7 @@ DEFAULT_THREAD_LIST = [
             "router": "product_recommendation",
             "type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
+        "template_id": "3",
     },
     {
         "question": "Quick overview of this product",
@@ -74,7 +77,8 @@ DEFAULT_THREAD_LIST = [
         "action": {
             "router": "generic",
             "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
-        }
+        },
+        "template_id": "4",
     },
     {
         "question": "How to choose",
@@ -82,7 +86,8 @@ DEFAULT_THREAD_LIST = [
         "action": {
             "router": "generic",
             "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
-        }
+        },
+        "template_id": "5",
     },
     {
         "question": "Best choice at each price",
@@ -90,7 +95,8 @@ DEFAULT_THREAD_LIST = [
         "action": {
             "router": "generic",
             "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
-        }
+        },
+        "template_id": "6",
     },
     {
         "question": "Product Demo",
@@ -98,7 +104,8 @@ DEFAULT_THREAD_LIST = [
         "action": {
             "router": "generic",
             "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
-        }
+        },
+        "template_id": "7",
     },
 ]
 
