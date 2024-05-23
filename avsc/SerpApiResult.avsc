@@ -78,7 +78,7 @@
                         "type": {
                             "type": "record",
                             "namespace": "SerpApiResult.knowledgeGraph",
-                            "name": "attributes",
+                            "name": "Attributes",
                             "fields": [
                                 {
                                     "name": "Headquarters",
@@ -144,7 +144,7 @@
                                     "items": {
                                         "type": "record",
                                         "namespace": "SerpApiResult.organic",
-                                        "name": "sitelinks",
+                                        "name": "Sitelinks",
                                         "fields": [
                                             {
                                                 "name": "title",
