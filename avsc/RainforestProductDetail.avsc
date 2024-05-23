@@ -9,7 +9,7 @@
             "type": {
                 "type": "record",
                 "namespace": "RainforestProductDetail",
-                "name": "request_info",
+                "name": "RequestInfo",
                 "fields": [
                     {
                         "name": "success",
@@ -31,7 +31,7 @@
             "type": {
                 "type": "record",
                 "namespace": "RainforestProductDetail",
-                "name": "request_metadata",
+                "name": "RequestMetadata",
                 "fields": [
                     {
                         "name": "id",
@@ -61,7 +61,7 @@
             "type": {
                 "type": "record",
                 "namespace": "RainforestProductDetail",
-                "name": "request_parameters",
+                "name": "RequestParameters",
                 "fields": [
                     {
                         "name": "type",
@@ -79,7 +79,7 @@
             "type": {
                 "type": "record",
                 "namespace": "RainforestProductDetail",
-                "name": "product",
+                "name": "Product",
                 "fields": [
                     {
                         "name": "title",
@@ -92,7 +92,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "variants",
+                                "name": "Variants",
                                 "fields": [
                                     {
                                         "name": "asin",
@@ -118,7 +118,7 @@
                                         "type": {
                                             "type": "record",
                                             "namespace": "RainforestProductDetail.product.variants",
-                                            "name": "price",
+                                            "name": "Price",
                                             "fields": [
                                                 {
                                                     "name": "symbol",
@@ -169,7 +169,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "categories",
+                                "name": "Categories",
                                 "fields": [
                                     {
                                         "name": "name",
@@ -194,7 +194,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "bestsellers_rank",
+                                "name": "BestsellersRank",
                                 "fields": [
                                     {
                                         "name": "category",
@@ -219,7 +219,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "summarization_attributes",
+                                "name": "SummarizationAttributes",
                                 "fields": [
                                     {
                                         "name": "name",
@@ -242,7 +242,7 @@
                         "type": {
                             "type": "record",
                             "namespace": "RainforestProductDetail.product",
-                            "name": "amazons_choice",
+                            "name": "AmazonsChoice",
                             "fields": [
                                 {
                                     "name": "keywords",
@@ -260,7 +260,7 @@
                         "type": {
                             "type": "record",
                             "namespace": "RainforestProductDetail.product",
-                            "name": "climate_pledge_friendly",
+                            "name": "ClimatePledgeFriendly",
                             "fields": [
                                 {
                                     "name": "text",
@@ -296,7 +296,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "promotions",
+                                "name": "Promotions",
                                 "fields": [
                                     {
                                         "name": "name",
@@ -323,7 +323,7 @@
                         "type": {
                             "type": "record",
                             "namespace": "RainforestProductDetail.product",
-                            "name": "first_available",
+                            "name": "FirstAvailable",
                             "fields": [
                                 {
                                     "name": "raw",
@@ -349,7 +349,7 @@
                         "type": {
                             "type": "record",
                             "namespace": "RainforestProductDetail.product",
-                            "name": "sub_title",
+                            "name": "SubTitle",
                             "fields": [
                                 {
                                     "name": "text",
@@ -381,7 +381,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "top_reviews",
+                                "name": "TopReviews",
                                 "fields": [
                                     {
                                         "name": "id",
@@ -412,7 +412,7 @@
                                         "type": {
                                             "type": "record",
                                             "namespace": "RainforestProductDetail.product.top_reviews",
-                                            "name": "date",
+                                            "name": "Date",
                                             "fields": [
                                                 {
                                                     "name": "raw",
@@ -430,7 +430,7 @@
                                         "type": {
                                             "type": "record",
                                             "namespace": "RainforestProductDetail.product.top_reviews",
-                                            "name": "profile",
+                                            "name": "Profile",
                                             "fields": [
                                                 {
                                                     "name": "name",
@@ -476,7 +476,7 @@
                         "type": {
                             "type": "record",
                             "namespace": "RainforestProductDetail.product",
-                            "name": "main_image",
+                            "name": "MainImage",
                             "fields": [
                                 {
                                     "name": "link",
@@ -492,7 +492,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "images",
+                                "name": "Images",
                                 "fields": [
                                     {
                                         "name": "link",
@@ -509,7 +509,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "videos",
+                                "name": "Videos",
                                 "fields": [
                                     {
                                         "name": "duration_seconds",
@@ -571,7 +571,7 @@
                         "type": {
                             "type": "record",
                             "namespace": "RainforestProductDetail.product",
-                            "name": "important_information",
+                            "name": "ImportantInformation",
                             "fields": [
                                 {
                                     "name": "sections",
@@ -580,7 +580,7 @@
                                         "items": {
                                             "type": "record",
                                             "namespace": "RainforestProductDetail.product.important_information",
-                                            "name": "sections",
+                                            "name": "Sections",
                                             "fields": [
                                                 {
                                                     "name": "title",
@@ -604,14 +604,14 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "more_buying_choices",
+                                "name": "MoreBuyingChoices",
                                 "fields": [
                                     {
                                         "name": "price",
                                         "type": {
                                             "type": "record",
                                             "namespace": "RainforestProductDetail.product.more_buying_choices",
-                                            "name": "price",
+                                            "name": "Price",
                                             "fields": [
                                                 {
                                                     "name": "symbol",
@@ -662,7 +662,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "specifications",
+                                "name": "Specifications",
                                 "fields": [
                                     {
                                         "name": "name",
@@ -683,7 +683,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "services",
+                                "name": "Services",
                                 "fields": [
                                     {
                                         "name": "title",
@@ -694,7 +694,7 @@
                                         "type": {
                                             "type": "record",
                                             "namespace": "RainforestProductDetail.product.services",
-                                            "name": "price",
+                                            "name": "Price",
                                             "fields": [
                                                 {
                                                     "name": "symbol",
@@ -733,7 +733,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.product",
-                                "name": "attributes",
+                                "name": "Attributes",
                                 "fields": [
                                     {
                                         "name": "name",
@@ -755,14 +755,14 @@
             "type": {
                 "type": "record",
                 "namespace": "RainforestProductDetail",
-                "name": "frequently_bought_together",
+                "name": "FrequentlyBoughtTogether",
                 "fields": [
                     {
                         "name": "total_price",
                         "type": {
                             "type": "record",
                             "namespace": "RainforestProductDetail.frequently_bought_together",
-                            "name": "total_price",
+                            "name": "TotalPrice",
                             "fields": [
                                 {
                                     "name": "symbol",
@@ -790,7 +790,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.frequently_bought_together",
-                                "name": "products",
+                                "name": "Products",
                                 "fields": [
                                     {
                                         "name": "asin",
@@ -809,7 +809,7 @@
                                         "type": {
                                             "type": "record",
                                             "namespace": "RainforestProductDetail.frequently_bought_together.products",
-                                            "name": "price",
+                                            "name": "Price",
                                             "fields": [
                                                 {
                                                     "name": "symbol",
@@ -844,7 +844,7 @@
                 "items": {
                     "type": "record",
                     "namespace": "RainforestProductDetail",
-                    "name": "also_viewed",
+                    "name": "AlsoViewed",
                     "fields": [
                         {
                             "name": "title",
@@ -875,7 +875,7 @@
                             "type": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.also_viewed",
-                                "name": "price",
+                                "name": "Price",
                                 "fields": [
                                     {
                                         "name": "symbol",
@@ -907,7 +907,7 @@
                 "items": {
                     "type": "record",
                     "namespace": "RainforestProductDetail",
-                    "name": "bundles",
+                    "name": "Bundles",
                     "fields": [
                         {
                             "name": "asin",
@@ -942,7 +942,7 @@
                             "type": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.bundles",
-                                "name": "price",
+                                "name": "Price",
                                 "fields": [
                                     {
                                         "name": "value",
@@ -966,7 +966,7 @@
                                 {
                                     "type": "record",
                                     "namespace": "RainforestProductDetail.bundles",
-                                    "name": "rrp",
+                                    "name": "RRP",
                                     "fields": [
                                         {
                                             "name": "value",
@@ -995,7 +995,7 @@
                 "items": {
                     "type": "record",
                     "namespace": "RainforestProductDetail",
-                    "name": "bundle_contents",
+                    "name": "BundleContents",
                     "fields": [
                         {
                             "name": "asin",
@@ -1030,7 +1030,7 @@
                             "type": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.bundle_contents",
-                                "name": "price",
+                                "name": "Price",
                                 "fields": [
                                     {
                                         "name": "symbol",
@@ -1062,7 +1062,7 @@
                 "items": {
                     "type": "record",
                     "namespace": "RainforestProductDetail",
-                    "name": "sponsored_products",
+                    "name": "SponsoredProducts",
                     "fields": [
                         {
                             "name": "title",
@@ -1093,7 +1093,7 @@
                             "type": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.sponsored_products",
-                                "name": "price",
+                                "name": "Price",
                                 "fields": [
                                     {
                                         "name": "symbol",
@@ -1123,7 +1123,7 @@
             "type": {
                 "type": "record",
                 "namespace": "RainforestProductDetail",
-                "name": "shop_by_look",
+                "name": "ShopByLook",
                 "fields": [
                     {
                         "name": "title",
@@ -1136,7 +1136,7 @@
                             "items": {
                                 "type": "record",
                                 "namespace": "RainforestProductDetail.shop_by_look",
-                                "name": "items",
+                                "name": "Items",
                                 "fields": [
                                     {
                                         "name": "asin",
@@ -1163,7 +1163,7 @@
                                         "type": {
                                             "type": "record",
                                             "namespace": "RainforestProductDetail.shop_by_look.items",
-                                            "name": "price",
+                                            "name": "Price",
                                             "fields": [
                                                 {
                                                     "name": "symbol",

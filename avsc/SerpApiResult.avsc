@@ -9,7 +9,7 @@
             "type": {
                 "type": "record",
                 "namespace": "SerpApiResult",
-                "name": "searchParameters",
+                "name": "SearchParameters",
                 "fields": [
                     {
                         "name": "q",
@@ -43,7 +43,7 @@
             "type": {
                 "type": "record",
                 "namespace": "SerpApiResult",
-                "name": "knowledgeGraph",
+                "name": "KnowledgeGraph",
                 "fields": [
                     {
                         "name": "title",
@@ -121,7 +121,7 @@
                 "items": {
                     "type": "record",
                     "namespace": "SerpApiResult",
-                    "name": "organic",
+                    "name": "Organic",
                     "fields": [
                         {
                             "name": "title",
@@ -181,7 +181,7 @@
                 "items": {
                     "type": "record",
                     "namespace": "SerpApiResult",
-                    "name": "peopleAlsoAsk",
+                    "name": "PeopleAlsoAsk",
                     "fields": [
                         {
                             "name": "question",
@@ -210,7 +210,7 @@
                 "items": {
                     "type": "record",
                     "namespace": "SerpApiResult",
-                    "name": "relatedSearches",
+                    "name": "RelatedSearches",
                     "fields": [
                         {
                             "name": "query",
