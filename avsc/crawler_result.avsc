@@ -1,0 +1,75 @@
+    "namespace": "shoppal.data",
+    "type": "record",
+    "name": "CrawlerResult",
+    "doc": "Schema for our crawler result",
+    "fields": [
+        {
+            "name": "crawler_request_info",
+            "type": {
+                "type": "record",
+                "namespace": "CrawlerResult",
+                "name": "ClawerRequestInfo",
+                "fields": [
+                    {
+                        "name": "use_api",
+                        "type": "boolean",
+                        "default": true
+                    },
+                    {
+                        "name": "api_base",
+                        "type": "string",
+                        "default": "https://api.scrapfly.io/scrape"
+                    },
+                    {
+                        "name": "api_params",
+                        "type": "map",
+                        "values": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "original_status",
+            "type": "int"
+        },
+        {
+            "name": "pc_status",
+            "type": "int"
+        },
+        {
+            "name": "original_url",
+            "type": "string"
+        },
+        {
+            "name": "url",
+            "type": "string"
+        },
+        {
+            "name": "html",
+            "type": "string",
+            "default": ""
+        },
+        {
+            "name": "content",
+            "type": {
+                "type": "record",
+                "namespace": "CrawlerResult",
+                "name": "Content",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "string"
+                    },
+                    {
+                        "name": "credits_used",
+                        "type": "long"
+                    },
+                    {
+                        "name": "credits_remaining",
+                        "type": "long"
+                    }
+                ]
+            }
+
+        }
+    ]
