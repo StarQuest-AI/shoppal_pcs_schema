@@ -47,79 +47,72 @@ DEFAULT_POST_LIST = [
     {
         "question": "Pros & cons of the product",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
-        "id": "",
         "action": {
             "router": "pros_and_cons",
             "request_type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
         },
         "template_id": "1",
-        "image_url": "",
+        "image_url": "https://images.shoppal.ai/feed_image%2F1.png",
     },
     {
         "question": "Top expert opinions",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fworth.png",
-        "id": "",
         "action": {
             "router": "reviews_feed",
             "request_type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
         },
         "template_id": "2",
-        "image_url": "",
+        "image_url": "https://images.shoppal.ai/feed_image%2F2.png",
     },
     {
         "question": "Other popular choices",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fpopular.png",
-        "id": "",
         "action": {
             "router": "product_recommendation",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "3",
-        "image_url": "",
+        "image_url": "https://images.shoppal.ai/feed_image%2F3.png",
     },
     {
         "question": "Quick overview of this product",
         "icon_url": "",
-        "id": "",
         "action": {
             "router": "generic",
             "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
         },
         "template_id": "4",
-        "image_url": "",
+        "image_url": "https://images.shoppal.ai/feed_image%2F4.png",
     },
     {
         "question": "How to choose",
         "icon_url": "",
-        "id": "",
         "action": {
             "router": "generic",
             "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
         },
         "template_id": "5",
-        "image_url": "",
+        "image_url": "https://images.shoppal.ai/feed_image%2F5.png",
     },
     {
         "question": "Best choice at each price",
         "icon_url": "",
-        "id": "",
         "action": {
             "router": "generic",
             "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
         },
         "template_id": "6",
-        "image_url": "",
+        "image_url": "https://images.shoppal.ai/feed_image%2F6.png",
     },
     {
         "question": "Product Demo",
         "icon_url": "",
-        "id": "",
         "action": {
             "router": "generic",
             "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
         },
         "template_id": "7",
-        "image_url": "",
+        "image_url": "https://images.shoppal.ai/feed_image%2F1.png",
     },
 ]
 
