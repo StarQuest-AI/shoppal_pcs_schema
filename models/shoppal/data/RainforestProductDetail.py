@@ -8,13 +8,13 @@ from uuid import UUID
 from pydantic import BaseModel, Field
 
 
-class request_info(BaseModel):
+class RequestInfo(BaseModel):
     success: bool
     credits_used: int
     credits_remaining: int
 
 
-class request_metadata(BaseModel):
+class RequestMetadata(BaseModel):
     id: str
     created_at: str
     processed_at: str
@@ -22,89 +22,89 @@ class request_metadata(BaseModel):
     amazon_url: str
 
 
-class request_parameters(BaseModel):
+class RequestParameters(BaseModel):
     type: str
     url: str
 
 
-class price(BaseModel):
+class Price(BaseModel):
     symbol: str
     currency: str
     value: int
     raw: str
 
 
-class variants(BaseModel):
+class Variants(BaseModel):
     asin: str
     text: str
     dimensions: Optional[str]
     link: str
-    price: price
+    price: Price
 
 
-class categories(BaseModel):
+class Categories(BaseModel):
     name: str
     link: str
     category_id: str
 
 
-class bestsellers_rank(BaseModel):
+class BestsellersRank(BaseModel):
     category: str
     rank: int
     link: str
 
 
-class summarization_attributes(BaseModel):
+class SummarizationAttributes(BaseModel):
     name: str
     value: float
     id: str
 
 
-class amazons_choice(BaseModel):
+class AmazonsChoice(BaseModel):
     keywords: str
     link: str
 
 
-class climate_pledge_friendly(BaseModel):
+class ClimatePledgeFriendly(BaseModel):
     text: str
     image: str
     link: str
 
 
-class promotions(BaseModel):
+class Promotions(BaseModel):
     name: str
 
 
-class first_available(BaseModel):
+class FirstAvailable(BaseModel):
     raw: str
     utc: str
 
 
-class sub_title(BaseModel):
+class SubTitle(BaseModel):
     text: str
     link: str
 
 
-class date(BaseModel):
+class Date(BaseModel):
     raw: str
     utc: str
 
 
-class profile(BaseModel):
+class Profile(BaseModel):
     name: str
     link: str
     id: str
 
 
-class top_reviews(BaseModel):
+class TopReviews(BaseModel):
     id: str
     title: str
     body: str
     body_html: str
     link: str
     rating: int
-    date: date
-    profile: profile
+    date: Date
+    profile: Profile
     vine_program: bool
     verified_purchase: bool
     helpful_votes: int
@@ -112,15 +112,15 @@ class top_reviews(BaseModel):
     is_global_review: bool
 
 
-class main_image(BaseModel):
+class MainImage(BaseModel):
     link: str
 
 
-class images(BaseModel):
+class Images(BaseModel):
     link: str
 
 
-class videos(BaseModel):
+class Videos(BaseModel):
     duration_seconds: int
     width: int
     height: int
@@ -133,114 +133,114 @@ class videos(BaseModel):
     group_type: str
 
 
-class sections(BaseModel):
+class Sections(BaseModel):
     title: str
     body: str
 
 
-class important_information(BaseModel):
-    sections: List[sections]
+class ImportantInformation(BaseModel):
+    sections: List[Sections]
 
 
-class more_buying_choices(BaseModel):
-    price: price
+class MoreBuyingChoices(BaseModel):
+    price: Price
     seller_name: str
     seller_link: str
     free_shipping: Optional[bool]
     position: int
 
 
-class specifications(BaseModel):
+class Specifications(BaseModel):
     name: str
     value: str
 
 
-class services(BaseModel):
+class Services(BaseModel):
     title: str
-    price: price
+    price: Price
     whats_included: List[str]
 
 
-class attributes(BaseModel):
+class Attributes(BaseModel):
     name: str
     value: str
 
 
-class product(BaseModel):
+class Product(BaseModel):
     title: str
-    variants: List[variants]
+    variants: List[Variants]
     keywords: str
     keywords_list: List[str]
     link: str
     parent_asin: str
-    categories: List[categories]
-    bestsellers_rank: List[bestsellers_rank]
-    summarization_attributes: List[summarization_attributes]
-    amazons_choice: amazons_choice
-    climate_pledge_friendly: climate_pledge_friendly
+    categories: List[Categories]
+    bestsellers_rank: List[BestsellersRank]
+    summarization_attributes: List[SummarizationAttributes]
+    amazons_choice: AmazonsChoice
+    climate_pledge_friendly: ClimatePledgeFriendly
     kindle_unlimited: bool
     has_coupon: bool
     coupon_text: str
-    promotions: List[promotions]
+    promotions: List[Promotions]
     brand: str
     weight: str
     shipping_weight: str
-    first_available: first_available
+    first_available: FirstAvailable
     delivery_message: str
     dimensions: str
-    sub_title: sub_title
+    sub_title: SubTitle
     rating: float
     ratings_total: int
     reviews_total: int
-    top_reviews: List[top_reviews]
-    main_image: main_image
-    images: List[images]
-    videos: List[videos]
+    top_reviews: List[TopReviews]
+    main_image: MainImage
+    images: List[Images]
+    videos: List[Videos]
     is_bundle: bool
     feature_bullets: List[str]
-    important_information: important_information
-    more_buying_choices: List[more_buying_choices]
-    specifications: List[specifications]
-    services: List[services]
-    attributes: List[attributes]
+    important_information: ImportantInformation
+    more_buying_choices: List[MoreBuyingChoices]
+    specifications: List[Specifications]
+    services: List[Services]
+    attributes: List[Attributes]
 
 
-class total_price(BaseModel):
+class TotalPrice(BaseModel):
     symbol: str
     value: float
     currency: str
     raw: str
 
 
-class products(BaseModel):
+class Products(BaseModel):
     asin: str
     title: str
     link: str
-    price: price
+    price: Price
 
 
-class frequently_bought_together(BaseModel):
-    total_price: total_price
-    products: List[products]
+class FrequentlyBoughtTogether(BaseModel):
+    total_price: TotalPrice
+    products: List[Products]
 
 
-class also_viewed(BaseModel):
+class AlsoViewed(BaseModel):
     title: str
     link: str
     image: str
     rating: float
     ratings_total: int
     is_prime: bool
-    price: price
+    price: Price
 
 
-class rrp(BaseModel):
+class RRP(BaseModel):
     value: float
     currency: str
     raw: str
 
 
-class bundles(BaseModel):
+class Bundles(BaseModel):
     asin: str
     title: str
     link: str
@@ -248,11 +248,11 @@ class bundles(BaseModel):
     rating: float
     ratings_total: int
     item_count: int
-    price: price
-    rrp: Optional[rrp]
+    price: Price
+    rrp: Optional[RRP]
 
 
-class bundle_contents(BaseModel):
+class BundleContents(BaseModel):
     asin: str
     title: str
     link: str
@@ -260,42 +260,42 @@ class bundle_contents(BaseModel):
     rating: float
     ratings_total: int
     item_count: int
-    price: price
+    price: Price
 
 
-class sponsored_products(BaseModel):
+class SponsoredProducts(BaseModel):
     title: str
     link: str
     image: str
     rating: float
     ratings_total: int
     is_prime: bool
-    price: price
+    price: Price
 
 
-class items(BaseModel):
+class Items(BaseModel):
     asin: str
     link: str
     title: str
     image: str
     is_prime: bool
-    price: price
+    price: Price
     ratings_total: Optional[int]
 
 
-class shop_by_look(BaseModel):
+class ShopByLook(BaseModel):
     title: str
-    items: List[items]
+    items: List[Items]
 
 
 class RainforestProductDetail(BaseModel):
-    request_info: request_info
-    request_metadata: request_metadata
-    request_parameters: request_parameters
-    product: product
-    frequently_bought_together: frequently_bought_together
-    also_viewed: List[also_viewed]
-    bundles: List[bundles]
-    bundle_contents: List[bundle_contents]
-    sponsored_products: List[sponsored_products]
-    shop_by_look: shop_by_look
+    request_info: RequestInfo
+    request_metadata: RequestMetadata
+    request_parameters: RequestParameters
+    product: Product
+    frequently_bought_together: FrequentlyBoughtTogether
+    also_viewed: List[AlsoViewed]
+    bundles: List[Bundles]
+    bundle_contents: List[BundleContents]
+    sponsored_products: List[SponsoredProducts]
+    shop_by_look: ShopByLook

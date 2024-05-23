@@ -8,7 +8,7 @@ from uuid import UUID
 from pydantic import BaseModel, Field
 
 
-class searchParameters(BaseModel):
+class SearchParameters(BaseModel):
     q: str
     gl: str
     hl: str
@@ -27,7 +27,7 @@ class attributes(BaseModel):
     Subsidiaries: str
 
 
-class knowledgeGraph(BaseModel):
+class KnowledgeGraph(BaseModel):
     title: str
     type: str
     website: str
@@ -43,7 +43,7 @@ class sitelinks(BaseModel):
     link: str
 
 
-class organic(BaseModel):
+class Organic(BaseModel):
     title: str
     link: str
     snippet: str
@@ -52,20 +52,20 @@ class organic(BaseModel):
     date: Optional[str]
 
 
-class peopleAlsoAsk(BaseModel):
+class PeopleAlsoAsk(BaseModel):
     question: str
     snippet: str
     title: str
     link: str
 
 
-class relatedSearches(BaseModel):
+class RelatedSearches(BaseModel):
     query: str
 
 
 class SerpApiResult(BaseModel):
-    searchParameters: searchParameters
-    knowledgeGraph: knowledgeGraph
-    organic: List[organic]
-    peopleAlsoAsk: List[peopleAlsoAsk]
-    relatedSearches: List[relatedSearches]
+    searchParameters: SearchParameters
+    knowledgeGraph: KnowledgeGraph
+    organic: List[Organic]
+    peopleAlsoAsk: List[PeopleAlsoAsk]
+    relatedSearches: List[RelatedSearches]
