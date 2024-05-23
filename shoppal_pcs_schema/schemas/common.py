@@ -47,6 +47,7 @@ DEFAULT_THREAD_LIST = [
     {
         "question": "Pros & cons of the product",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
+        "id": "",
         "action": {
             "router": "pros_and_cons",
             "request_type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
