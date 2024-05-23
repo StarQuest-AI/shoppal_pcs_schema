@@ -530,7 +530,8 @@
             "name": "videos",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
@@ -560,14 +561,16 @@
             "name": "attributes",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
             "name": "specifications",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
@@ -578,7 +581,8 @@
             "name": "top_reviews",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
@@ -621,14 +625,16 @@
             "name": "compare",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
             "name": "frequently_bought_together",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
@@ -674,7 +680,8 @@
             "name": "similar_list",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
@@ -802,7 +809,8 @@
             "name": "keywords_list",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
@@ -813,7 +821,8 @@
             "name": "more_buying_choices",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
@@ -844,7 +853,8 @@
             "name": "ranks",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
@@ -867,21 +877,24 @@
             "name": "aplus_table",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
             "name": "also_viewed_asins",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
             "name": "also_bought_asins",
             "type": {
                 "type": "array",
-                "items": "null"
+                "items": "string",
+                "default": []
             }
         },
         {
