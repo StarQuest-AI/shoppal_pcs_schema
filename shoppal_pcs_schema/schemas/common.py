@@ -49,63 +49,76 @@ DEFAULT_THREAD_LIST = [
         "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
         "action": {
             "router": "pros_and_cons",
-            "type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
+            "request_type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
         },
         "template_id": "1",
+        "image_url": "",
     },
     {
         "question": "Top expert opinions",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fworth.png",
+        "id": "",
         "action": {
             "router": "reviews_feed",
-            "type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
+            "request_type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
         },
         "template_id": "2",
+        "image_url": "",
     },
     {
         "question": "Other popular choices",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fpopular.png",
+        "id": "",
         "action": {
             "router": "product_recommendation",
-            "type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
+            "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "3",
+        "image_url": "",
     },
     {
         "question": "Quick overview of this product",
         "icon_url": "",
+        "id": "",
         "action": {
             "router": "generic",
-            "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
+            "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
         },
         "template_id": "4",
+        "image_url": "",
     },
     {
         "question": "How to choose",
         "icon_url": "",
+        "id": "",
         "action": {
             "router": "generic",
-            "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
+            "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
         },
         "template_id": "5",
+        "image_url": "",
     },
     {
         "question": "Best choice at each price",
         "icon_url": "",
+        "id": "",
         "action": {
             "router": "generic",
-            "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
+            "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
         },
         "template_id": "6",
+        "image_url": "",
     },
     {
         "question": "Product Demo",
         "icon_url": "",
+        "id": "",
         "action": {
             "router": "generic",
-            "type": "shoppal_pcs_schema.schemas.common.GenericRequest",
+            "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
         },
         "template_id": "7",
+        "image_url": "",
     },
 ]
 
@@ -192,6 +205,7 @@ class BaseResponse(BaseModel):
     content: Optional[str] = None
     end_content: Optional[str] = None
     sources: Optional[list[PageSource]] = None
+    post_id: Optional[str] = None
 
 
 class FunctionCallRequestBase(BaseRequest):
@@ -259,7 +273,7 @@ class FunctionAction(BaseModel):
     """
 
     router: Optional[str] = None
-    type: Optional[str] = None
+    request_type: Optional[str] = None
 
 
 class SessionStartQuestionResult(BaseResponse):
