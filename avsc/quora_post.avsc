@@ -1,0 +1,68 @@
+{
+    "namespace": "shoppal.data",
+    "type": "record",
+    "name": "QuoraPost",
+    "doc": "Schema for quora data from crawler",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        },
+        {
+            "name": "type_name",
+            "type": "string"
+        },
+        {
+            "name": "id_str",
+            "type": "string"
+        },
+        {
+            "name": "oid",
+            "type": "string"
+        },
+        {
+            "name": "uid",
+            "type": "string"
+        },
+        {
+            "name": "url",
+            "type": "string"
+        },
+        {
+            "name": "views_count",
+            "type": "string"
+        },
+        {
+            "name": "upvotes_count",
+            "type": "string"
+        },
+        {
+            "name": "shares_count",
+            "type": "string"
+        },
+        {
+            "name": "comments_count",
+            "type": "string"
+        },
+        {
+            "name": "creation_time",
+            "type": "string"
+        },
+        {
+            "name": "updated_time",
+            "type": "string"
+        },
+        {
+            "name": "cursor",
+            "type": "string"
+        },
+        {
+            "name": "json_raw",
+            "type": "string"
+        },
+        {
+            "name": "crawl_time",
+            "type": "string"
+        }
+    ]
+}
