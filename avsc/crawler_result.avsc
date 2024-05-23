@@ -23,8 +23,7 @@
                     },
                     {
                         "name": "api_params",
-                        "type": "map",
-                        "values": "string"
+                        "type": "string"
                     }
                 ]
             }
@@ -62,12 +61,23 @@
                         "type": "string"
                     },
                     {
-                        "name": "credits_used",
-                        "type": "long"
-                    },
-                    {
-                        "name": "credits_remaining",
-                        "type": "long"
+                        "name": "links",
+                        "type": "array",
+                        "items": {
+                            "type": "record",
+                            "name": "UrlLinkInfo",
+                            "namespace": "CrawlerResult",
+                            "fields": [
+                                {
+                                    "name": "title",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "link",
+                                    "type": "string"
+                                }
+                            ]
+                        }
                     }
                 ]
             }
