@@ -30,7 +30,7 @@ class RequestParameters(BaseModel):
 class Price(BaseModel):
     symbol: str
     currency: str
-    value: int
+    value: float
     raw: str
 
 
