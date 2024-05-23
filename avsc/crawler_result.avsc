@@ -7,7 +7,8 @@
             "name": "crawler_request_info",
             "type": {
                 "type": "record",
-                "name": "ClawerRequestInfo",
+                "name": "crawler_request_info",
+                "namespace": "CrawlerResult",
                 "fields": [
                     {
                         "name": "use_api",
@@ -52,7 +53,8 @@
             "name": "content",
             "type": {
                 "type": "record",
-                "name": "Content",
+                "name": "content",
+                "namespace": "CrawlerResult",
                 "fields": [
                     {
                         "name": "title",
