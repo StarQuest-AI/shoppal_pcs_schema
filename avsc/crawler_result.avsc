@@ -1,3 +1,4 @@
+{
     "namespace": "shoppal.data",
     "type": "record",
     "name": "CrawlerResult",
@@ -7,7 +8,7 @@
             "name": "crawler_request_info",
             "type": {
                 "type": "record",
-                "name": "crawler_request_info",
+                "name": "CrawlerRequestInfo",
                 "namespace": "CrawlerResult",
                 "fields": [
                     {
@@ -53,7 +54,7 @@
             "name": "content",
             "type": {
                 "type": "record",
-                "name": "content",
+                "name": "Content",
                 "namespace": "CrawlerResult",
                 "fields": [
                     {
@@ -70,6 +71,6 @@
                     }
                 ]
             }
-
         }
     ]
+}
