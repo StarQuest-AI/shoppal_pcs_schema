@@ -30,11 +30,13 @@
         },
         {
             "name": "original_status",
-            "type": "int"
+            "type": "int",
+            "default": 200
         },
         {
             "name": "pc_status",
-            "type": "int"
+            "type": "int",
+            "default": 200
         },
         {
             "name": "original_url",
