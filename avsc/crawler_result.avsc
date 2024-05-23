@@ -62,21 +62,23 @@
                     },
                     {
                         "name": "links",
-                        "type": "array",
-                        "items": {
-                            "type": "record",
-                            "name": "UrlLinkInfo",
-                            "namespace": "CrawlerResult",
-                            "fields": [
-                                {
-                                    "name": "title",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "link",
-                                    "type": "string"
-                                }
-                            ]
+                        "type": {
+                            "type": "array",
+                            "items": {
+                                "type": "record",
+                                "namespace": "CrawlerResult",
+                                "name": "UrlLinkInfo",
+                                "fields": [
+                                    {
+                                        "name": "title",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "link",
+                                        "type": "string"
+                                    }
+                                ]
+                            }
                         }
                     }
                 ]
