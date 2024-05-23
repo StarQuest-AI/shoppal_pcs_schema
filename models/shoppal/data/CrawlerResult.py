@@ -26,8 +26,8 @@ class Content(BaseModel):
 
 class CrawlerResult(BaseModel):
     crawler_request_info: CrawlerRequestInfo
-    original_status: int = Field(..., ge=-2**31, le=(2**31 - 1))
-    pc_status: int = Field(..., ge=-2**31, le=(2**31 - 1))
+    original_status: int = Field(200, ge=-2**31, le=(2**31 - 1))
+    pc_status: int = Field(200, ge=-2**31, le=(2**31 - 1))
     original_url: str
     url: str
     html: str = ""
