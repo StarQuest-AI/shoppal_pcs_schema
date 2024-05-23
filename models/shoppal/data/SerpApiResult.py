@@ -17,7 +17,7 @@ class SearchParameters(BaseModel):
     type: str
 
 
-class attributes(BaseModel):
+class Attributes(BaseModel):
     Headquarters: str
     CEO: str
     Founded: str
@@ -35,10 +35,10 @@ class KnowledgeGraph(BaseModel):
     description: str
     descriptionSource: str
     descriptionLink: str
-    attributes: attributes
+    attributes: Attributes
 
 
-class sitelinks(BaseModel):
+class Sitelinks(BaseModel):
     title: str
     link: str
 
@@ -47,7 +47,7 @@ class Organic(BaseModel):
     title: str
     link: str
     snippet: str
-    sitelinks: Optional[List[sitelinks]]
+    sitelinks: Optional[List[Sitelinks]]
     position: int
     date: Optional[str]
 
