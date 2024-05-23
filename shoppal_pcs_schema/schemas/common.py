@@ -43,7 +43,7 @@ SESSION_START_QUESTIONS = [
     },
 ]
 
-DEFAULT_THREAD_LIST = [
+DEFAULT_POST_LIST = [
     {
         "question": "Pros & cons of the product",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
