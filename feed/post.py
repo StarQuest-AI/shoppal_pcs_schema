@@ -1,5 +1,5 @@
 """
-thread model
+post model
 """
 
 # pylint: disable=too-few-public-methods
@@ -18,9 +18,9 @@ class BaseMixin(BaseModel):
     updated_at: str
 
 
-class ThreadStatus(Enum):
+class PostStatus(Enum):
     """
-    Thread status enum
+    Post status enum
     """
 
     GENERATING = "Generating"
@@ -46,9 +46,9 @@ class ConversationMessage(BaseMixin):
     content: str
 
 
-class PostThread(BaseMixin):
+class Post(BaseMixin):
     """
-    Thread model
+    Post model
     """
 
     title: str
@@ -56,6 +56,6 @@ class PostThread(BaseMixin):
     # content: str
     # user_id: str
     is_public: Optional[str] = PublicStatus.PRIVATE.value
-    status: Optional[str] = ThreadStatus.COMPLETED.value
-    refer_thread_id: Optional[str] = None  # 引用嵌套的thread的id
-    product_id: Optional[str] = None  # thread所属的产品id
+    status: Optional[str] = PostStatus.COMPLETED.value
+    refer_post_id: Optional[str] = None
+    product_id: Optional[str] = None
