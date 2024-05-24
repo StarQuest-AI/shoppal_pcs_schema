@@ -77,12 +77,17 @@ DEFAULT_POST_LIST = [
 ]
 
 POST_DEFAULT_COVER_IMAGES = [
-   "https://images.shoppal.ai/feed_image%2F1.png", 
-   "https://images.shoppal.ai/feed_image%2F2.png", 
-   "https://images.shoppal.ai/feed_image%2F3.png", 
-   "https://images.shoppal.ai/feed_image%2F4.png", 
-   "https://images.shoppal.ai/feed_image%2F5.png", 
-   "https://images.shoppal.ai/feed_image%2F6.png", 
+   "https://images.shoppal.ai/feed_image%2Fdefault%2FAnti-valentines%20Facebook%20Post.jpg", 
+   "https://images.shoppal.ai/feed_image%2Fdefault%2FBeige%20Brown%20Add%20to%20Cart%20Instagram.jpg", 
+   "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-181423.jpg", 
+   "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-175724.jpg", 
+   "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-175232.jpg",
+   "https://images.shoppal.ai/feed_image%2Fdefault%2FRetro%20Gradient%20Quote%20Instagram.jpeg",
+   "https://images.shoppal.ai/feed_image%2Fdefault%2FRetro%20Cupcake%20Shop%20Quote.jpg",
+   "https://images.shoppal.ai/feed_image%2Fdefault%2FPowder%20Blue%20Instagram%20Post.jpg",
+   "https://images.shoppal.ai/feed_image%2Fdefault%2FEasy%20Hopping%20Logo.jpg",
+   "https://images.shoppal.ai/feed_image%2Fdefault%2FColorful%20Retro%20Hippie%20Instagram.jpg",
+   "https://images.shoppal.ai/feed_image%2Fdefault%2FBlack%20Friday%20Minicart%20Facebook%20Post.jpg",
 ]
 
 
