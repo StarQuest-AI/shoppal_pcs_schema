@@ -76,6 +76,15 @@ DEFAULT_POST_LIST = [
     },
 ]
 
+POST_DEFAULT_COVER_IMAGES = [
+   "https://images.shoppal.ai/feed_image%2F1.png", 
+   "https://images.shoppal.ai/feed_image%2F2.png", 
+   "https://images.shoppal.ai/feed_image%2F3.png", 
+   "https://images.shoppal.ai/feed_image%2F4.png", 
+   "https://images.shoppal.ai/feed_image%2F5.png", 
+   "https://images.shoppal.ai/feed_image%2F6.png", 
+]
+
 
 WEBPAGE_EXCLUDE_SITES = [
     "amazon.*",
