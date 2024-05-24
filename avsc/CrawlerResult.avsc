@@ -64,7 +64,7 @@
                     },
                     {
                         "name": "author",
-                        "type": "null"
+                        "type": ["string", "null"]
                     },
                     {
                         "name": "hostname",
@@ -80,15 +80,15 @@
                     },
                     {
                         "name": "id",
-                        "type": "null"
+                        "type": ["string", "null"]
                     },
                     {
                         "name": "license",
-                        "type": "null"
+                        "type": ["string", "null"]
                     },
                     {
                         "name": "comments",
-                        "type": "null"
+                        "type": ["string", "null"]
                     },
                     {
                         "name": "raw_text",
@@ -100,7 +100,7 @@
                     },
                     {
                         "name": "language",
-                        "type": "null"
+                        "type": ["string", "null"]
                     },
                     {
                         "name": "image",
