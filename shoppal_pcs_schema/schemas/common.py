@@ -52,7 +52,7 @@ DEFAULT_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
         },
         "template_id": "1",
-        "image_url": "https://images.shoppal.ai/feed_image%2F7.png",
+        "image_url": "https://images.shoppal.ai/feed_image%2Fpros_cons.png",
     },
     {
         "question": "Top expert opinions",
@@ -62,7 +62,7 @@ DEFAULT_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
         },
         "template_id": "2",
-        "image_url": "https://images.shoppal.ai/feed_image%2F2.png",
+        "image_url": "https://images.shoppal.ai/feed_image%2Ftop_export_opinions.png",
     },
     {
         "question": "Other popular choices",
@@ -72,7 +72,7 @@ DEFAULT_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "3",
-        "image_url": "https://images.shoppal.ai/feed_image%2F4.png",
+        "image_url": "https://images.shoppal.ai/feed_image%2Fother_popular_choices.png",
     },
 ]
 
