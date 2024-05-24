@@ -30,7 +30,7 @@ class RequestParameters(BaseModel):
 class Price(BaseModel):
     symbol: str
     currency: str
-    value: float
+    value: int
     raw: str
 
 
@@ -142,6 +142,87 @@ class ImportantInformation(BaseModel):
     sections: List[Sections]
 
 
+class MinimumOrderQuantity(BaseModel):
+    value: int
+    message: str
+
+
+class Availability(BaseModel):
+    type: str
+    raw: str
+    dispatch_days: int
+
+
+class ThirdPartySeller(BaseModel):
+    name: str
+    link: str
+
+
+class Fulfillment(BaseModel):
+    type: str
+    is_sold_by_amazon: bool
+    is_fulfilled_by_amazon: bool
+    is_fulfilled_by_third_party: bool
+    is_sold_by_third_party: bool
+    third_party_seller: ThirdPartySeller
+
+
+class Claimed(BaseModel):
+    percentage: int
+    raw: str
+
+
+class Timing(BaseModel):
+    raw: str
+    ends_at: str
+    remaining_hours: int
+    remaining_minutes: int
+    remaining_seconds: int
+
+
+class deal(BaseModel):
+    claimed: Claimed
+    timing: Timing
+
+
+class NewOffersFrom(BaseModel):
+    symbol: str
+    value: float
+    currency: str
+    raw: str
+
+
+class UsedOffersFrom(BaseModel):
+    symbol: str
+    value: float
+    currency: str
+    raw: str
+
+
+class MixedOffersFrom(BaseModel):
+    symbol: str
+    value: float
+    currency: str
+    raw: str
+
+
+class BuyboxWinner(BaseModel):
+    minimum_order_quantity: MinimumOrderQuantity
+    offer_id: str
+    is_prime: bool
+    is_prime_exclusive_deal: bool
+    availability: Availability
+    fulfillment: Fulfillment
+    deal: deal
+    price: Price
+    new_offers_count: int
+    new_offers_from: NewOffersFrom
+    used_offers_count: int
+    used_offers_from: UsedOffersFrom
+    mixed_offers_count: int
+    mixed_offers_from: MixedOffersFrom
+
+
 class MoreBuyingChoices(BaseModel):
     price: Price
     seller_name: str
@@ -199,6 +280,7 @@ class Product(BaseModel):
     is_bundle: bool
     feature_bullets: List[str]
     important_information: ImportantInformation
+    buybox_winner: BuyboxWinner
     more_buying_choices: List[MoreBuyingChoices]
     specifications: List[Specifications]
     services: List[Services]
