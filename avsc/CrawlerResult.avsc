@@ -64,7 +64,10 @@
                     },
                     {
                         "name": "author",
-                        "type": ["string", "null"]
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
                     {
                         "name": "hostname",
@@ -80,15 +83,24 @@
                     },
                     {
                         "name": "id",
-                        "type": ["string", "null"]
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
                     {
                         "name": "license",
-                        "type": ["string", "null"]
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
                     {
                         "name": "comments",
-                        "type": ["string", "null"]
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
                     {
                         "name": "raw_text",
@@ -100,7 +112,10 @@
                     },
                     {
                         "name": "language",
-                        "type": ["string", "null"]
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
                     {
                         "name": "image",
@@ -139,8 +154,10 @@
         },
         {
             "name": "doc_filter_result",
-            "type": "array",
-            "items": "string"
+            "type": {
+                "type": "array",
+                "items": "string"
+            }
         }
     ]
 }
