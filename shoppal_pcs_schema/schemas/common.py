@@ -74,46 +74,6 @@ DEFAULT_POST_LIST = [
         "template_id": "3",
         "image_url": "https://images.shoppal.ai/feed_image%2F3.png",
     },
-    {
-        "question": "Quick overview of this product",
-        "icon_url": "",
-        "action": {
-            "router": "generic",
-            "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
-        },
-        "template_id": "4",
-        "image_url": "https://images.shoppal.ai/feed_image%2F4.png",
-    },
-    {
-        "question": "How to choose",
-        "icon_url": "",
-        "action": {
-            "router": "generic",
-            "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
-        },
-        "template_id": "5",
-        "image_url": "https://images.shoppal.ai/feed_image%2F5.png",
-    },
-    {
-        "question": "Best choice at each price",
-        "icon_url": "",
-        "action": {
-            "router": "generic",
-            "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
-        },
-        "template_id": "6",
-        "image_url": "https://images.shoppal.ai/feed_image%2F6.png",
-    },
-    {
-        "question": "Product Demo",
-        "icon_url": "",
-        "action": {
-            "router": "generic",
-            "request_type": "shoppal_pcs_schema.schemas.common.GenericRequest",
-        },
-        "template_id": "7",
-        "image_url": "https://images.shoppal.ai/feed_image%2F1.png",
-    },
 ]
 
 
