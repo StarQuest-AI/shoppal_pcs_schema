@@ -14,14 +14,26 @@ class CrawlerRequestInfo(BaseModel):
     api_params: str
 
 
-class UrlLinkInfo(BaseModel):
-    title: str
-    link: str
-
-
 class Content(BaseModel):
     title: str
-    links: List[UrlLinkInfo]
+    author: Optional[str]
+    hostname: str
+    date: str
+    fingerprint: str
+    id: Optional[str]
+    license: Optional[str]
+    comments: Optional[str]
+    raw_text: str
+    text: str
+    language: Optional[str]
+    image: str
+    pagetype: str
+    filedate: str
+    source: str
+    source-hostname: str
+    excerpt: str
+    categories: str
+    tags: str
 
 
 class CrawlerResult(BaseModel):
@@ -32,3 +44,4 @@ class CrawlerResult(BaseModel):
     url: str
     html: str = ""
     content: Content
+    doc_filter_result: List[str]
