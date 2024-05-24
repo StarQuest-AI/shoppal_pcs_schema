@@ -52,7 +52,7 @@ DEFAULT_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
         },
         "template_id": "1",
-        "image_url": "https://images.shoppal.ai/feed_image%2F1.png",
+        "image_url": "https://images.shoppal.ai/feed_image%2F7.png",
     },
     {
         "question": "Top expert opinions",
@@ -72,7 +72,7 @@ DEFAULT_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "3",
-        "image_url": "https://images.shoppal.ai/feed_image%2F3.png",
+        "image_url": "https://images.shoppal.ai/feed_image%2F4.png",
     },
 ]
 
