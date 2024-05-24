@@ -43,6 +43,48 @@ SESSION_START_QUESTIONS = [
     },
 ]
 
+DEFAULT_POST_LIST = [
+    {
+        "question": "Pros & cons of the product",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
+        "action": {
+            "router": "pros_and_cons",
+            "request_type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
+        },
+        "template_id": "1",
+        "image_url": "https://images.shoppal.ai/feed_image%2F1.png",
+    },
+    {
+        "question": "Top expert opinions",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fworth.png",
+        "action": {
+            "router": "reviews_feed",
+            "request_type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
+        },
+        "template_id": "2",
+        "image_url": "https://images.shoppal.ai/feed_image%2F2.png",
+    },
+    {
+        "question": "Other popular choices",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fpopular.png",
+        "action": {
+            "router": "product_recommendation",
+            "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
+        },
+        "template_id": "3",
+        "image_url": "https://images.shoppal.ai/feed_image%2F3.png",
+    },
+]
+
+POST_DEFAULT_COVER_IMAGES = [
+   "https://images.shoppal.ai/feed_image%2F1.png", 
+   "https://images.shoppal.ai/feed_image%2F2.png", 
+   "https://images.shoppal.ai/feed_image%2F3.png", 
+   "https://images.shoppal.ai/feed_image%2F4.png", 
+   "https://images.shoppal.ai/feed_image%2F5.png", 
+   "https://images.shoppal.ai/feed_image%2F6.png", 
+]
+
 
 WEBPAGE_EXCLUDE_SITES = [
     "amazon.*",
@@ -112,6 +154,8 @@ class BaseRequest(BaseModel):
     """
 
     use_cache: Optional[bool] = True
+    version: Optional[str] = None
+    post_id: Optional[str] = None
 
 
 class BaseResponse(BaseModel):
@@ -124,6 +168,7 @@ class BaseResponse(BaseModel):
     content: Optional[str] = None
     end_content: Optional[str] = None
     sources: Optional[list[PageSource]] = None
+    post_id: Optional[str] = None
 
 
 class FunctionCallRequestBase(BaseRequest):
@@ -185,6 +230,15 @@ class SessionStartQuestionRequest(FunctionCallRequestBase):
     """
 
 
+class FunctionAction(BaseModel):
+    """
+    Function Action
+    """
+
+    router: Optional[str] = None
+    request_type: Optional[str] = None
+
+
 class SessionStartQuestionResult(BaseResponse):
     """
     Related Response
@@ -197,6 +251,9 @@ class SessionStartQuestionResult(BaseResponse):
 
         question: str
         icon_url: str
+        action: Optional[FunctionAction]
+        id: Optional[str] = None
+        image_url: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
