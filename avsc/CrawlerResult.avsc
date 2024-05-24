@@ -1,0 +1,163 @@
+{
+    "namespace": "shoppal.data",
+    "type": "record",
+    "name": "CrawlerResult",
+    "doc": "Schema for our crawler result",
+    "fields": [
+        {
+            "name": "crawler_request_info",
+            "type": {
+                "type": "record",
+                "name": "CrawlerRequestInfo",
+                "namespace": "CrawlerResult",
+                "fields": [
+                    {
+                        "name": "use_api",
+                        "type": "boolean",
+                        "default": true
+                    },
+                    {
+                        "name": "api_base",
+                        "type": "string",
+                        "default": "https://api.scrapfly.io/scrape"
+                    },
+                    {
+                        "name": "api_params",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "original_status",
+            "type": "int",
+            "default": 200
+        },
+        {
+            "name": "pc_status",
+            "type": "int",
+            "default": 200
+        },
+        {
+            "name": "original_url",
+            "type": "string"
+        },
+        {
+            "name": "url",
+            "type": "string"
+        },
+        {
+            "name": "html",
+            "type": "string",
+            "default": ""
+        },
+        {
+            "name": "content",
+            "type": {
+                "type": "record",
+                "name": "Content",
+                "namespace": "CrawlerResult",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "string"
+                    },
+                    {
+                        "name": "author",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    {
+                        "name": "hostname",
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "type": "string"
+                    },
+                    {
+                        "name": "fingerprint",
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    {
+                        "name": "license",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    {
+                        "name": "comments",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    {
+                        "name": "raw_text",
+                        "type": "string"
+                    },
+                    {
+                        "name": "text",
+                        "type": "string"
+                    },
+                    {
+                        "name": "language",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    {
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "name": "pagetype",
+                        "type": "string"
+                    },
+                    {
+                        "name": "filedate",
+                        "type": "string"
+                    },
+                    {
+                        "name": "source",
+                        "type": "string"
+                    },
+                    {
+                        "name": "source-hostname",
+                        "type": "string"
+                    },
+                    {
+                        "name": "excerpt",
+                        "type": "string"
+                    },
+                    {
+                        "name": "categories",
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "doc_filter_result",
+            "type": {
+                "type": "array",
+                "items": "string"
+            }
+        }
+    ]
+}
