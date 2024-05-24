@@ -63,28 +63,84 @@
                         "type": "string"
                     },
                     {
-                        "name": "links",
-                        "type": {
-                            "type": "array",
-                            "items": {
-                                "type": "record",
-                                "namespace": "CrawlerResult",
-                                "name": "UrlLinkInfo",
-                                "fields": [
-                                    {
-                                        "name": "title",
-                                        "type": "string"
-                                    },
-                                    {
-                                        "name": "link",
-                                        "type": "string"
-                                    }
-                                ]
-                            }
-                        }
+                        "name": "author",
+                        "type": "null"
+                    },
+                    {
+                        "name": "hostname",
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "type": "string"
+                    },
+                    {
+                        "name": "fingerprint",
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "type": "null"
+                    },
+                    {
+                        "name": "license",
+                        "type": "null"
+                    },
+                    {
+                        "name": "comments",
+                        "type": "null"
+                    },
+                    {
+                        "name": "raw_text",
+                        "type": "string"
+                    },
+                    {
+                        "name": "text",
+                        "type": "string"
+                    },
+                    {
+                        "name": "language",
+                        "type": "null"
+                    },
+                    {
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "name": "pagetype",
+                        "type": "string"
+                    },
+                    {
+                        "name": "filedate",
+                        "type": "string"
+                    },
+                    {
+                        "name": "source",
+                        "type": "string"
+                    },
+                    {
+                        "name": "source-hostname",
+                        "type": "string"
+                    },
+                    {
+                        "name": "excerpt",
+                        "type": "string"
+                    },
+                    {
+                        "name": "categories",
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "type": "string"
                     }
                 ]
             }
+        },
+        {
+            "name": "doc_filter_result",
+            "type": "array",
+            "items": "string"
         }
     ]
 }
