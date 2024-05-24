@@ -1,0 +1,496 @@
+{
+    "namespace": "shoppal.data",
+    "type": "record",
+    "name": "SerperAPiResult",
+    "doc": "Schema for serpapi.com result",
+    "fields": [
+        {
+            "name": "search_metadata",
+            "type": {
+                "type": "record",
+                "namespace": "SerperAPiResult",
+                "name": "SearchMetadata",
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "type": "string"
+                    },
+                    {
+                        "name": "json_endpoint",
+                        "type": "string"
+                    },
+                    {
+                        "name": "created_at",
+                        "type": "string"
+                    },
+                    {
+                        "name": "processed_at",
+                        "type": "string"
+                    },
+                    {
+                        "name": "google_url",
+                        "type": "string"
+                    },
+                    {
+                        "name": "raw_html_file",
+                        "type": "string"
+                    },
+                    {
+                        "name": "total_time_taken",
+                        "type": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "search_parameters",
+            "type": {
+                "type": "record",
+                "namespace": "SerperAPiResult",
+                "name": "SearchParameters",
+                "fields": [
+                    {
+                        "name": "engine",
+                        "type": "string"
+                    },
+                    {
+                        "name": "q",
+                        "type": "string"
+                    },
+                    {
+                        "name": "location_requested",
+                        "type": "string"
+                    },
+                    {
+                        "name": "location_used",
+                        "type": "string"
+                    },
+                    {
+                        "name": "google_domain",
+                        "type": "string"
+                    },
+                    {
+                        "name": "hl",
+                        "type": "string"
+                    },
+                    {
+                        "name": "gl",
+                        "type": "string"
+                    },
+                    {
+                        "name": "safe",
+                        "type": "string"
+                    },
+                    {
+                        "name": "start",
+                        "type": "long"
+                    },
+                    {
+                        "name": "num",
+                        "type": "string"
+                    },
+                    {
+                        "name": "device",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "search_information",
+            "type": {
+                "type": "record",
+                "namespace": "SerperAPiResult",
+                "name": "SearchInformation",
+                "fields": [
+                    {
+                        "name": "organic_results_state",
+                        "type": "string"
+                    },
+                    {
+                        "name": "query_displayed",
+                        "type": "string"
+                    },
+                    {
+                        "name": "total_results",
+                        "type": "long"
+                    },
+                    {
+                        "name": "page_number",
+                        "type": "long"
+                    },
+                    {
+                        "name": "time_taken_displayed",
+                        "type": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "organic_results",
+            "type": {
+                "type": "array",
+                "items": {
+                    "type": "record",
+                    "namespace": "SerperAPiResult",
+                    "name": "OrganicResults",
+                    "fields": [
+                        {
+                            "name": "position",
+                            "type": "long"
+                        },
+                        {
+                            "name": "title",
+                            "type": "string"
+                        },
+                        {
+                            "name": "link",
+                            "type": "string"
+                        },
+                        {
+                            "name": "redirect_link",
+                            "type": [
+                                "null",
+                                "string"
+                            ]
+                        },
+                        {
+                            "name": "displayed_link",
+                            "type": "string"
+                        },
+                        {
+                            "name": "thumbnail",
+                            "type": [
+                                "null",
+                                "string"
+                            ]
+                        },
+                        {
+                            "name": "date",
+                            "type": [
+                                "null",
+                                "string"
+                            ]
+                        },
+                        {
+                            "name": "snippet",
+                            "type": "string"
+                        },
+                        {
+                            "name": "snippet_highlighted_words",
+                            "type": {
+                                "type": "array",
+                                "items": "string"
+                            }
+                        },
+                        {
+                            "name": "about_this_result",
+                            "type": {
+                                "type": "record",
+                                "namespace": "SerperAPiResult.organic_results",
+                                "name": "AboutThisResult",
+                                "fields": [
+                                    {
+                                        "name": "source",
+                                        "type": {
+                                            "type": "record",
+                                            "namespace": "SerperAPiResult.organic_results.about_this_result",
+                                            "name": "source",
+                                            "fields": [
+                                                {
+                                                    "name": "description",
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "name": "icon",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "keywords",
+                                        "type": {
+                                            "type": "array",
+                                            "items": "string"
+                                        }
+                                    },
+                                    {
+                                        "name": "related_keywords",
+                                        "type": [
+                                            "null",
+                                            {
+                                                "type": "array",
+                                                "items": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "languages",
+                                        "type": {
+                                            "type": "array",
+                                            "items": "string"
+                                        }
+                                    },
+                                    {
+                                        "name": "regions",
+                                        "type": {
+                                            "type": "array",
+                                            "items": "string"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "about_page_link",
+                            "type": "string"
+                        },
+                        {
+                            "name": "about_page_serpapi_link",
+                            "type": "string"
+                        },
+                        {
+                            "name": "cached_page_link",
+                            "type": "string"
+                        },
+                        {
+                            "name": "related_pages_link",
+                            "type": [
+                                "null",
+                                "string"
+                            ]
+                        },
+                        {
+                            "name": "rich_snippet",
+                            "type": [
+                                "null",
+                                {
+                                    "type": "record",
+                                    "namespace": "SerperAPiResult.organic_results",
+                                    "name": "RichSnippet",
+                                    "fields": [
+                                        {
+                                            "name": "top",
+                                            "type": {
+                                                "type": "record",
+                                                "namespace": "SerperAPiResult.organic_results.rich_snippet",
+                                                "name": "top",
+                                                "fields": [
+                                                    {
+                                                        "name": "detected_extensions",
+                                                        "type": {
+                                                            "type": "record",
+                                                            "namespace": "SerperAPiResult.organic_results.rich_snippet.top",
+                                                            "name": "DetectedExtensions",
+                                                            "fields": [
+                                                                {
+                                                                    "name": "rating",
+                                                                    "type": "long"
+                                                                },
+                                                                {
+                                                                    "name": "review_by_jennaviles",
+                                                                    "type": "long"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "extensions",
+                                                        "type": {
+                                                            "type": "array",
+                                                            "items": "string"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "reirect_link",
+                            "type": [
+                                "null",
+                                "string"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "related_searches",
+            "type": {
+                "type": "array",
+                "items": {
+                    "type": "record",
+                    "namespace": "SerperAPiResult",
+                    "name": "RelatedSearches",
+                    "fields": [
+                        {
+                            "name": "query",
+                            "type": "string"
+                        },
+                        {
+                            "name": "link",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "pagination",
+            "type": {
+                "type": "record",
+                "namespace": "SerperAPiResult",
+                "name": "Pagination",
+                "fields": [
+                    {
+                        "name": "current",
+                        "type": "long"
+                    },
+                    {
+                        "name": "previous",
+                        "type": "string"
+                    },
+                    {
+                        "name": "next",
+                        "type": "string"
+                    },
+                    {
+                        "name": "other_pages",
+                        "type": {
+                            "type": "record",
+                            "namespace": "SerperAPiResult.pagination",
+                            "name": "OtherPages",
+                            "fields": [
+                                {
+                                    "name": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "3",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "4",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "5",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "6",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "7",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "8",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "9",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "10",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "serpapi_pagination",
+            "type": {
+                "type": "record",
+                "namespace": "SerperAPiResult",
+                "name": "SerpapiPagination",
+                "fields": [
+                    {
+                        "name": "current",
+                        "type": "long"
+                    },
+                    {
+                        "name": "previous_link",
+                        "type": "string"
+                    },
+                    {
+                        "name": "previous",
+                        "type": "string"
+                    },
+                    {
+                        "name": "next_link",
+                        "type": "string"
+                    },
+                    {
+                        "name": "next",
+                        "type": "string"
+                    },
+                    {
+                        "name": "other_pages",
+                        "type": {
+                            "type": "record",
+                            "namespace": "SerperAPiResult.serpapi_pagination",
+                            "name": "OtherPages",
+                            "fields": [
+                                {
+                                    "name": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "3",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "4",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "5",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "6",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "7",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "8",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "9",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "10",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
