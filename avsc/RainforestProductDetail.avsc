@@ -598,6 +598,290 @@
                         }
                     },
                     {
+                        "name": "buybox_winner",
+                        "type": {
+                            "type": "record",
+                            "namespace": "RainforestProductDetail.product",
+                            "name": "BuyboxWinner",
+                            "fields": [
+                                {
+                                    "name": "minimum_order_quantity",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "RainforestProductDetail.product.buybox_winner",
+                                        "name": "MinimumOrderQuantity",
+                                        "fields": [
+                                            {
+                                                "name": "value",
+                                                "type": "long"
+                                            },
+                                            {
+                                                "name": "message",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "offer_id",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "is_prime",
+                                    "type": "boolean"
+                                },
+                                {
+                                    "name": "is_prime_exclusive_deal",
+                                    "type": "boolean"
+                                },
+                                {
+                                    "name": "availability",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "RainforestProductDetail.product.buybox_winner",
+                                        "name": "Availability",
+                                        "fields": [
+                                            {
+                                                "name": "type",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "raw",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "dispatch_days",
+                                                "type": "long"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "fulfillment",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "RainforestProductDetail.product.buybox_winner",
+                                        "name": "Fulfillment",
+                                        "fields": [
+                                            {
+                                                "name": "type",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "is_sold_by_amazon",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "name": "is_fulfilled_by_amazon",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "name": "is_fulfilled_by_third_party",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "name": "is_sold_by_third_party",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "name": "third_party_seller",
+                                                "type": {
+                                                    "type": "record",
+                                                    "namespace": "RainforestProductDetail.product.buybox_winner.fulfillment",
+                                                    "name": "ThirdPartySeller",
+                                                    "fields": [
+                                                        {
+                                                            "name": "name",
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "name": "link",
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "deal",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "RainforestProductDetail.product.buybox_winner",
+                                        "name": "deal",
+                                        "fields": [
+                                            {
+                                                "name": "claimed",
+                                                "type": {
+                                                    "type": "record",
+                                                    "namespace": "RainforestProductDetail.product.buybox_winner.deal",
+                                                    "name": "Claimed",
+                                                    "fields": [
+                                                        {
+                                                            "name": "percentage",
+                                                            "type": "long"
+                                                        },
+                                                        {
+                                                            "name": "raw",
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "name": "timing",
+                                                "type": {
+                                                    "type": "record",
+                                                    "namespace": "RainforestProductDetail.product.buybox_winner.deal",
+                                                    "name": "Timing",
+                                                    "fields": [
+                                                        {
+                                                            "name": "raw",
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "name": "ends_at",
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "name": "remaining_hours",
+                                                            "type": "long"
+                                                        },
+                                                        {
+                                                            "name": "remaining_minutes",
+                                                            "type": "long"
+                                                        },
+                                                        {
+                                                            "name": "remaining_seconds",
+                                                            "type": "long"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "price",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "RainforestProductDetail.product.buybox_winner",
+                                        "name": "Price",
+                                        "fields": [
+                                            {
+                                                "name": "symbol",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "double"
+                                            },
+                                            {
+                                                "name": "currency",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "raw",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "new_offers_count",
+                                    "type": "long"
+                                },
+                                {
+                                    "name": "new_offers_from",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "RainforestProductDetail.product.buybox_winner",
+                                        "name": "NewOffersFrom",
+                                        "fields": [
+                                            {
+                                                "name": "symbol",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "double"
+                                            },
+                                            {
+                                                "name": "currency",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "raw",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "used_offers_count",
+                                    "type": "long"
+                                },
+                                {
+                                    "name": "used_offers_from",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "RainforestProductDetail.product.buybox_winner",
+                                        "name": "UsedOffersFrom",
+                                        "fields": [
+                                            {
+                                                "name": "symbol",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "double"
+                                            },
+                                            {
+                                                "name": "currency",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "raw",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "mixed_offers_count",
+                                    "type": "long"
+                                },
+                                {
+                                    "name": "mixed_offers_from",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "RainforestProductDetail.product.buybox_winner",
+                                        "name": "MixedOffersFrom",
+                                        "fields": [
+                                            {
+                                                "name": "symbol",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "double"
+                                            },
+                                            {
+                                                "name": "currency",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "name": "raw",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
                         "name": "more_buying_choices",
                         "type": {
                             "type": "array",
