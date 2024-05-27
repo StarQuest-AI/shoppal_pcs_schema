@@ -203,6 +203,7 @@ class FunctionCallRequestBase(BaseRequest):
     prompt: Optional[str] = ""
     params: Optional[dict] = None
     product: ProductDetail
+    query_kw: Optional[str] = None
 
 
 class GenericRequest(FunctionCallRequestBase):
@@ -243,10 +244,9 @@ class FunctionAction(BaseModel):
     router: Optional[str] = None
     request_type: Optional[str] = None
 
-
-class SessionStartQuestionResult(BaseResponse):
+class PostMeta(BaseResponse):
     """
-    Related Response
+    post meta
     """
 
     class Question(BaseModel):
@@ -256,11 +256,17 @@ class SessionStartQuestionResult(BaseResponse):
 
         question: str
         icon_url: str
-        action: Optional[FunctionAction]
+        action: Optional[FunctionAction] = None
+        actions: Optional[list[FunctionAction]] = None
         id: Optional[str] = None
         image_url: Optional[str] = None
 
     questions: Optional[list[Question]] = None
+
+class SessionStartQuestionResult(PostMeta):
+    """
+    start question result
+    """
 
 
 class ProsConsResponse(BaseResponse):
