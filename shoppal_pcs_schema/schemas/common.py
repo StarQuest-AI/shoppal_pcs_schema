@@ -260,6 +260,7 @@ class PostMeta(BaseResponse):
         actions: Optional[list[FunctionAction]] = None
         id: Optional[str] = None
         image_url: Optional[str] = None
+        prompt_key: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
