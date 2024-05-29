@@ -255,7 +255,7 @@ class SessionStartQuestionResult(BaseResponse):
         """
 
         question: str
-        icon_url: Optional[str]
+        icon_url: Optional[str] = None
         action: Optional[FunctionAction] = None
         actions: Optional[list[FunctionAction]] = None
         id: Optional[str] = None
