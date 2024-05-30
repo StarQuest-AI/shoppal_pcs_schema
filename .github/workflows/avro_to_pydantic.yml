@@ -27,8 +27,8 @@ jobs:
           for file in $(find . -name '*.avsc'); do
             model_name=$(basename "$file" .avsc)
             namespace_dir=$(jq -r '.namespace' "$file" | tr '.' '/')
-            mkdir -p "models/$namespace_dir"
-            pydantic-avro avro_to_pydantic --asvc "$file" --output "models/${namespace_dir}/${model_name}.py"
+            mkdir -p "shoppal_pcs_schema/schemas/$namespace_dir"
+            pydantic-avro avro_to_pydantic --asvc "$file" --output "shoppal_pcs_schema/schemas/${namespace_dir}/${model_name}.py"
           done
       
       - name: Commit and Push Generated Models
