@@ -44,7 +44,7 @@ SESSION_START_QUESTIONS = [
 ]
 
 DEFAULT_POST_LIST = [
-  {
+    {
         "question": "Product Brief",
         "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
         "action": {
@@ -54,7 +54,7 @@ DEFAULT_POST_LIST = [
         "template_id": "6",
         "image_url": "https://images.shoppal.ai/feed_image%2Fquick_overview.png",
     },
-{
+    {
         "question": "Pros & cons of the product",
         "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
         "action": {
@@ -64,7 +64,7 @@ DEFAULT_POST_LIST = [
         "template_id": "1",
         "image_url": "https://images.shoppal.ai/feed_image%2Fpros_cons.png",
     },
-{
+    {
         "question": "Top expert opinions",
         "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
         "action": {
@@ -74,7 +74,7 @@ DEFAULT_POST_LIST = [
         "template_id": "2",
         "image_url": "https://images.shoppal.ai/feed_image%2Ftop_export_opinions.png",
     },
-  {
+    {
         "question": "Best choices in this category",
         "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
         "action": {
@@ -84,7 +84,7 @@ DEFAULT_POST_LIST = [
         "template_id": "3",
         "image_url": "https://images.shoppal.ai/feed_image%2Fother_popular_choices.png",
     },
- {
+    {
         "question": "How to choose",
         "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
         "action": {
@@ -94,7 +94,7 @@ DEFAULT_POST_LIST = [
         "template_id": "4",
         "image_url": "https://images.shoppal.ai/feed_image%2Fhow_to_choose.png",
     },
-   {
+    {
         "question": "Best product at each price range",
         "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
         "action": {
@@ -107,17 +107,17 @@ DEFAULT_POST_LIST = [
 ]
 
 POST_DEFAULT_COVER_IMAGES = [
-   "https://images.shoppal.ai/feed_image%2Fdefault%2FAnti-valentines%20Facebook%20Post.jpg", 
-   "https://images.shoppal.ai/feed_image%2Fdefault%2FBeige%20Brown%20Add%20to%20Cart%20Instagram.jpg", 
-   "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-181423.jpg", 
-   "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-175724.jpg", 
-   "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-175232.jpg",
-   "https://images.shoppal.ai/feed_image%2Fdefault%2FRetro%20Gradient%20Quote%20Instagram.jpeg",
-   "https://images.shoppal.ai/feed_image%2Fdefault%2FRetro%20Cupcake%20Shop%20Quote.jpg",
-   "https://images.shoppal.ai/feed_image%2Fdefault%2FPowder%20Blue%20Instagram%20Post.jpg",
-   "https://images.shoppal.ai/feed_image%2Fdefault%2FEasy%20Hopping%20Logo.jpg",
-   "https://images.shoppal.ai/feed_image%2Fdefault%2FColorful%20Retro%20Hippie%20Instagram.jpg",
-   "https://images.shoppal.ai/feed_image%2Fdefault%2FBlack%20Friday%20Minicart%20Facebook%20Post.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2FAnti-valentines%20Facebook%20Post.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2FBeige%20Brown%20Add%20to%20Cart%20Instagram.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-181423.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-175724.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-175232.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2FRetro%20Gradient%20Quote%20Instagram.jpeg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2FRetro%20Cupcake%20Shop%20Quote.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2FPowder%20Blue%20Instagram%20Post.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2FEasy%20Hopping%20Logo.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2FColorful%20Retro%20Hippie%20Instagram.jpg",
+    "https://images.shoppal.ai/feed_image%2Fdefault%2FBlack%20Friday%20Minicart%20Facebook%20Post.jpg",
 ]
 
 

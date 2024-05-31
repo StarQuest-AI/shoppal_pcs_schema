@@ -5,7 +5,8 @@ product reviews by e-commerce platform and third party review sites
 from typing import Optional
 
 from pydantic import BaseModel
-from shoppal_pcs_schema.schemas.product_detail import ReviewInfo, ProductPlatForm
+
+from shoppal_pcs_schema.schemas.product_detail import ProductPlatForm, ReviewInfo
 
 
 class EcommercePlatformReview(BaseModel):
