@@ -81,7 +81,7 @@ DEFAULT_POST_LIST = [
             "router": "shoppal_how_to_choose",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
-        "template_id": "3",
+        "template_id": "4",
         "image_url": "https://images.shoppal.ai/feed_image%2Fhow_to_choose.png",
     },
     {
@@ -91,7 +91,7 @@ DEFAULT_POST_LIST = [
             "router": "shoppal_price_range",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
-        "template_id": "3",
+        "template_id": "5",
         "image_url": "https://images.shoppal.ai/feed_image%2Fbest_choice_at_each_price.png",
     },
     {
@@ -101,7 +101,7 @@ DEFAULT_POST_LIST = [
             "router": "shoppal_product_brief",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
-        "template_id": "3",
+        "template_id": "6",
         "image_url": "https://images.shoppal.ai/feed_image%2Fquick_overview.png",
     },
 ]
