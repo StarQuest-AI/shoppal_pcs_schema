@@ -134,7 +134,7 @@
                         "type": "string"
                     },
                     {
-                        "name": "source-hostname",
+                        "name": "source_hostname",
                         "type": "string"
                     },
                     {
