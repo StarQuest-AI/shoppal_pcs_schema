@@ -74,6 +74,36 @@ DEFAULT_POST_LIST = [
         "template_id": "3",
         "image_url": "https://images.shoppal.ai/feed_image%2Fother_popular_choices.png",
     },
+    {
+        "question": "How to choose",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fpopular.png",
+        "action": {
+            "router": "shoppal_how_to_choose",
+            "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
+        },
+        "template_id": "4",
+        "image_url": "https://images.shoppal.ai/feed_image%2Fhow_to_choose.png",
+    },
+    {
+        "question": "Best product at each price range",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fpopular.png",
+        "action": {
+            "router": "shoppal_price_range",
+            "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
+        },
+        "template_id": "5",
+        "image_url": "https://images.shoppal.ai/feed_image%2Fbest_choice_at_each_price.png",
+    },
+    {
+        "question": "Product Brief",
+        "icon_url": "https://copilot.buildagi.dev/icon%2Fpopular.png",
+        "action": {
+            "router": "shoppal_product_brief",
+            "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
+        },
+        "template_id": "6",
+        "image_url": "https://images.shoppal.ai/feed_image%2Fquick_overview.png",
+    },
 ]
 
 POST_DEFAULT_COVER_IMAGES = [
