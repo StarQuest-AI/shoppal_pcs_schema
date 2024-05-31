@@ -2,7 +2,7 @@
 from datetime import date, datetime, time
 from decimal import Decimal
 from enum import Enum
-from typing import Dict, List, Optional, Union
+from typing import List, Optional, Dict, Union
 from uuid import UUID
 
 from pydantic import BaseModel, Field
@@ -30,7 +30,7 @@ class Content(BaseModel):
     pagetype: str
     filedate: str
     source: str
-    source-hostname: str
+    source_hostname: str
     excerpt: str
     categories: str
     tags: str
