@@ -9,375 +9,375 @@ from pydantic import BaseModel, Field
 
 
 class RequestInfo(BaseModel):
-    success: bool
-    credits_used: int
-    credits_remaining: int
+    success: Optional[bool]
+    credits_used: Optional[int]
+    credits_remaining: Optional[int]
 
 
 class RequestMetadata(BaseModel):
-    id: str
-    created_at: str
-    processed_at: str
-    total_time_taken: float
-    amazon_url: str
+    id: Optional[str]
+    created_at: Optional[str]
+    processed_at: Optional[str]
+    total_time_taken: Optional[float]
+    amazon_url: Optional[str]
 
 
 class RequestParameters(BaseModel):
-    type: str
-    url: str
+    type: Optional[str]
+    url: Optional[str]
 
 
 class Price(BaseModel):
-    symbol: str
-    currency: str
-    value: int
-    raw: str
+    symbol: Optional[str]
+    currency: Optional[str]
+    value: Optional[int]
+    raw: Optional[str]
 
 
 class Variants(BaseModel):
-    asin: str
-    text: str
+    asin: Optional[str]
+    text: Optional[str]
     dimensions: Optional[str]
-    link: str
-    price: Price
+    link: Optional[str]
+    price: Optional[Price]
 
 
 class Categories(BaseModel):
-    name: str
-    link: str
-    category_id: str
+    name: Optional[str]
+    link: Optional[str]
+    category_id: Optional[str]
 
 
 class BestsellersRank(BaseModel):
-    category: str
-    rank: int
-    link: str
+    category: Optional[str]
+    rank: Optional[int]
+    link: Optional[str]
 
 
 class SummarizationAttributes(BaseModel):
-    name: str
-    value: float
-    id: str
+    name: Optional[str]
+    value: Optional[float]
+    id: Optional[str]
 
 
 class AmazonsChoice(BaseModel):
-    keywords: str
-    link: str
+    keywords: Optional[str]
+    link: Optional[str]
 
 
 class ClimatePledgeFriendly(BaseModel):
-    text: str
-    image: str
-    link: str
+    text: Optional[str]
+    image: Optional[str]
+    link: Optional[str]
 
 
 class Promotions(BaseModel):
-    name: str
+    name: Optional[str]
 
 
 class FirstAvailable(BaseModel):
-    raw: str
-    utc: str
+    raw: Optional[str]
+    utc: Optional[str]
 
 
 class SubTitle(BaseModel):
-    text: str
-    link: str
+    text: Optional[str]
+    link: Optional[str]
 
 
 class Date(BaseModel):
-    raw: str
-    utc: str
+    raw: Optional[str]
+    utc: Optional[str]
 
 
 class Profile(BaseModel):
-    name: str
-    link: str
-    id: str
+    name: Optional[str]
+    link: Optional[str]
+    id: Optional[str]
 
 
 class TopReviews(BaseModel):
-    id: str
-    title: str
-    body: str
-    body_html: str
-    link: str
-    rating: int
-    date: Date
-    profile: Profile
-    vine_program: bool
-    verified_purchase: bool
-    helpful_votes: int
-    review_country: str
-    is_global_review: bool
+    id: Optional[str]
+    title: Optional[str]
+    body: Optional[str]
+    body_html: Optional[str]
+    link: Optional[str]
+    rating: Optional[int]
+    date: Optional[Date]
+    profile: Optional[Profile]
+    vine_program: Optional[bool]
+    verified_purchase: Optional[bool]
+    helpful_votes: Optional[int]
+    review_country: Optional[str]
+    is_global_review: Optional[bool]
 
 
 class MainImage(BaseModel):
-    link: str
+    link: Optional[str]
 
 
 class Images(BaseModel):
-    link: str
+    link: Optional[str]
 
 
 class Videos(BaseModel):
-    duration_seconds: int
-    width: int
-    height: int
-    url: str
-    thumbnail: str
-    is_hero_video: bool
-    variant: str
-    title: str
-    group_id: str
-    group_type: str
+    duration_seconds: Optional[int]
+    width: Optional[int]
+    height: Optional[int]
+    url: Optional[str]
+    thumbnail: Optional[str]
+    is_hero_video: Optional[bool]
+    variant: Optional[str]
+    title: Optional[str]
+    group_id: Optional[str]
+    group_type: Optional[str]
 
 
 class Sections(BaseModel):
-    title: str
-    body: str
+    title: Optional[str]
+    body: Optional[str]
 
 
 class ImportantInformation(BaseModel):
-    sections: List[Sections]
+    sections: Optional[List[Sections]]
 
 
 class MinimumOrderQuantity(BaseModel):
-    value: int
-    message: str
+    value: Optional[int]
+    message: Optional[str]
 
 
 class Availability(BaseModel):
-    type: str
-    raw: str
-    dispatch_days: int
+    type: Optional[str]
+    raw: Optional[str]
+    dispatch_days: Optional[int]
 
 
 class ThirdPartySeller(BaseModel):
-    name: str
-    link: str
+    name: Optional[str]
+    link: Optional[str]
 
 
 class Fulfillment(BaseModel):
-    type: str
-    is_sold_by_amazon: bool
-    is_fulfilled_by_amazon: bool
-    is_fulfilled_by_third_party: bool
-    is_sold_by_third_party: bool
-    third_party_seller: ThirdPartySeller
+    type: Optional[str]
+    is_sold_by_amazon: Optional[bool]
+    is_fulfilled_by_amazon: Optional[bool]
+    is_fulfilled_by_third_party: Optional[bool]
+    is_sold_by_third_party: Optional[bool]
+    third_party_seller: Optional[ThirdPartySeller]
 
 
 class Claimed(BaseModel):
-    percentage: int
-    raw: str
+    percentage: Optional[int]
+    raw: Optional[str]
 
 
 class Timing(BaseModel):
-    raw: str
-    ends_at: str
-    remaining_hours: int
-    remaining_minutes: int
-    remaining_seconds: int
+    raw: Optional[str]
+    ends_at: Optional[str]
+    remaining_hours: Optional[int]
+    remaining_minutes: Optional[int]
+    remaining_seconds: Optional[int]
 
 
-class deal(BaseModel):
-    claimed: Claimed
-    timing: Timing
+class Deal(BaseModel):
+    claimed: Optional[Claimed]
+    timing: Optional[Timing]
 
 
 class NewOffersFrom(BaseModel):
-    symbol: str
-    value: float
-    currency: str
-    raw: str
+    symbol: Optional[str]
+    value: Optional[float]
+    currency: Optional[str]
+    raw: Optional[str]
 
 
 class UsedOffersFrom(BaseModel):
-    symbol: str
-    value: float
-    currency: str
-    raw: str
+    symbol: Optional[str]
+    value: Optional[float]
+    currency: Optional[str]
+    raw: Optional[str]
 
 
 class MixedOffersFrom(BaseModel):
-    symbol: str
-    value: float
-    currency: str
-    raw: str
+    symbol: Optional[str]
+    value: Optional[float]
+    currency: Optional[str]
+    raw: Optional[str]
 
 
 class BuyboxWinner(BaseModel):
-    minimum_order_quantity: MinimumOrderQuantity
-    offer_id: str
-    is_prime: bool
-    is_prime_exclusive_deal: bool
-    availability: Availability
-    fulfillment: Fulfillment
-    deal: deal
-    price: Price
-    new_offers_count: int
-    new_offers_from: NewOffersFrom
-    used_offers_count: int
-    used_offers_from: UsedOffersFrom
-    mixed_offers_count: int
-    mixed_offers_from: MixedOffersFrom
+    minimum_order_quantity: Optional[MinimumOrderQuantity]
+    offer_id: Optional[str]
+    is_prime: Optional[bool]
+    is_prime_exclusive_deal: Optional[bool]
+    availability: Optional[Availability]
+    fulfillment: Optional[Fulfillment]
+    deal: Optional[Deal]
+    price: Optional[Price]
+    new_offers_count: Optional[int]
+    new_offers_from: Optional[NewOffersFrom]
+    used_offers_count: Optional[int]
+    used_offers_from: Optional[UsedOffersFrom]
+    mixed_offers_count: Optional[int]
+    mixed_offers_from: Optional[MixedOffersFrom]
 
 
 class MoreBuyingChoices(BaseModel):
-    price: Price
-    seller_name: str
-    seller_link: str
+    price: Optional[Price]
+    seller_name: Optional[str]
+    seller_link: Optional[str]
     free_shipping: Optional[bool]
-    position: int
+    position: Optional[int]
 
 
 class Specifications(BaseModel):
-    name: str
-    value: str
+    name: Optional[str]
+    value: Optional[str]
 
 
 class Services(BaseModel):
-    title: str
-    price: Price
-    whats_included: List[str]
+    title: Optional[str]
+    price: Optional[Price]
+    whats_included: Optional[List[str]]
 
 
 class Attributes(BaseModel):
-    name: str
-    value: str
+    name: Optional[str]
+    value: Optional[str]
 
 
 class Product(BaseModel):
-    title: str
-    variants: List[Variants]
-    keywords: str
-    keywords_list: List[str]
-    link: str
-    parent_asin: str
-    categories: List[Categories]
-    bestsellers_rank: List[BestsellersRank]
-    summarization_attributes: List[SummarizationAttributes]
-    amazons_choice: AmazonsChoice
-    climate_pledge_friendly: ClimatePledgeFriendly
-    kindle_unlimited: bool
-    has_coupon: bool
-    coupon_text: str
-    promotions: List[Promotions]
-    brand: str
-    weight: str
-    shipping_weight: str
-    first_available: FirstAvailable
-    delivery_message: str
-    dimensions: str
-    sub_title: SubTitle
-    rating: float
-    ratings_total: int
-    reviews_total: int
-    top_reviews: List[TopReviews]
-    main_image: MainImage
-    images: List[Images]
-    videos: List[Videos]
-    is_bundle: bool
-    feature_bullets: List[str]
-    important_information: ImportantInformation
-    buybox_winner: BuyboxWinner
-    more_buying_choices: List[MoreBuyingChoices]
-    specifications: List[Specifications]
-    services: List[Services]
-    attributes: List[Attributes]
+    title: Optional[str]
+    variants: Optional[List[Variants]]
+    keywords: Optional[str]
+    keywords_list: Optional[List[str]]
+    link: Optional[str]
+    parent_asin: Optional[str]
+    categories: Optional[List[Categories]]
+    bestsellers_rank: Optional[List[BestsellersRank]]
+    summarization_attributes: Optional[List[SummarizationAttributes]]
+    amazons_choice: Optional[AmazonsChoice]
+    climate_pledge_friendly: Optional[ClimatePledgeFriendly]
+    kindle_unlimited: Optional[bool]
+    has_coupon: Optional[bool]
+    coupon_text: Optional[str]
+    promotions: Optional[List[Promotions]]
+    brand: Optional[str]
+    weight: Optional[str]
+    shipping_weight: Optional[str]
+    first_available: Optional[FirstAvailable]
+    delivery_message: Optional[str]
+    dimensions: Optional[str]
+    sub_title: Optional[SubTitle]
+    rating: Optional[float]
+    ratings_total: Optional[int]
+    reviews_total: Optional[int]
+    top_reviews: Optional[List[TopReviews]]
+    main_image: Optional[MainImage]
+    images: Optional[List[Images]]
+    videos: Optional[List[Videos]]
+    is_bundle: Optional[bool]
+    feature_bullets: Optional[List[str]]
+    important_information: Optional[ImportantInformation]
+    buybox_winner: Optional[BuyboxWinner]
+    more_buying_choices: Optional[List[MoreBuyingChoices]]
+    specifications: Optional[List[Specifications]]
+    services: Optional[List[Services]]
+    attributes: Optional[List[Attributes]]
 
 
 class TotalPrice(BaseModel):
-    symbol: str
-    value: float
-    currency: str
-    raw: str
+    symbol: Optional[str]
+    value: Optional[float]
+    currency: Optional[str]
+    raw: Optional[str]
 
 
 class Products(BaseModel):
-    asin: str
-    title: str
-    link: str
-    price: Price
+    asin: Optional[str]
+    title: Optional[str]
+    link: Optional[str]
+    price: Optional[Price]
 
 
 class FrequentlyBoughtTogether(BaseModel):
-    total_price: TotalPrice
-    products: List[Products]
+    total_price: Optional[TotalPrice]
+    products: Optional[List[Products]]
 
 
 class AlsoViewed(BaseModel):
-    title: str
-    link: str
-    image: str
-    rating: float
-    ratings_total: int
-    is_prime: bool
-    price: Price
+    title: Optional[str]
+    link: Optional[str]
+    image: Optional[str]
+    rating: Optional[float]
+    ratings_total: Optional[int]
+    is_prime: Optional[bool]
+    price: Optional[Price]
 
 
 class RRP(BaseModel):
-    value: float
-    currency: str
-    raw: str
+    value: Optional[float]
+    currency: Optional[str]
+    raw: Optional[str]
 
 
 class Bundles(BaseModel):
-    asin: str
-    title: str
-    link: str
-    image: str
-    rating: float
-    ratings_total: int
-    item_count: int
-    price: Price
+    asin: Optional[str]
+    title: Optional[str]
+    link: Optional[str]
+    image: Optional[str]
+    rating: Optional[float]
+    ratings_total: Optional[int]
+    item_count: Optional[int]
+    price: Optional[Price]
     rrp: Optional[RRP]
 
 
 class BundleContents(BaseModel):
-    asin: str
-    title: str
-    link: str
-    image: str
-    rating: float
-    ratings_total: int
-    item_count: int
-    price: Price
+    asin: Optional[str]
+    title: Optional[str]
+    link: Optional[str]
+    image: Optional[str]
+    rating: Optional[float]
+    ratings_total: Optional[int]
+    item_count: Optional[int]
+    price: Optional[Price]
 
 
 class SponsoredProducts(BaseModel):
-    title: str
-    link: str
-    image: str
-    rating: float
-    ratings_total: int
-    is_prime: bool
-    price: Price
+    title: Optional[str]
+    link: Optional[str]
+    image: Optional[str]
+    rating: Optional[float]
+    ratings_total: Optional[int]
+    is_prime: Optional[bool]
+    price: Optional[Price]
 
 
 class Items(BaseModel):
-    asin: str
-    link: str
-    title: str
-    image: str
-    is_prime: bool
-    price: Price
+    asin: Optional[str]
+    link: Optional[str]
+    title: Optional[str]
+    image: Optional[str]
+    is_prime: Optional[bool]
+    price: Optional[Price]
     ratings_total: Optional[int]
 
 
 class ShopByLook(BaseModel):
-    title: str
-    items: List[Items]
+    title: Optional[str]
+    items: Optional[List[Items]]
 
 
 class RainforestProductDetail(BaseModel):
-    request_info: RequestInfo
-    request_metadata: RequestMetadata
-    request_parameters: RequestParameters
-    product: Product
-    frequently_bought_together: FrequentlyBoughtTogether
-    also_viewed: List[AlsoViewed]
-    bundles: List[Bundles]
-    bundle_contents: List[BundleContents]
-    sponsored_products: List[SponsoredProducts]
-    shop_by_look: ShopByLook
+    request_info: Optional[RequestInfo]
+    request_metadata: Optional[RequestMetadata]
+    request_parameters: Optional[RequestParameters]
+    product: Optional[Product]
+    frequently_bought_together: Optional[FrequentlyBoughtTogether]
+    also_viewed: Optional[List[AlsoViewed]]
+    bundles: Optional[List[Bundles]]
+    bundle_contents: Optional[List[BundleContents]]
+    sponsored_products: Optional[List[SponsoredProducts]]
+    shop_by_look: Optional[ShopByLook]
