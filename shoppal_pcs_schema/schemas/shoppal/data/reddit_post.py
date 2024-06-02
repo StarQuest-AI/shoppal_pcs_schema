@@ -9,13 +9,13 @@ from pydantic import BaseModel, Field
 
 
 class RedditPost(BaseModel):
-    id: str
-    type_name: str
-    oid: str
-    uid: str
-    url: str
-    upvotes_count: str
-    comments_count: str
-    creation_time: str
-    json_data: str
-    crawl_time: str
+    id: Optional[str]
+    type_name: Optional[str]
+    oid: Optional[str]
+    uid: Optional[str]
+    url: Optional[str]
+    upvotes_count: Optional[str]
+    comments_count: Optional[str]
+    creation_time: Optional[str]
+    json_data: Optional[str]
+    crawl_time: Optional[str]

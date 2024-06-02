@@ -9,18 +9,18 @@ from pydantic import BaseModel, Field
 
 
 class QuoraPost(BaseModel):
-    id: str
-    type_name: str
-    id_str: str
-    oid: str
-    uid: str
-    url: str
-    views_count: str
-    upvotes_count: str
-    shares_count: str
-    comments_count: str
-    creation_time: str
-    updated_time: str
-    cursor: str
-    json_raw: str
-    crawl_time: str
+    id: Optional[str]
+    type_name: Optional[str]
+    id_str: Optional[str]
+    oid: Optional[str]
+    uid: Optional[str]
+    url: Optional[str]
+    views_count: Optional[str]
+    upvotes_count: Optional[str]
+    shares_count: Optional[str]
+    comments_count: Optional[str]
+    creation_time: Optional[str]
+    updated_time: Optional[str]
+    cursor: Optional[str]
+    json_raw: Optional[str]
+    crawl_time: Optional[str]
