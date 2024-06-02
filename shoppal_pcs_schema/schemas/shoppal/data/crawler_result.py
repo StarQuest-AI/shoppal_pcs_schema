@@ -43,5 +43,5 @@ class CrawlerResult(BaseModel):
     original_url: str
     url: str
     html: str = ""
-    content: Content
+    content: Optional[Content]
     doc_filter_result: List[str]
