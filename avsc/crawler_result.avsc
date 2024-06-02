@@ -53,104 +53,107 @@
         },
         {
             "name": "content",
-            "type": {
-                "type": "record",
-                "name": "Content",
-                "namespace": "CrawlerResult",
-                "fields": [
-                    {
-                        "name": "title",
-                        "type": "string"
-                    },
-                    {
-                        "name": "author",
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    {
-                        "name": "hostname",
-                        "type": "string"
-                    },
-                    {
-                        "name": "date",
-                        "type": "string"
-                    },
-                    {
-                        "name": "fingerprint",
-                        "type": "string"
-                    },
-                    {
-                        "name": "id",
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    {
-                        "name": "license",
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    {
-                        "name": "comments",
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    {
-                        "name": "raw_text",
-                        "type": "string"
-                    },
-                    {
-                        "name": "text",
-                        "type": "string"
-                    },
-                    {
-                        "name": "language",
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    {
-                        "name": "image",
-                        "type": "string"
-                    },
-                    {
-                        "name": "pagetype",
-                        "type": "string"
-                    },
-                    {
-                        "name": "filedate",
-                        "type": "string"
-                    },
-                    {
-                        "name": "source",
-                        "type": "string"
-                    },
-                    {
-                        "name": "source_hostname",
-                        "type": "string"
-                    },
-                    {
-                        "name": "excerpt",
-                        "type": "string"
-                    },
-                    {
-                        "name": "categories",
-                        "type": "string"
-                    },
-                    {
-                        "name": "tags",
-                        "type": "string"
-                    }
-                ]
-            }
+            "type": [
+                "null",
+                {
+                    "type": "record",
+                    "name": "Content",
+                    "namespace": "CrawlerResult",
+                    "fields": [
+                        {
+                            "name": "title",
+                            "type": "string"
+                        },
+                        {
+                            "name": "author",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        {
+                            "name": "hostname",
+                            "type": "string"
+                        },
+                        {
+                            "name": "date",
+                            "type": "string"
+                        },
+                        {
+                            "name": "fingerprint",
+                            "type": "string"
+                        },
+                        {
+                            "name": "id",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        {
+                            "name": "license",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        {
+                            "name": "comments",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        {
+                            "name": "raw_text",
+                            "type": "string"
+                        },
+                        {
+                            "name": "text",
+                            "type": "string"
+                        },
+                        {
+                            "name": "language",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        {
+                            "name": "image",
+                            "type": "string"
+                        },
+                        {
+                            "name": "pagetype",
+                            "type": "string"
+                        },
+                        {
+                            "name": "filedate",
+                            "type": "string"
+                        },
+                        {
+                            "name": "source",
+                            "type": "string"
+                        },
+                        {
+                            "name": "source_hostname",
+                            "type": "string"
+                        },
+                        {
+                            "name": "excerpt",
+                            "type": "string"
+                        },
+                        {
+                            "name": "categories",
+                            "type": "string"
+                        },
+                        {
+                            "name": "tags",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "doc_filter_result",
