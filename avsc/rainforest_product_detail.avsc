@@ -239,7 +239,21 @@
                             ]
                         },
                         {
+                            "name": "asin",
+                            "type": [
+                                "null",
+                                "string"
+                            ]
+                        },
+                        {
                             "name": "parent_asin",
+                            "type": [
+                                "null",
+                                "string"
+                            ]
+                        },
+                        {
+                            "name": "description",
                             "type": [
                                 "null",
                                 "string"
