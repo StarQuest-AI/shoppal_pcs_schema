@@ -6,43 +6,43 @@
     "fields": [
         {
             "name": "id",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "type_name",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "oid",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "uid",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "url",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "upvotes_count",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "comments_count",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "creation_time",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "json_data",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "crawl_time",
-            "type": "string"
+            "type": ["null", "string"]
         }
     ]
 }

@@ -6,63 +6,63 @@
     "fields": [
         {
             "name": "id",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "type_name",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "id_str",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "oid",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "uid",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "url",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "views_count",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "upvotes_count",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "shares_count",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "comments_count",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "creation_time",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "updated_time",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "cursor",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "json_raw",
-            "type": "string"
+            "type": ["null", "string"]
         },
         {
             "name": "crawl_time",
-            "type": "string"
+            "type": ["null", "string"]
         }
     ]
 }
