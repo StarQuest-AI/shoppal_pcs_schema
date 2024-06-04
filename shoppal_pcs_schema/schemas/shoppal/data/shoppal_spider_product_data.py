@@ -15,5 +15,5 @@ class ShoppalSpiderProductData(BaseModel):
     source: Optional[int] = 0 # 数据来源，0：未知，1：Spider，2: DataService
     crawl_result: Optional[RainforestProductDetail] # 商品解析结果，存储为JSON格式，遵循RainForest的数据模型
     crawl_result_md5: Optional[str] # 商品解析结果MD5
-    crawl_time: datetime # 爬虫写入时间
-    update_time: datetime # 数据更新时间
+    crawl_time: Optional[datetime] # 爬虫写入时间
+    update_time: Optional[datetime] # 数据更新时间
