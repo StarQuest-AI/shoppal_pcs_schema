@@ -15,25 +15,25 @@ class CrawlerRequestInfo(BaseModel):
 
 
 class Content(BaseModel):
-    title: str
+    title: Optional[str]
     author: Optional[str]
-    hostname: str
-    date: str
-    fingerprint: str
+    hostname: Optional[str]
+    date: Optional[str]
+    fingerprint: Optional[str]
     id: Optional[str]
     license: Optional[str]
     comments: Optional[str]
-    raw_text: str
-    text: str
+    raw_text: Optional[str]
+    text: Optional[str]
     language: Optional[str]
-    image: str
-    pagetype: str
-    filedate: str
-    source: str
-    source_hostname: str
-    excerpt: str
-    categories: str
-    tags: str
+    image: Optional[str]
+    pagetype: Optional[str]
+    filedate: Optional[str]
+    source: Optional[str]
+    source_hostname: Optional[str]
+    excerpt: Optional[str]
+    categories: Optional[str]
+    tags: Optional[str]
 
 
 class CrawlerResult(BaseModel):
