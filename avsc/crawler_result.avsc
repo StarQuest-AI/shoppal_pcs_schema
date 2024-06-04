@@ -62,7 +62,10 @@
                     "fields": [
                         {
                             "name": "title",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "author",
@@ -73,15 +76,24 @@
                         },
                         {
                             "name": "hostname",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "date",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "fingerprint",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "id",
@@ -106,11 +118,17 @@
                         },
                         {
                             "name": "raw_text",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "text",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "language",
@@ -121,35 +139,59 @@
                         },
                         {
                             "name": "image",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "pagetype",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "filedate",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "source",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "source_hostname",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "excerpt",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "categories",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         {
                             "name": "tags",
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         }
                     ]
                 }
