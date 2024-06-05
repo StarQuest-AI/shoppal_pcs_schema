@@ -57,6 +57,6 @@ class CrawlerResult(BaseModel):
     pc_status: int = Field(200, ge=-2**31, le=(2**31 - 1))
     original_url: str
     url: str
-    webpage: Optional[WebPageContent]
+    webpage: Optional[WebPageContent] = None
     subtitle: Optional[SubtitleContent] = None
     doc_filter_result: List[str]
