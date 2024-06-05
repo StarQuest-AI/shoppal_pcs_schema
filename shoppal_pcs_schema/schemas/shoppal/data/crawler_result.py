@@ -14,7 +14,7 @@ class CrawlerRequestInfo(BaseModel):
     api_params: str
 
 
-class Content(BaseModel):
+class ParsedWebPageContent(BaseModel):
     title: Optional[str]
     author: Optional[str]
     hostname: Optional[str]
@@ -36,12 +36,27 @@ class Content(BaseModel):
     tags: Optional[str]
 
 
+class WebPageContent(BaseModel):
+    raw_html: Optional[str]
+    parsed_webpage_content: Optional[ParsedWebPageContent]
+
+
+class SubTitleTrunk(BaseModel):
+    trunck_content_str: Optional[str]
+    trunck_content_position: Optional[int]
+
+
+class SubtitleContent(BaseModel):
+    concatenated_string: Optional[str]
+    subtitle_trunks: Optional[List[SubTitleTrunk]]
+
+
 class CrawlerResult(BaseModel):
     crawler_request_info: CrawlerRequestInfo
     original_status: int = Field(200, ge=-2**31, le=(2**31 - 1))
     pc_status: int = Field(200, ge=-2**31, le=(2**31 - 1))
     original_url: str
     url: str
-    html: str = ""
-    content: Optional[Content]
+    webpage: Optional[WebPageContent]
+    subtitle: Optional[SubtitleContent]
     doc_filter_result: List[str]
