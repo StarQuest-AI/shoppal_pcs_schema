@@ -47,6 +47,172 @@
             "type": "string"
         },
         {
+            "name": "webpage",
+            "type": [
+                "null",
+                {
+                    "type": "record",
+                    "name": "WebPageContent",
+                    "namespace": "CrawlerResult",
+                    "fields": [
+                        {
+                            "name": "raw_html",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        {
+                            "name": "parsed_webpage_content",
+                            "type": [
+                                "null",
+                                {
+                                    "type": "record",
+                                    "name": "ParsedWebPageContent",
+                                    "namespace": "CrawlerResult",
+                                    "fields": [
+                                        {
+                                            "name": "title",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "author",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "hostname",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "date",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "fingerprint",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "id",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "license",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "comments",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "raw_text",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "text",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "language",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "image",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "pagetype",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "filedate",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "source",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "source_hostname",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "excerpt",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "categories",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        {
+                                            "name": "tags",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "html",
             "type": "string",
             "default": ""
