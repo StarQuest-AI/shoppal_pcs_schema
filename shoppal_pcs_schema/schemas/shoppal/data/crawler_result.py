@@ -10,45 +10,45 @@ from pydantic import BaseModel, Field
 
 class CrawlerRequestInfo(BaseModel):
     use_api: bool = True
-    api_base: str = "https://api.scrapfly.io/scrape"
-    api_params: str
+    api_base: str = "https://api.crawlbase.com/"
+    api_params: Optional[str] = None
 
 
 class ParsedWebPageContent(BaseModel):
-    title: Optional[str]
-    author: Optional[str]
-    hostname: Optional[str]
-    date: Optional[str]
-    fingerprint: Optional[str]
-    id: Optional[str]
-    license: Optional[str]
-    comments: Optional[str]
-    raw_text: Optional[str]
-    text: Optional[str]
-    language: Optional[str]
-    image: Optional[str]
-    pagetype: Optional[str]
-    filedate: Optional[str]
-    source: Optional[str]
-    source_hostname: Optional[str]
-    excerpt: Optional[str]
-    categories: Optional[str]
-    tags: Optional[str]
+    title: Optional[str] = None
+    author: Optional[str] = None
+    hostname: Optional[str] = None
+    date: Optional[str] = None
+    fingerprint: Optional[str] = None
+    id: Optional[str] = None
+    license: Optional[str] = None
+    comments: Optional[str] = None
+    raw_text: Optional[str] = None
+    text: Optional[str] = None
+    language: Optional[str] = None
+    image: Optional[str] = None
+    pagetype: Optional[str] = None
+    filedate: Optional[str] = None
+    source: Optional[str] = None
+    source_hostname: Optional[str] = None
+    excerpt: Optional[str] = None
+    categories: Optional[str] = None
+    tags: Optional[str] = None
 
 
 class WebPageContent(BaseModel):
-    raw_html: Optional[str]
-    parsed_webpage_content: Optional[ParsedWebPageContent]
+    raw_html: Optional[str] = None
+    parsed_webpage_content: Optional[ParsedWebPageContent] = None
 
 
 class SubTitleTrunk(BaseModel):
-    trunck_content_str: Optional[str]
-    trunck_content_position: Optional[int]
+    trunck_content_str: Optional[str] = None
+    trunck_content_position: Optional[int] = None
 
 
 class SubtitleContent(BaseModel):
-    concatenated_string: Optional[str]
-    subtitle_trunks: Optional[List[SubTitleTrunk]]
+    concatenated_string: Optional[str] = None
+    subtitle_trunks: Optional[List[SubTitleTrunk]] = None
 
 
 class CrawlerResult(BaseModel):
@@ -57,6 +57,6 @@ class CrawlerResult(BaseModel):
     pc_status: int = Field(200, ge=-2**31, le=(2**31 - 1))
     original_url: str
     url: str
-    webpage: Optional[WebPageContent]
-    subtitle: Optional[SubtitleContent]
+    webpage: Optional[WebPageContent] = None
+    subtitle: Optional[SubtitleContent] = None
     doc_filter_result: List[str]

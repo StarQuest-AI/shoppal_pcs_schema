@@ -19,11 +19,15 @@
                     {
                         "name": "api_base",
                         "type": "string",
-                        "default": "https://api.scrapfly.io/scrape"
+                        "default": "https://api.crawlbase.com/"
                     },
                     {
                         "name": "api_params",
-                        "type": "string"
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "default": null
                     }
                 ]
             }
@@ -58,9 +62,10 @@
                         {
                             "name": "raw_html",
                             "type": [
-                                "string",
-                                "null"
-                            ]
+                                "null",
+                                "string"
+                            ],
+                            "default": null
                         },
                         {
                             "name": "parsed_webpage_content",
@@ -74,143 +79,164 @@
                                         {
                                             "name": "title",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "author",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "hostname",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "date",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "fingerprint",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "id",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "license",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "comments",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "raw_text",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "text",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "language",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "image",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "pagetype",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "filedate",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "source",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "source_hostname",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "excerpt",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "categories",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         },
                                         {
                                             "name": "tags",
                                             "type": [
-                                                "string",
-                                                "null"
-                                            ]
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
                                         }
                                     ]
                                 }
-                            ]
+                            ],
+                            "default": null
                         }
                     ]
                 }
-            ]
+            ],
+            "default": null
         },
         {
             "name": "subtitle",
@@ -224,9 +250,10 @@
                         {
                             "name": "concatenated_string",
                             "type": [
-                                "string",
-                                "null"
+                                "null",
+                                "string"
                             ],
+                            "default": null,
                             "comment": "concatenated string of all the subtitles"
                         },
                         {
@@ -246,7 +273,8 @@
                                                     "null",
                                                     "string"
                                                 ],
-                                                "commment": "content of each trunk in the original video or audio"
+                                                "default": null,
+                                                "comment": "content of each trunk in the original video or audio"
                                             },
                                             {
                                                 "name": "trunck_content_position",
@@ -254,16 +282,19 @@
                                                     "null",
                                                     "long"
                                                 ],
+                                                "default": null,
                                                 "comment": "position of the trunk in the original video or audio"
                                             }
                                         ]
                                     }
                                 }
-                            ]
+                            ],
+                            "default": null
                         }
                     ]
                 }
-            ]
+            ],
+            "default": null
         },
         {
             "name": "doc_filter_result",
