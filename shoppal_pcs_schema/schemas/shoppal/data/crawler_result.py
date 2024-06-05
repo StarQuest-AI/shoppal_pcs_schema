@@ -41,26 +41,14 @@ class WebPageContent(BaseModel):
     parsed_webpage_content: Optional[ParsedWebPageContent]
 
 
-class Content(BaseModel):
-    title: Optional[str]
-    author: Optional[str]
-    hostname: Optional[str]
-    date: Optional[str]
-    fingerprint: Optional[str]
-    id: Optional[str]
-    license: Optional[str]
-    comments: Optional[str]
-    raw_text: Optional[str]
-    text: Optional[str]
-    language: Optional[str]
-    image: Optional[str]
-    pagetype: Optional[str]
-    filedate: Optional[str]
-    source: Optional[str]
-    source_hostname: Optional[str]
-    excerpt: Optional[str]
-    categories: Optional[str]
-    tags: Optional[str]
+class SubTitleTrunk(BaseModel):
+    trunck_content_str: Optional[str]
+    trunck_content_position: Optional[int]
+
+
+class SubtitleContent(BaseModel):
+    concatenated_string: Optional[str]
+    subtitle_trunks: Optional[List[SubTitleTrunk]]
 
 
 class CrawlerResult(BaseModel):
@@ -70,6 +58,5 @@ class CrawlerResult(BaseModel):
     original_url: str
     url: str
     webpage: Optional[WebPageContent]
-    html: str = ""
-    content: Optional[Content]
+    subtitle: Optional[SubtitleContent]
     doc_filter_result: List[str]
