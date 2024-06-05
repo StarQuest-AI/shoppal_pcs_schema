@@ -213,151 +213,48 @@
             ]
         },
         {
-            "name": "html",
-            "type": "string",
-            "default": ""
-        },
-        {
-            "name": "content",
+            "name": "subtitle",
             "type": [
                 "null",
                 {
                     "type": "record",
-                    "name": "Content",
+                    "name": "SubtitleContent",
                     "namespace": "CrawlerResult",
                     "fields": [
                         {
-                            "name": "title",
+                            "name": "concatenated_string",
                             "type": [
                                 "string",
                                 "null"
-                            ]
+                            ],
+                            "comment": "concatenated string of all the subtitles"
                         },
                         {
-                            "name": "author",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "hostname",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "date",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "fingerprint",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "id",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "license",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "comments",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "raw_text",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "text",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "language",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "image",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "pagetype",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "filedate",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "source",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "source_hostname",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "excerpt",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "categories",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        {
-                            "name": "tags",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
+                            "name": "subtitle_trunks",
+                            "type": "array",
+                            "items": {
+                                "type": "record",
+                                "namespace": "CrawlerResult",
+                                "name": "SubTitleTrunk",
+                                "fields": [
+                                    {
+                                        "name": "trunck_content_str",
+                                        "type": [
+                                            "null",
+                                            "string"
+                                        ],
+                                        "commment": "content of each trunk in the original video or audio"
+                                    },
+                                    {
+                                        "name": "trunck_content_position",
+                                        "type": [
+                                            "null",
+                                            "long"
+                                        ],
+                                        "comment": "position of the trunk in the original video or audio"
+                                    }
+                                ]
+                            }
                         }
                     ]
                 }
