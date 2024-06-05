@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field
 
 class CrawlerRequestInfo(BaseModel):
     use_api: bool = True
-    api_base: str = "https://api.scrapfly.io/scrape"
+    api_base: str = "https://api.crawlbase.com/"
     api_params: Optional[str] = None
 
 
