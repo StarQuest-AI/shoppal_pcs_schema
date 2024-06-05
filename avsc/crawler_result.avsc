@@ -19,7 +19,7 @@
                     {
                         "name": "api_base",
                         "type": "string",
-                        "default": "https://api.scrapfly.io/scrape"
+                        "default": "https://api.crawlbase.com/"
                     },
                     {
                         "name": "api_params",
