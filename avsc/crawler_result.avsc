@@ -231,30 +231,35 @@
                         },
                         {
                             "name": "subtitle_trunks",
-                            "type": "array",
-                            "items": {
-                                "type": "record",
-                                "namespace": "CrawlerResult",
-                                "name": "SubTitleTrunk",
-                                "fields": [
-                                    {
-                                        "name": "trunck_content_str",
-                                        "type": [
-                                            "null",
-                                            "string"
-                                        ],
-                                        "commment": "content of each trunk in the original video or audio"
-                                    },
-                                    {
-                                        "name": "trunck_content_position",
-                                        "type": [
-                                            "null",
-                                            "long"
-                                        ],
-                                        "comment": "position of the trunk in the original video or audio"
+                            "type": [
+                                "null",
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "record",
+                                        "namespace": "CrawlerResult",
+                                        "name": "SubTitleTrunk",
+                                        "fields": [
+                                            {
+                                                "name": "trunck_content_str",
+                                                "type": [
+                                                    "null",
+                                                    "string"
+                                                ],
+                                                "commment": "content of each trunk in the original video or audio"
+                                            },
+                                            {
+                                                "name": "trunck_content_position",
+                                                "type": [
+                                                    "null",
+                                                    "long"
+                                                ],
+                                                "comment": "position of the trunk in the original video or audio"
+                                            }
+                                        ]
                                     }
-                                ]
-                            }
+                                }
+                            ]
                         }
                     ]
                 }
