@@ -24,8 +24,9 @@ jobs:
           black .
           isort .
 
-      - name: Run linters
+      - name:  Commit and Push fixing changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'Applied automatic fixes from linters'
-          github_token: ${{ secrets.GH_RELEASE_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
