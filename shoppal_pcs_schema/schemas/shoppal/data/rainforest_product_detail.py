@@ -42,7 +42,7 @@ class Price(BaseModel):
 class Variants(BaseModel):
     asin: Optional[str] = None
     text: Optional[str] = None
-    dimensions: Optional[Union[str,Specifications]] = None
+    dimensions: Optional[Union[str,List[Specifications]]] = None
     link: Optional[str] = None
     price: Optional[Price] = None
 
@@ -270,7 +270,7 @@ class Product(BaseModel):
     shipping_weight: Optional[str] = None
     first_available: Optional[Union[str,FirstAvailable]] = None
     delivery_message: Optional[str] = None
-    dimensions: Optional[Union[str,Specifications]] = None
+    dimensions: Optional[Union[str,List[Specifications]]] = None
     sub_title: Optional[SubTitle] = None
     rating: Optional[float] = None
     ratings_total: Optional[int] = None
