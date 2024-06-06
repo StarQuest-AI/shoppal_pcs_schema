@@ -174,7 +174,30 @@
                                                 "name": "dimensions",
                                                 "type": [
                                                     "null",
-                                                    "string"
+                                                    "string",
+                                                    {
+                                                        "type": "record",
+                                                        "namespace": "RainforestProductDetail.product.variants",
+                                                        "name": "Specifications",
+                                                        "fields": [
+                                                            {
+                                                                "name": "name",
+                                                                "type": [
+                                                                    "null",
+                                                                    "string"
+                                                                ],
+                                                                "default": null
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": [
+                                                                    "null",
+                                                                    "string"
+                                                                ],
+                                                                "default": null
+                                                            }
+                                                        ]
+                                                    }
                                                 ],
                                                 "default": null
                                             },
@@ -596,7 +619,30 @@
                             "name": "dimensions",
                             "type": [
                                 "null",
-                                "string"
+                                "string",
+                                {
+                                    "type": "record",
+                                    "namespace": "RainforestProductDetail.product.variants",
+                                    "name": "Specifications",
+                                    "fields": [
+                                        {
+                                            "name": "name",
+                                            "type": [
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
+                                        },
+                                        {
+                                            "name": "value",
+                                            "type": [
+                                                "null",
+                                                "string"
+                                            ],
+                                            "default": null
+                                        }
+                                    ]
+                                }
                             ],
                             "default": null
                         },
