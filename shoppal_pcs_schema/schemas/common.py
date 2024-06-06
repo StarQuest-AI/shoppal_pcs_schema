@@ -3,16 +3,13 @@ common schemas
 """
 
 from enum import Enum
-
 # pylint: disable=too-few-public-methods
 from typing import Optional
 
 from pydantic import BaseModel
 
 from shoppal_pcs_schema.schemas.common_search_result import (
-    GoogleSearchResult,
-    PageSource,
-)
+    GoogleSearchResult, PageSource)
 from shoppal_pcs_schema.schemas.product_detail import ProductDetail
 from shoppal_pcs_schema.schemas.video_detail import VideoBaseInfos
 
