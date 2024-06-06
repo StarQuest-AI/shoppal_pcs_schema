@@ -30,7 +30,7 @@ class RequestParameters(BaseModel):
 class Price(BaseModel):
     symbol: Optional[str] = None
     currency: Optional[str] = None
-    value: Optional[int] = None
+    value: Optional[float] = None
     raw: Optional[str] = None
 
 
