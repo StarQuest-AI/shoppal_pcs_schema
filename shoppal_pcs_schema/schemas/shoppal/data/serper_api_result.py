@@ -92,6 +92,12 @@ class RelatedSearches(BaseModel):
     link: str
 
 
+class Pagination(BaseModel):
+    current: int
+    previous: str
+    next: str
+
+
 class OtherPages(BaseModel):
     1: str
     3: str
@@ -102,13 +108,6 @@ class OtherPages(BaseModel):
     8: str
     9: str
     10: str
-
-
-class Pagination(BaseModel):
-    current: int
-    previous: str
-    next: str
-    other_pages: OtherPages
 
 
 class SerpapiPagination(BaseModel):
