@@ -34,10 +34,14 @@ class Price(BaseModel):
     raw: Optional[str] = None
 
 
+class Specifications(BaseModel):
+    name: Optional[str] = None
+    value: Optional[str] = None
+    
 class Variants(BaseModel):
     asin: Optional[str] = None
     text: Optional[str] = None
-    dimensions: Optional[str] = None
+    dimensions: Optional[Union[str,Specifications]] = None
     link: Optional[str] = None
     price: Optional[Price] = None
 
@@ -229,11 +233,6 @@ class MoreBuyingChoices(BaseModel):
     seller_link: Optional[str] = None
     free_shipping: Optional[bool] = None
     position: Optional[int] = None
-
-
-class Specifications(BaseModel):
-    name: Optional[str] = None
-    value: Optional[str] = None
 
 
 class Services(BaseModel):
