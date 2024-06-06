@@ -1,8 +1,7 @@
-
 from datetime import date, datetime, time
 from decimal import Decimal
 from enum import Enum
-from typing import List, Optional, Dict, Union
+from typing import Dict, List, Optional, Union
 from uuid import UUID
 
 from pydantic import BaseModel, Field
@@ -268,7 +267,7 @@ class Product(BaseModel):
     brand: Optional[str] = None
     weight: Optional[str] = None
     shipping_weight: Optional[str] = None
-    first_available: Optional[Union[str,FirstAvailable]] = None
+    first_available: Optional[Union[str, FirstAvailable]] = None
     delivery_message: Optional[str] = None
     dimensions: Optional[str] = None
     sub_title: Optional[SubTitle] = None
