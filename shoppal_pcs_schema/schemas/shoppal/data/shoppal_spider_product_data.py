@@ -15,9 +15,7 @@ class ShoppalSpiderProductData(BaseModel):
     product_id: Optional[str] = None  # 商品ID，比如：Amazon为ASIN: B0CBLKS51N
     parser_name: Optional[str] = None  # used for spider
     source: Optional[int] = 0  # 数据来源，0：未知，1：Spider，2: DataService
-    crawl_result: Optional[RainforestProductDetail] = (
-        None  # 商品解析结果，存储为JSON格式，遵循RainForest的数据模型
-    )
+    crawl_result: Optional[RainforestProductDetail] = None  # 商品解析结果，存储为JSON格式，遵循RainForest的数据模型
     crawl_result_md5: Optional[str] = None  # 商品解析结果MD5
     crawl_time: Optional[datetime] = None  # 爬虫写入时间
     update_time: Optional[datetime] = None  # 数据更新时间
