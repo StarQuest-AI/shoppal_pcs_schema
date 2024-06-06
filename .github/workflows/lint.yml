@@ -1,0 +1,34 @@
+name: Lint
+
+on:
+  pull_request:
+    branches: ['main', 'dev']
+
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Install Python dependencies and run linters
+        run: |
+          pip install black isort
+          black .
+          isort .
+
+      - name:  Commit and Push fixing changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Applied automatic fixes from linters"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}

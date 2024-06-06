@@ -1,8 +1,7 @@
-
 from datetime import date, datetime, time
 from decimal import Decimal
 from enum import Enum
-from typing import List, Optional, Dict, Union
+from typing import Dict, List, Optional, Union
 from uuid import UUID
 
 from pydantic import BaseModel, Field
@@ -92,23 +91,10 @@ class RelatedSearches(BaseModel):
     link: str
 
 
-class OtherPages(BaseModel):
-    1: str
-    3: str
-    4: str
-    5: str
-    6: str
-    7: str
-    8: str
-    9: str
-    10: str
-
-
 class Pagination(BaseModel):
     current: int
     previous: str
     next: str
-    other_pages: OtherPages
 
 
 class SerpapiPagination(BaseModel):
@@ -117,7 +103,6 @@ class SerpapiPagination(BaseModel):
     previous: str
     next_link: str
     next: str
-    other_pages: OtherPages
 
 
 class SerperAPiResult(BaseModel):
