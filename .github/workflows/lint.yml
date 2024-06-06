@@ -8,10 +8,12 @@ jobs:
   run-linters:
     name: Run linters
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
