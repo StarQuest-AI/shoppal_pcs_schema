@@ -557,6 +557,7 @@
                             "name": "first_available",
                             "type": [
                                 "null",
+                                "string",
                                 {
                                     "type": "record",
                                     "namespace": "RainforestProductDetail.product",
