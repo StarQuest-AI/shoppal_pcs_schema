@@ -30,7 +30,7 @@ class RequestParameters(BaseModel):
 class Price(BaseModel):
     symbol: Optional[str] = None
     currency: Optional[str] = None
-    value: Optional[int] = None
+    value: Optional[float] = None
     raw: Optional[str] = None
 
 
@@ -268,7 +268,7 @@ class Product(BaseModel):
     brand: Optional[str] = None
     weight: Optional[str] = None
     shipping_weight: Optional[str] = None
-    first_available: Optional[FirstAvailable] = None
+    first_available: Union[str, Optional[FirstAvailable]] = None
     delivery_message: Optional[str] = None
     dimensions: Optional[str] = None
     sub_title: Optional[SubTitle] = None
