@@ -59,4 +59,4 @@ class CrawlerResult(BaseModel):
     url: str
     webpage: Optional[WebPageContent] = None
     subtitle: Optional[SubtitleContent] = None
-    doc_filter_result: List[str]
+    doc_filter_result: Optional[List[str]] = None
