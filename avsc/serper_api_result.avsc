@@ -395,52 +395,6 @@
                     {
                         "name": "next",
                         "type": "string"
-                    },
-                    {
-                        "name": "other_pages",
-                        "type": {
-                            "type": "record",
-                            "namespace": "SerperAPiResult.serpapi_pagination",
-                            "name": "OtherPages",
-                            "fields": [
-                                {
-                                    "name": "1",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "3",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "4",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "5",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "6",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "7",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "8",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "9",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "10",
-                                    "type": "string"
-                                }
-                            ]
-                        }
                     }
                 ]
             }
