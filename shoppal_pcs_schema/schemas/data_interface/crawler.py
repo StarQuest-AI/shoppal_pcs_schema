@@ -2,7 +2,9 @@ from enum import Enum
 from typing import Optional
 
 from pydantic import BaseModel
-from shoppal_pcs_schema.schemas.shoppal.data.shoppal_spider_data import ContentType, ShoppalSpiderData
+
+from shoppal_pcs_schema.schemas.shoppal.data.shoppal_spider_data import (
+    ContentType, ShoppalSpiderData)
 
 
 class CrawlerStatus(Enum):
