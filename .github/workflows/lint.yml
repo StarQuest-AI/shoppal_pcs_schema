@@ -27,6 +27,6 @@ jobs:
       - name:  Commit and Push fixing changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'Applied automatic fixes from linters'
+          commit_message: "Applied automatic fixes from linters"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
