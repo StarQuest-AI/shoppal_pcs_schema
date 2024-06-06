@@ -2,7 +2,7 @@ name: Lint
 
 on:
   pull_request:
-    branches: ['main', 'dev']
+    branches: ['main']
 
 jobs:
   run-linters:
@@ -23,7 +23,7 @@ jobs:
       - name: Install Python dependencies and run linters
         run: |
           pip install black isort
-          black .
+          black -l 120 .
           isort .
 
       - name:  Commit and Push fixing changes
