@@ -298,10 +298,14 @@
         },
         {
             "name": "doc_filter_result",
-            "type": {
-                "type": "array",
-                "items": "string"
-            }
+            "type": [
+                "null",
+                {
+                    "type": "array",
+                    "items": "string"
+                }
+            ],
+            "default": null
         }
     ]
 }
