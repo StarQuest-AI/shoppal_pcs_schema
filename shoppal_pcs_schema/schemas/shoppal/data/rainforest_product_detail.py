@@ -1,10 +1,6 @@
-from datetime import date, datetime, time
-from decimal import Decimal
-from enum import Enum
-from typing import Dict, List, Optional, Union
-from uuid import UUID
+from typing import List, Optional, Union
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class RequestInfo(BaseModel):
@@ -219,6 +215,7 @@ class BuyboxWinner(BaseModel):
     fulfillment: Optional[Fulfillment] = None
     deal: Optional[Deal] = None
     price: Optional[Price] = None
+    rrp: Optional[Price] = None
     new_offers_count: Optional[int] = None
     new_offers_from: Optional[NewOffersFrom] = None
     used_offers_count: Optional[int] = None

@@ -28,6 +28,7 @@ class Source(IntEnum):
     # 爬虫调用RF API获取
     SPIDER_CALL_RF_API = 3
 
+
 class ShoppalSpiderData(BaseModel):
     id: str  # UUID1
     url: str  # URL

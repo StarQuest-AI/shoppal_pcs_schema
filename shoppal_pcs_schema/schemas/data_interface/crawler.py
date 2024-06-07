@@ -5,6 +5,8 @@ from pydantic import BaseModel
 
 from shoppal_pcs_schema.schemas.shoppal.data.shoppal_spider_data import (
     ContentType, ShoppalSpiderData)
+from shoppal_pcs_schema.schemas.shoppal.data.shoppal_spider_product_data import \
+    ShoppalSpiderProductData
 
 
 class CrawlerStatus(Enum):
@@ -28,3 +30,17 @@ class CrawlerDataResponse(BaseModel):
 
     status: CrawlerStatus
     data: Optional[ShoppalSpiderData] = None
+
+
+class CrawlerProductDataRequest(BaseModel):
+    """Crawler product data request model."""
+
+    product_id: Optional[str] = None
+    url: Optional[str] = None
+
+
+class CrawlerProductDataResponse(BaseModel):
+    """Crawler product data response model."""
+
+    status: CrawlerStatus
+    data: Optional[ShoppalSpiderProductData] = None
