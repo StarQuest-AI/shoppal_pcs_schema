@@ -15,14 +15,6 @@ from shoppal_pcs_schema.schemas.video_detail import VideoBaseInfos
 
 SESSION_START_QUESTIONS = [
     {
-        "question": "Pros & cons of the product",
-        "icon_url": "https://copilot.buildagi.dev/icon%2Fproduct.png",
-        "action": {
-            "router": "pros_and_cons",
-            "type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
-        },
-    },
-    {
         "question": "Top expert opinions",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fworth.png",
         "action": {
@@ -50,16 +42,6 @@ DEFAULT_POST_LIST = [
         },
         "template_id": "6",
         "image_url": "https://images.shoppal.ai/feed_image%2Fquick_overview.png",
-    },
-    {
-        "question": "Pros & cons of the product",
-        "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
-        "action": {
-            "router": "pros_and_cons",
-            "request_type": "shoppal_pcs_schema.schemas.common.ProsConsRequest",
-        },
-        "template_id": "1",
-        "image_url": "https://images.shoppal.ai/feed_image%2Fpros_cons.png",
     },
     {
         "question": "Top expert opinions",
