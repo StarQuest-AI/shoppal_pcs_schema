@@ -8,6 +8,7 @@ from pydantic import BaseModel, Field
 from shoppal_pcs_schema.schemas.shoppal.data.rainforest_product_detail import \
     RainforestProductDetail
 
+
 class Source(IntEnum):
     # 未知
     UNKNOWN = 0
@@ -17,6 +18,7 @@ class Source(IntEnum):
     DATA_SERVICE = 2
     # 爬虫调用RF API获取
     SPIDER_CALL_RF_API = 3
+
 
 class ShoppalSpiderProductData(BaseModel):
     id: str  # UUID1
