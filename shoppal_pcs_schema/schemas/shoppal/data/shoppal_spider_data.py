@@ -5,8 +5,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
-from shoppal_pcs_schema.schemas.shoppal.data.crawler_result import \
-    CrawlerResult
+from shoppal_pcs_schema.schemas.shoppal.data.crawler_result import CrawlerResult
 
 
 class ContentType(str, Enum):
