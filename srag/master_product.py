@@ -6,8 +6,7 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from shoppal_pcs_schema.schemas.product_detail import (ProductDetail,
-                                                       ProductPlatForm)
+from shoppal_pcs_schema.schemas.product_detail import ProductDetail, ProductPlatForm
 
 
 class MasterProduct(BaseModel):

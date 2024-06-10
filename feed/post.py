@@ -3,6 +3,7 @@ post model
 """
 
 from enum import Enum
+
 # pylint: disable=too-few-public-methods
 from typing import Optional
 
