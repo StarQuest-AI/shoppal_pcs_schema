@@ -1,7 +1,7 @@
+import uuid
 from datetime import datetime
 from enum import IntEnum
 from typing import Optional
-from uuid import UUID
 
 from pydantic import BaseModel, Field
 
@@ -21,7 +21,7 @@ class Source(IntEnum):
 
 
 class ShoppalSpiderProductData(BaseModel):
-    id: str  # UUID1
+    id: str = uuid.uuid1().hex  # UUID1
     url: str  # URL
     host: str  # 商品所在网站的域名，比如：www.amazon.com
     product_id: Optional[str] = None  # 商品ID，比如：Amazon为ASIN: B0CBLKS51N

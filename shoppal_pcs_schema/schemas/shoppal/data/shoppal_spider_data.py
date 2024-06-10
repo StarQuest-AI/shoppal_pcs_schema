@@ -1,7 +1,7 @@
+import uuid
 from datetime import datetime
 from enum import Enum, IntEnum
 from typing import Optional
-from uuid import UUID
 
 from pydantic import BaseModel, Field
 
@@ -30,7 +30,7 @@ class Source(IntEnum):
 
 
 class ShoppalSpiderData(BaseModel):
-    id: str  # UUID1
+    id: str = uuid.uuid1().hex  # UUID1
     url: str  # URL
     content_type: Optional[ContentType] = ContentType.OTHER  # used for spider
     source: Optional[Source] = 0  # 数据来源
