@@ -377,3 +377,9 @@ class RecommendProductResults(BaseResponse):
     """
 
     products: list[RecommendProductResult]
+
+class ProductsRequest(BaseModel):
+    """
+    Products Request
+    """
+    products: list[ProductDetail]
