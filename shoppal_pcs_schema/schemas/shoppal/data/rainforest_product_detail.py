@@ -1,6 +1,10 @@
-from typing import List, Optional, Union
+from datetime import date, datetime, time
+from decimal import Decimal
+from enum import Enum
+from typing import Dict, List, Optional, Union
+from uuid import UUID
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class RequestInfo(BaseModel):
@@ -314,12 +318,6 @@ class AlsoViewed(BaseModel):
     price: Optional[Price] = None
 
 
-class RRP(BaseModel):
-    value: Optional[float] = None
-    currency: Optional[str] = None
-    raw: Optional[str] = None
-
-
 class Bundles(BaseModel):
     asin: Optional[str] = None
     title: Optional[str] = None
@@ -329,7 +327,7 @@ class Bundles(BaseModel):
     ratings_total: Optional[int] = None
     item_count: Optional[int] = None
     price: Optional[Price] = None
-    rrp: Optional[RRP] = None
+    rrp: Optional[Price] = None
 
 
 class BundleContents(BaseModel):
