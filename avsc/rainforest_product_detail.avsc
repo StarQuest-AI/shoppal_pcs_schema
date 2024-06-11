@@ -1419,6 +1419,52 @@
                                             "default": null
                                         },
                                         {
+                                            "name": "rrp",
+                                            "type": [
+                                                "null",
+                                                {
+                                                    "type": "record",
+                                                    "namespace": "RainforestProductDetail.product.buybox_winner",
+                                                    "name": "Price",
+                                                    "fields": [
+                                                        {
+                                                            "name": "symbol",
+                                                            "type": [
+                                                                "null",
+                                                                "string"
+                                                            ],
+                                                            "default": null
+                                                        },
+                                                        {
+                                                            "name": "value",
+                                                            "type": [
+                                                                "null",
+                                                                "double"
+                                                            ],
+                                                            "default": null
+                                                        },
+                                                        {
+                                                            "name": "currency",
+                                                            "type": [
+                                                                "null",
+                                                                "string"
+                                                            ],
+                                                            "default": null
+                                                        },
+                                                        {
+                                                            "name": "raw",
+                                                            "type": [
+                                                                "null",
+                                                                "string"
+                                                            ],
+                                                            "default": null
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "default": null
+                                        },
+                                        {
                                             "name": "new_offers_count",
                                             "type": [
                                                 "null",
@@ -2203,7 +2249,7 @@
                                     {
                                         "type": "record",
                                         "namespace": "RainforestProductDetail.bundles",
-                                        "name": "RRP",
+                                        "name": "Price",
                                         "fields": [
                                             {
                                                 "name": "value",
