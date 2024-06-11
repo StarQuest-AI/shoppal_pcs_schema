@@ -5,6 +5,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
+from shoppal_pcs_schema.schemas.shoppal.data.common import Source
 from shoppal_pcs_schema.schemas.shoppal.data.crawler_result import \
     CrawlerResult
 
@@ -16,17 +17,6 @@ class ContentType(str, Enum):
     AUDIO = "audio"
     VIDEO = "video"
     IMAGE = "image"
-
-
-class Source(IntEnum):
-    # 未知
-    UNKNOWN = 0
-    # 爬虫爬取页面
-    SPIDER = 1
-    # 数据服务写入
-    DATA_SERVICE = 2
-    # 爬虫调用RF API获取
-    SPIDER_CALL_RF_API = 3
 
 
 class ShoppalSpiderData(BaseModel):
