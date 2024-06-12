@@ -18,20 +18,20 @@ class ProductSearchResult(BaseModel):
         category model
         """
 
-        name: str
-        id: str
+        name: Optional[str] = None
+        id: Optional[str] = None
 
     class Price(BaseModel):
         """
         price model
         """
 
-        symbol: str
-        value: float
-        currency: str
-        raw: str
-        asin: str
-        link: str
+        symbol: Optional[str] = None
+        value: Optional[float] = None
+        currency: Optional[str] = None
+        raw: Optional[str] = None
+        asin: Optional[str] = None
+        link: Optional[str] = None
 
     position: Optional[int] = None
     title: str
