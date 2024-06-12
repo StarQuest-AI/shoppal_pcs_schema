@@ -28,3 +28,4 @@ class ShoppalSpiderData(BaseModel):
     crawl_result: Optional[CrawlerResult] = None  # 爬虫结果
     create_time: Optional[datetime] = datetime.now()  # 爬虫写入时间
     update_time: Optional[datetime] = datetime.now()  # 数据更新时间
+    task_id: Optional[int] = None  # 爬虫任务ID
