@@ -32,7 +32,7 @@ SESSION_START_QUESTIONS = [
     },
 ]
 
-DEFAULT_POST_LIST = [
+DEFAULT_TOP_POST_LIST = [
     {
         "question": "Product Brief",
         "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
@@ -53,6 +53,20 @@ DEFAULT_POST_LIST = [
         "template_id": "2",
         "image_url": "https://images.shoppal.ai/feed_image%2Ftop_export_opinions.png",
     },
+]
+DEFAULT_IMPORTANT_WEBSITE_POSTS = [
+    {
+        "question": "more information or expert in youtube",
+        "icon_url": "https://images.shoppal.ai/icon%2Fyoutube_website_icon.png",
+        "action": {
+            "router": "youtube_search",
+            "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
+        },
+        "template_id": "100",
+        "image_url": "https://images.shoppal.ai/feed_image%2Fdefault%2FColorful%20Retro%20Hippie%20Instagram.jpg",
+    }
+]
+DEFAULT_POST_LIST = [
     {
         "question": "Best choices in this category",
         "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
@@ -269,6 +283,7 @@ class SessionStartQuestionResult(BaseResponse):
         actions: Optional[list[FunctionAction]] = None
         id: Optional[str] = None
         image_url: Optional[str] = None
+        question_for_query: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
