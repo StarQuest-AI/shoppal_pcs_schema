@@ -283,6 +283,7 @@ class SessionStartQuestionResult(BaseResponse):
         actions: Optional[list[FunctionAction]] = None
         id: Optional[str] = None
         image_url: Optional[str] = None
+        question_for_query: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
