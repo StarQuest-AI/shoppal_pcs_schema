@@ -33,6 +33,7 @@ class ProductSearchResult(BaseModel):
         asin: Optional[str] = None
         link: Optional[str] = None
 
+    q: Optional[str] = None
     position: Optional[int] = None
     title: str
     price: Price
