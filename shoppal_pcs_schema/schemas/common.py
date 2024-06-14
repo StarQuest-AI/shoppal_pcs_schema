@@ -59,7 +59,7 @@ DEFAULT_IMPORTANT_WEBSITE_POSTS = [
         "question": "more information or expert in youtube",
         "icon_url": "https://images.shoppal.ai/icon%2Fyoutube_website_icon.png",
         "action": {
-            "router": "youtube_search",
+            "router": "",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "100",
