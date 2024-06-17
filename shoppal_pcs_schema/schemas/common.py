@@ -56,14 +56,14 @@ DEFAULT_TOP_POST_LIST = [
 ]
 DEFAULT_IMPORTANT_WEBSITE_POSTS = [
     {
-        "question": "more information or expert in youtube",
-        "icon_url": "https://images.shoppal.ai/icon%2Fyoutube_website_icon.png",
+        "question": "What are users saying about this product on Reddit?",
+        "icon_url": "https://images.shoppal.ai/icon%2Freddit-icon.png",
         "action": {
             "router": "",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
-        "template_id": "100",
-        "image_url": "https://images.shoppal.ai/feed_image%2Fdefault%2FColorful%20Retro%20Hippie%20Instagram.jpg",
+        "template_id": "101",
+        "image_url": "https://images.shoppal.ai/feed_image%2Freddit-cover-image.jpeg",
     }
 ]
 DEFAULT_POST_LIST = [
