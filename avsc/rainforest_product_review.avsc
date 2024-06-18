@@ -10,7 +10,7 @@
                 "null",
                 {
                     "type": "record",
-                    "namespace": "Record",
+                    "namespace": "RainforestProductReview",
                     "name": "RequestInfo",
                     "fields": [
                         {
@@ -64,7 +64,7 @@
                 "null",
                 {
                     "type": "record",
-                    "namespace": "Record",
+                    "namespace": "RainforestProductReview",
                     "name": "RequestParameters",
                     "fields": [
                         {
@@ -102,7 +102,7 @@
                 "null",
                 {
                     "type": "record",
-                    "namespace": "Record",
+                    "namespace": "RainforestProductReview",
                     "name": "RequestMetadata",
                     "fields": [
                         {
@@ -148,7 +148,7 @@
                 "null",
                 {
                     "type": "record",
-                    "namespace": "Record",
+                    "namespace": "RainforestProductReview",
                     "name": "Product",
                     "fields": [
                         {
@@ -173,7 +173,7 @@
                                 "null",
                                 {
                                     "type": "record",
-                                    "namespace": "Record.product",
+                                    "namespace": "RainforestProductReview.product",
                                     "name": "SubTitle",
                                     "fields": [
                                         {
@@ -224,7 +224,7 @@
                 "null",
                 {
                     "type": "record",
-                    "namespace": "Record",
+                    "namespace": "RainforestProductReview",
                     "name": "Summary",
                     "fields": [
                         {
@@ -273,7 +273,7 @@
                                 "null",
                                 {
                                     "type": "record",
-                                    "namespace": "Record.summary",
+                                    "namespace": "RainforestProductReview.summary",
                                     "name": "RatingBreakdown",
                                     "fields": [
                                         {
@@ -282,7 +282,7 @@
                                                 "null",
                                                 {
                                                     "type": "record",
-                                                    "namespace": "Record.summary.rating_breakdown",
+                                                    "namespace": "RainforestProductReview.summary.rating_breakdown",
                                                     "name": "FiveStar",
                                                     "fields": [
                                                         {
@@ -312,7 +312,7 @@
                                                 "null",
                                                 {
                                                     "type": "record",
-                                                    "namespace": "Record.summary.rating_breakdown",
+                                                    "namespace": "RainforestProductReview.summary.rating_breakdown",
                                                     "name": "FourStar",
                                                     "fields": [
                                                         {
@@ -342,7 +342,7 @@
                                                 "null",
                                                 {
                                                     "type": "record",
-                                                    "namespace": "Record.summary.rating_breakdown",
+                                                    "namespace": "RainforestProductReview.summary.rating_breakdown",
                                                     "name": "ThreeStar",
                                                     "fields": [
                                                         {
@@ -372,7 +372,7 @@
                                                 "null",
                                                 {
                                                     "type": "record",
-                                                    "namespace": "Record.summary.rating_breakdown",
+                                                    "namespace": "RainforestProductReview.summary.rating_breakdown",
                                                     "name": "TwoStar",
                                                     "fields": [
                                                         {
@@ -402,7 +402,7 @@
                                                 "null",
                                                 {
                                                     "type": "record",
-                                                    "namespace": "Record.summary.rating_breakdown",
+                                                    "namespace": "RainforestProductReview.summary.rating_breakdown",
                                                     "name": "OneStar",
                                                     "fields": [
                                                         {
@@ -444,7 +444,7 @@
                     "type": "array",
                     "items": {
                         "type": "record",
-                        "namespace": "Record",
+                        "namespace": "RainforestProductReview",
                         "name": "Reviews",
                         "fields": [
                             {
@@ -509,7 +509,7 @@
                                     "null",
                                     {
                                         "type": "record",
-                                        "namespace": "Record.reviews",
+                                        "namespace": "RainforestProductReview.reviews",
                                         "name": "Date",
                                         "fields": [
                                             {
@@ -539,7 +539,7 @@
                                     "null",
                                     {
                                         "type": "record",
-                                        "namespace": "Record.reviews",
+                                        "namespace": "RainforestProductReview.reviews",
                                         "name": "Profile",
                                         "fields": [
                                             {
@@ -639,7 +639,7 @@
                 "null",
                 {
                     "type": "record",
-                    "namespace": "Record",
+                    "namespace": "RainforestProductReview",
                     "name": "Pagination",
                     "fields": [
                         {
