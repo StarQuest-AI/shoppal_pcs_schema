@@ -144,6 +144,14 @@
                             "default": null
                         },
                         {
+                            "name": "title_excluding_variant_name",
+                            "type": [
+                                "null",
+                                "string"
+                            ],
+                            "default": null
+                        },
+                        {
                             "name": "variants",
                             "type": [
                                 "null",
