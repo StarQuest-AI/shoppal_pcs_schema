@@ -11,7 +11,7 @@
                 {
                     "type": "record",
                     "namespace": "Record",
-                    "name": "request_info",
+                    "name": "RequestInfo",
                     "fields": [
                         {
                             "name": "success",
@@ -65,7 +65,7 @@
                 {
                     "type": "record",
                     "namespace": "Record",
-                    "name": "request_parameters",
+                    "name": "RequestParameters",
                     "fields": [
                         {
                             "name": "amazon_domain",
@@ -103,7 +103,7 @@
                 {
                     "type": "record",
                     "namespace": "Record",
-                    "name": "request_metadata",
+                    "name": "RequestMetadata",
                     "fields": [
                         {
                             "name": "created_at",
@@ -149,7 +149,7 @@
                 {
                     "type": "record",
                     "namespace": "Record",
-                    "name": "product",
+                    "name": "Product",
                     "fields": [
                         {
                             "name": "title",
@@ -174,7 +174,7 @@
                                 {
                                     "type": "record",
                                     "namespace": "Record.product",
-                                    "name": "sub_title",
+                                    "name": "SubTitle",
                                     "fields": [
                                         {
                                             "name": "text",
@@ -225,7 +225,7 @@
                 {
                     "type": "record",
                     "namespace": "Record",
-                    "name": "summary",
+                    "name": "Summary",
                     "fields": [
                         {
                             "name": "rating",
@@ -274,7 +274,7 @@
                                 {
                                     "type": "record",
                                     "namespace": "Record.summary",
-                                    "name": "rating_breakdown",
+                                    "name": "RatingBreakdown",
                                     "fields": [
                                         {
                                             "name": "five_star",
@@ -283,7 +283,7 @@
                                                 {
                                                     "type": "record",
                                                     "namespace": "Record.summary.rating_breakdown",
-                                                    "name": "five_star",
+                                                    "name": "FiveStar",
                                                     "fields": [
                                                         {
                                                             "name": "percentage",
@@ -313,7 +313,7 @@
                                                 {
                                                     "type": "record",
                                                     "namespace": "Record.summary.rating_breakdown",
-                                                    "name": "four_star",
+                                                    "name": "FourStar",
                                                     "fields": [
                                                         {
                                                             "name": "percentage",
@@ -343,7 +343,7 @@
                                                 {
                                                     "type": "record",
                                                     "namespace": "Record.summary.rating_breakdown",
-                                                    "name": "three_star",
+                                                    "name": "ThreeStar",
                                                     "fields": [
                                                         {
                                                             "name": "percentage",
@@ -373,7 +373,7 @@
                                                 {
                                                     "type": "record",
                                                     "namespace": "Record.summary.rating_breakdown",
-                                                    "name": "two_star",
+                                                    "name": "TwoStar",
                                                     "fields": [
                                                         {
                                                             "name": "percentage",
@@ -403,7 +403,7 @@
                                                 {
                                                     "type": "record",
                                                     "namespace": "Record.summary.rating_breakdown",
-                                                    "name": "one_star",
+                                                    "name": "OneStar",
                                                     "fields": [
                                                         {
                                                             "name": "percentage",
@@ -445,7 +445,7 @@
                     "items": {
                         "type": "record",
                         "namespace": "Record",
-                        "name": "reviews",
+                        "name": "Reviews",
                         "fields": [
                             {
                                 "name": "id",
@@ -510,7 +510,7 @@
                                     {
                                         "type": "record",
                                         "namespace": "Record.reviews",
-                                        "name": "date",
+                                        "name": "Date",
                                         "fields": [
                                             {
                                                 "name": "raw",
@@ -540,7 +540,7 @@
                                     {
                                         "type": "record",
                                         "namespace": "Record.reviews",
-                                        "name": "profile",
+                                        "name": "Profile",
                                         "fields": [
                                             {
                                                 "name": "name",
@@ -640,7 +640,7 @@
                 {
                     "type": "record",
                     "namespace": "Record",
-                    "name": "pagination",
+                    "name": "Pagination",
                     "fields": [
                         {
                             "name": "ratings_total_filtered",
