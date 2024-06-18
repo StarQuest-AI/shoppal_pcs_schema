@@ -156,6 +156,7 @@ class CommonSearchProductResult(product_detail.ProductBase):
     rich_snippet: Optional[dict] = None
     content: Optional[str] = None
     content_summary: Optional[str] = None
+    images: Optional[list[str]] = None
     # KV for product detail TODO
     # rate
     # price
