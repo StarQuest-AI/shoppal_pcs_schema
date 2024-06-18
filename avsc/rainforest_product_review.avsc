@@ -1,0 +1,421 @@
+{
+    "namespace": "shoppal.data",
+    "type": "record",
+    "name": "RainforestProductReview",
+    "doc": "Schema for Rainforest product review api result",
+    "fields": [
+        {
+            "name": "request_info",
+            "type": {
+                "type": "record",
+                "namespace": "Record",
+                "name": "request_info",
+                "fields": [
+                    {
+                        "name": "success",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "credits_used",
+                        "type": "long"
+                    },
+                    {
+                        "name": "credits_used_this_request",
+                        "type": "long"
+                    },
+                    {
+                        "name": "credits_remaining",
+                        "type": "long"
+                    },
+                    {
+                        "name": "credits_reset_at",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "request_parameters",
+            "type": {
+                "type": "record",
+                "namespace": "Record",
+                "name": "request_parameters",
+                "fields": [
+                    {
+                        "name": "amazon_domain",
+                        "type": "string"
+                    },
+                    {
+                        "name": "asin",
+                        "type": "string"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "request_metadata",
+            "type": {
+                "type": "record",
+                "namespace": "Record",
+                "name": "request_metadata",
+                "fields": [
+                    {
+                        "name": "created_at",
+                        "type": "string"
+                    },
+                    {
+                        "name": "processed_at",
+                        "type": "string"
+                    },
+                    {
+                        "name": "total_time_taken",
+                        "type": "double"
+                    },
+                    {
+                        "name": "amazon_url",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "product",
+            "type": {
+                "type": "record",
+                "namespace": "Record",
+                "name": "product",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "string"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string"
+                    },
+                    {
+                        "name": "sub_title",
+                        "type": {
+                            "type": "record",
+                            "namespace": "Record.product",
+                            "name": "sub_title",
+                            "fields": [
+                                {
+                                    "name": "text",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "link",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "name": "asin",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "summary",
+            "type": {
+                "type": "record",
+                "namespace": "Record",
+                "name": "summary",
+                "fields": [
+                    {
+                        "name": "rating",
+                        "type": "double"
+                    },
+                    {
+                        "name": "ratings_total",
+                        "type": "long"
+                    },
+                    {
+                        "name": "ratings_total_filtered",
+                        "type": "long"
+                    },
+                    {
+                        "name": "reviews_total_filtered",
+                        "type": "long"
+                    },
+                    {
+                        "name": "reviews_total",
+                        "type": "long"
+                    },
+                    {
+                        "name": "rating_breakdown",
+                        "type": {
+                            "type": "record",
+                            "namespace": "Record.summary",
+                            "name": "rating_breakdown",
+                            "fields": [
+                                {
+                                    "name": "five_star",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "Record.summary.rating_breakdown",
+                                        "name": "five_star",
+                                        "fields": [
+                                            {
+                                                "name": "percentage",
+                                                "type": "long"
+                                            },
+                                            {
+                                                "name": "count",
+                                                "type": "long"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "four_star",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "Record.summary.rating_breakdown",
+                                        "name": "four_star",
+                                        "fields": [
+                                            {
+                                                "name": "percentage",
+                                                "type": "long"
+                                            },
+                                            {
+                                                "name": "count",
+                                                "type": "long"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "three_star",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "Record.summary.rating_breakdown",
+                                        "name": "three_star",
+                                        "fields": [
+                                            {
+                                                "name": "percentage",
+                                                "type": "long"
+                                            },
+                                            {
+                                                "name": "count",
+                                                "type": "long"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "two_star",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "Record.summary.rating_breakdown",
+                                        "name": "two_star",
+                                        "fields": [
+                                            {
+                                                "name": "percentage",
+                                                "type": "long"
+                                            },
+                                            {
+                                                "name": "count",
+                                                "type": "long"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "one_star",
+                                    "type": {
+                                        "type": "record",
+                                        "namespace": "Record.summary.rating_breakdown",
+                                        "name": "one_star",
+                                        "fields": [
+                                            {
+                                                "name": "percentage",
+                                                "type": "long"
+                                            },
+                                            {
+                                                "name": "count",
+                                                "type": "long"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "reviews",
+            "type": {
+                "type": "array",
+                "items": {
+                    "type": "record",
+                    "namespace": "Record",
+                    "name": "reviews",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "type": "string"
+                        },
+                        {
+                            "name": "title",
+                            "type": "string"
+                        },
+                        {
+                            "name": "body",
+                            "type": "string"
+                        },
+                        {
+                            "name": "asin",
+                            "type": "string"
+                        },
+                        {
+                            "name": "body_html",
+                            "type": "string"
+                        },
+                        {
+                            "name": "link",
+                            "type": "string"
+                        },
+                        {
+                            "name": "rating",
+                            "type": "long"
+                        },
+                        {
+                            "name": "date",
+                            "type": {
+                                "type": "record",
+                                "namespace": "Record.reviews",
+                                "name": "date",
+                                "fields": [
+                                    {
+                                        "name": "raw",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "utc",
+                                        "type": "string"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "profile",
+                            "type": {
+                                "type": "record",
+                                "namespace": "Record.reviews",
+                                "name": "profile",
+                                "fields": [
+                                    {
+                                        "name": "name",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "link",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "id",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "image",
+                                        "type": [
+                                            "null",
+                                            "string"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "vine_program",
+                            "type": "boolean"
+                        },
+                        {
+                            "name": "verified_purchase",
+                            "type": "boolean"
+                        },
+                        {
+                            "name": "review_country",
+                            "type": "string"
+                        },
+                        {
+                            "name": "is_global_review",
+                            "type": "boolean"
+                        },
+                        {
+                            "name": "position",
+                            "type": "long"
+                        },
+                        {
+                            "name": "helpful_votes",
+                            "type": [
+                                "null",
+                                "long"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "pagination",
+            "type": {
+                "type": "record",
+                "namespace": "Record",
+                "name": "pagination",
+                "fields": [
+                    {
+                        "name": "ratings_total_filtered",
+                        "type": "long"
+                    },
+                    {
+                        "name": "reviews_total_filtered",
+                        "type": "long"
+                    },
+                    {
+                        "name": "reviews_total",
+                        "type": "long"
+                    },
+                    {
+                        "name": "total_results",
+                        "type": "long"
+                    },
+                    {
+                        "name": "total_pages",
+                        "type": "long"
+                    },
+                    {
+                        "name": "message",
+                        "type": "string"
+                    },
+                    {
+                        "name": "current_page",
+                        "type": "long"
+                    },
+                    {
+                        "name": "start",
+                        "type": "long"
+                    },
+                    {
+                        "name": "end",
+                        "type": "long"
+                    }
+                ]
+            }
+        }
+    ]
+}
