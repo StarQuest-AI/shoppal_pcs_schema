@@ -8,7 +8,7 @@ from uuid import UUID
 from pydantic import BaseModel, Field
 
 
-class request_info(BaseModel):
+class RequestInfo(BaseModel):
     success: Optional[bool] = None
     credits_used: Optional[int] = None
     credits_used_this_request: Optional[int] = None
@@ -16,87 +16,87 @@ class request_info(BaseModel):
     credits_reset_at: Optional[str] = None
 
 
-class request_parameters(BaseModel):
+class RequestParameters(BaseModel):
     amazon_domain: Optional[str] = None
     asin: Optional[str] = None
     type: Optional[str] = None
 
 
-class request_metadata(BaseModel):
+class RequestMetadata(BaseModel):
     created_at: Optional[str] = None
     processed_at: Optional[str] = None
     total_time_taken: Optional[float] = None
     amazon_url: Optional[str] = None
 
 
-class sub_title(BaseModel):
+class SubTitle(BaseModel):
     text: Optional[str] = None
     link: Optional[str] = None
 
 
-class product(BaseModel):
+class Product(BaseModel):
     title: Optional[str] = None
     link: Optional[str] = None
-    sub_title: Optional[sub_title] = None
+    sub_title: Optional[SubTitle] = None
     image: Optional[str] = None
     asin: Optional[str] = None
 
 
-class five_star(BaseModel):
+class FiveStar(BaseModel):
     percentage: Optional[int] = None
     count: Optional[int] = None
 
 
-class four_star(BaseModel):
+class FourStar(BaseModel):
     percentage: Optional[int] = None
     count: Optional[int] = None
 
 
-class three_star(BaseModel):
+class ThreeStar(BaseModel):
     percentage: Optional[int] = None
     count: Optional[int] = None
 
 
-class two_star(BaseModel):
+class TwoStar(BaseModel):
     percentage: Optional[int] = None
     count: Optional[int] = None
 
 
-class one_star(BaseModel):
+class OneStar(BaseModel):
     percentage: Optional[int] = None
     count: Optional[int] = None
 
 
-class rating_breakdown(BaseModel):
-    five_star: Optional[five_star] = None
-    four_star: Optional[four_star] = None
-    three_star: Optional[three_star] = None
-    two_star: Optional[two_star] = None
-    one_star: Optional[one_star] = None
+class RatingBreakdown(BaseModel):
+    five_star: Optional[FiveStar] = None
+    four_star: Optional[FourStar] = None
+    three_star: Optional[ThreeStar] = None
+    two_star: Optional[TwoStar] = None
+    one_star: Optional[OneStar] = None
 
 
-class summary(BaseModel):
+class Summary(BaseModel):
     rating: Optional[float] = None
     ratings_total: Optional[int] = None
     ratings_total_filtered: Optional[int] = None
     reviews_total_filtered: Optional[int] = None
     reviews_total: Optional[int] = None
-    rating_breakdown: Optional[rating_breakdown] = None
+    rating_breakdown: Optional[RatingBreakdown] = None
 
 
-class date(BaseModel):
+class Date(BaseModel):
     raw: Optional[str] = None
     utc: Optional[str] = None
 
 
-class profile(BaseModel):
+class Profile(BaseModel):
     name: Optional[str] = None
     link: Optional[str] = None
     id: Optional[str] = None
     image: Optional[str] = None
 
 
-class reviews(BaseModel):
+class Reviews(BaseModel):
     id: Optional[str] = None
     title: Optional[str] = None
     body: Optional[str] = None
@@ -104,8 +104,8 @@ class reviews(BaseModel):
     body_html: Optional[str] = None
     link: Optional[str] = None
     rating: Optional[int] = None
-    date: Optional[date] = None
-    profile: Optional[profile] = None
+    date: Optional[Date] = None
+    profile: Optional[Profile] = None
     vine_program: Optional[bool] = None
     verified_purchase: Optional[bool] = None
     review_country: Optional[str] = None
@@ -114,7 +114,7 @@ class reviews(BaseModel):
     helpful_votes: Optional[int] = None
 
 
-class pagination(BaseModel):
+class Pagination(BaseModel):
     ratings_total_filtered: Optional[int] = None
     reviews_total_filtered: Optional[int] = None
     reviews_total: Optional[int] = None
@@ -127,10 +127,10 @@ class pagination(BaseModel):
 
 
 class RainforestProductReview(BaseModel):
-    request_info: Optional[request_info] = None
-    request_parameters: Optional[request_parameters] = None
-    request_metadata: Optional[request_metadata] = None
-    product: Optional[product] = None
-    summary: Optional[summary] = None
-    reviews: Optional[List[reviews]] = None
-    pagination: Optional[pagination] = None
+    request_info: Optional[RequestInfo] = None
+    request_parameters: Optional[RequestParameters] = None
+    request_metadata: Optional[RequestMetadata] = None
+    product: Optional[Product] = None
+    summary: Optional[Summary] = None
+    reviews: Optional[List[Reviews]] = None
+    pagination: Optional[Pagination] = None
