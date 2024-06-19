@@ -249,6 +249,7 @@ class Attributes(BaseModel):
 
 class Product(BaseModel):
     title: Optional[str] = None
+    title_excluding_variant_name: Optional[str] = None
     variants: Optional[List[Variants]] = None
     keywords: Optional[str] = None
     keywords_list: Optional[List[str]] = None
