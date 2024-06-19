@@ -1,11 +1,12 @@
+import uuid
 from datetime import date, datetime, time
 from decimal import Decimal
 from enum import Enum
 from typing import Dict, List, Optional, Union
 from uuid import UUID
-import uuid
 
 from pydantic import BaseModel, Field
+
 from shoppal_pcs_schema.schemas.shoppal.data.common import Source
 
 
@@ -148,7 +149,9 @@ class ShoppalSpiderProductReviewData(BaseModel):
     raw_result: Optional[str] = (
         None  # 原始抓取结果，如果为Rainforest则为API则为Response的json结果，如果为自研爬虫则为原始html
     )
-    crawl_result: Optional[RainforestProductReview] = None  # 商品review解析结果，存储为JSON格式，遵循RainForest的数据模型
+    crawl_result: Optional[RainforestProductReview] = (
+        None  # 商品review解析结果，存储为JSON格式，遵循RainForest的数据模型
+    )
     create_time: Optional[datetime] = datetime.now()  # 爬虫写入时间
     update_time: Optional[datetime] = datetime.now()  # 数据更新时间
     task_id: Optional[int] = None  # 爬虫任务ID
