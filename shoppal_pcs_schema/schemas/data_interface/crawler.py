@@ -3,7 +3,8 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from shoppal_pcs_schema.schemas.shoppal.data.rainforest_product_review import ShoppalSpiderProductReviewData
+from shoppal_pcs_schema.schemas.shoppal.data.rainforest_product_review import \
+    ShoppalSpiderProductReviewData
 from shoppal_pcs_schema.schemas.shoppal.data.shoppal_spider_data import (
     ContentType, ShoppalSpiderData)
 from shoppal_pcs_schema.schemas.shoppal.data.shoppal_spider_product_data import \
