@@ -13,6 +13,8 @@ from shoppal_pcs_schema.schemas.common_search_result import (
 from shoppal_pcs_schema.schemas.product_detail import ProductDetail
 from shoppal_pcs_schema.schemas.video_detail import VideoBaseInfos
 
+DEFAULT_ICON = "https://images.shoppal.ai/icon%2Ffavie-icon.png"
+
 SESSION_START_QUESTIONS = [
     {
         "question": "Top expert opinions",
@@ -35,7 +37,7 @@ SESSION_START_QUESTIONS = [
 DEFAULT_TOP_POST_LIST = [
     {
         "question": "Product Brief",
-        "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
+        "icon_url": DEFAULT_ICON,
         "action": {
             "router": "shoppal_product_brief",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
@@ -45,7 +47,7 @@ DEFAULT_TOP_POST_LIST = [
     },
     {
         "question": "Top expert opinions",
-        "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
+        "icon_url": DEFAULT_ICON,
         "action": {
             "router": "reviews_feed",
             "request_type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
@@ -69,7 +71,7 @@ DEFAULT_IMPORTANT_WEBSITE_POSTS = [
 DEFAULT_POST_LIST = [
     {
         "question": "Best choices in this category",
-        "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
+        "icon_url": DEFAULT_ICON,
         "action": {
             "router": "product_recommendation",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
@@ -79,7 +81,7 @@ DEFAULT_POST_LIST = [
     },
     {
         "question": "How to choose",
-        "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
+        "icon_url": DEFAULT_ICON,
         "action": {
             "router": "shoppal_how_to_choose",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
@@ -89,7 +91,7 @@ DEFAULT_POST_LIST = [
     },
     {
         "question": "Best product at each price range",
-        "icon_url": "https://images.shoppal.ai/icon%2Fshoppal-logo.png",
+        "icon_url": DEFAULT_ICON,
         "action": {
             "router": "shoppal_price_range",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
