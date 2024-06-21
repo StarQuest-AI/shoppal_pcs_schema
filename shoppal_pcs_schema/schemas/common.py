@@ -14,6 +14,7 @@ from shoppal_pcs_schema.schemas.product_detail import ProductDetail
 from shoppal_pcs_schema.schemas.video_detail import VideoBaseInfos
 
 DEFAULT_ICON = "https://images.shoppal.ai/icon%2Ffavie-icon.png"
+REDDIT_ICON = "https://images.shoppal.ai/icon%2Freddit-icon.png"
 
 SESSION_START_QUESTIONS = [
     {
@@ -59,7 +60,7 @@ DEFAULT_TOP_POST_LIST = [
 DEFAULT_IMPORTANT_WEBSITE_POSTS = [
     {
         "question": "What are users saying about this product on Reddit?",
-        "icon_url": "https://images.shoppal.ai/icon%2Freddit-icon.png",
+        "icon_url": REDDIT_ICON,
         "action": {
             "router": "",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
