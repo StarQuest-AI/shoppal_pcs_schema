@@ -18,7 +18,7 @@ REDDIT_ICON = "https://images.shoppal.ai/icon%2Freddit-icon.png"
 
 SESSION_START_QUESTIONS = [
     {
-        "question": "Top expert opinions",
+        "question": "Uncover top expert insights on this product",
         "icon_url": "https://copilot.buildagi.dev/icon%2Fworth.png",
         "action": {
             "router": "reviews_feed",
@@ -37,7 +37,7 @@ SESSION_START_QUESTIONS = [
 
 DEFAULT_TOP_POST_LIST = [
     {
-        "question": "Product Brief",
+        "question": "Get a quick overview of this product",
         "icon_url": DEFAULT_ICON,
         "action": {
             "router": "shoppal_product_brief",
@@ -47,7 +47,7 @@ DEFAULT_TOP_POST_LIST = [
         "image_url": "https://images.shoppal.ai/feed_image%2Fquick_overview.png",
     },
     {
-        "question": "Top expert opinions",
+        "question": "Uncover top expert insights on this product",
         "icon_url": DEFAULT_ICON,
         "action": {
             "router": "reviews_feed",
@@ -71,7 +71,7 @@ DEFAULT_IMPORTANT_WEBSITE_POSTS = [
 ]
 DEFAULT_POST_LIST = [
     {
-        "question": "Best choices in this category",
+        "question": "Discover the best choices in this category",
         "icon_url": DEFAULT_ICON,
         "action": {
             "router": "product_recommendation",
@@ -91,7 +91,7 @@ DEFAULT_POST_LIST = [
         "image_url": "https://images.shoppal.ai/feed_image%2Fhow_to_choose.png",
     },
     {
-        "question": "Best product at each price range",
+        "question": "Find the representative product product at each price range",
         "icon_url": DEFAULT_ICON,
         "action": {
             "router": "shoppal_price_range",
