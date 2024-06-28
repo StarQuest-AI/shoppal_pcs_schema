@@ -81,7 +81,7 @@ DEFAULT_POST_LIST = [
         "image_url": "https://images.shoppal.ai/feed_image%2Fother_popular_choices.png",
     },
     {
-        "question": "How to choose",
+        "question": "Key factors for choosing the product that's best for you",
         "icon_url": DEFAULT_ICON,
         "action": {
             "router": "shoppal_how_to_choose",
