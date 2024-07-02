@@ -42,20 +42,3 @@ def is_encoded_html(encoded_html_string):
         return True
     except (base64.binascii.Error, gzip.BadGzipFile):
         return False
-
-
-# 示例用法
-html_string = "<html><body><h1>Hello, World!</h1></body></html>"
-encoded_html_string = compress_and_encode_html(html_string)
-print(f"Encoded HTML: {encoded_html_string}")
-
-is_encoded = is_encoded_html(html_string)
-print(f"Is encoded: {is_encoded}")
-
-# 判断是否是编码过的字符串
-is_encoded = is_encoded_html(encoded_html_string)
-print(f"Is encoded: {is_encoded}")
-
-# 解码和解压缩
-decoded_html_string = decode_and_decompress_html(encoded_html_string)
-print(f"Decoded HTML: {decoded_html_string}")
