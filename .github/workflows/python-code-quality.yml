@@ -19,6 +19,7 @@ jobs:
       with:
         python-version: '3.10'
         cache: 'pip' # caching pip dependencies
+    - run: pip install pytest
     - name: Run unit tests
       id: run_unit_tests
       run: |
