@@ -1,7 +1,10 @@
-import unittest
 import base64
+import unittest
 
-from shoppal_pcs_schema.utils.log_util import compress_and_encode_html, decode_and_decompress_html, is_encoded_html
+from shoppal_pcs_schema.utils.log_util import (compress_and_encode_html,
+                                               decode_and_decompress_html,
+                                               is_encoded_html)
+
 
 class TestHtmlEncoding(unittest.TestCase):
     def test_compress_and_encode_html(self):
@@ -32,10 +35,11 @@ class TestHtmlEncoding(unittest.TestCase):
         # 测试无效的Base64字符串
         invalid_base64_string = "invalid_base64_string"
         self.assertFalse(is_encoded_html(invalid_base64_string))
-        
+
         # 测试有效的Base64但无效的gzip数据
-        valid_base64_invalid_gzip = base64.b64encode(b'invalid gzip data').decode('utf-8')
+        valid_base64_invalid_gzip = base64.b64encode(b"invalid gzip data").decode("utf-8")
         self.assertFalse(is_encoded_html(valid_base64_invalid_gzip))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
