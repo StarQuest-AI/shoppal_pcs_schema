@@ -13,8 +13,8 @@ from shoppal_pcs_schema.schemas.common_search_result import (
 from shoppal_pcs_schema.schemas.product_detail import ProductDetail
 from shoppal_pcs_schema.schemas.video_detail import VideoBaseInfos
 
-DEFAULT_ICON = "https://images.shoppal.ai/icon%2Ffavie-icon.png"
-REDDIT_ICON = "https://images.shoppal.ai/icon%2Freddit-icon.png"
+DEFAULT_ICON = "https://img.favie.ai/deal/favie-icon.png"
+REDDIT_ICON = "https://img.favie.ai/deal/reddit-icon.png"
 
 SESSION_START_QUESTIONS = [
     {
@@ -44,7 +44,7 @@ DEFAULT_TOP_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "6",
-        "image_url": "https://images.shoppal.ai/feed_image%2Fquick_overview.png",
+        "image_url": "https://img.favie.ai/deal/quick_overview.png",
     },
     {
         "question": "Uncover top expert insights on this product",
@@ -54,7 +54,7 @@ DEFAULT_TOP_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.ReviewRequest",
         },
         "template_id": "2",
-        "image_url": "https://images.shoppal.ai/feed_image%2Ftop_export_opinions.png",
+        "image_url": "https://img.favie.ai/deal/top_export_opinions.png",
     },
 ]
 DEFAULT_IMPORTANT_WEBSITE_POSTS = [
@@ -66,7 +66,7 @@ DEFAULT_IMPORTANT_WEBSITE_POSTS = [
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "101",
-        "image_url": "https://images.shoppal.ai/feed_image%2Freddit-cover-image.jpeg",
+        "image_url": "https://img.favie.ai/deal/reddit-cover-image.jpeg",
     }
 ]
 DEFAULT_POST_LIST = [
@@ -78,7 +78,7 @@ DEFAULT_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "3",
-        "image_url": "https://images.shoppal.ai/feed_image%2Fother_popular_choices.png",
+        "image_url": "https://img.favie.ai/deal/other_popular_choices.png",
     },
     {
         "question": "Key factors for choosing the product that's best for you",
@@ -88,32 +88,32 @@ DEFAULT_POST_LIST = [
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "4",
-        "image_url": "https://images.shoppal.ai/feed_image%2Fhow_to_choose.png",
+        "image_url": "https://img.favie.ai/deal/how_to_choose.png",
     },
     {
-        "question": "Find the representative product product at each price range",
+        "question": "Find the representative product at each price range",
         "icon_url": DEFAULT_ICON,
         "action": {
             "router": "shoppal_price_range",
             "request_type": "shoppal_pcs_schema.schemas.common.RecommendProductRequest",
         },
         "template_id": "5",
-        "image_url": "https://images.shoppal.ai/feed_image%2Fbest_choice_at_each_price.png",
+        "image_url": "https://img.favie.ai/deal/best_choice_at_each_price.png",
     },
 ]
 
 POST_DEFAULT_COVER_IMAGES = [
-    "https://images.shoppal.ai/feed_image%2Fdefault%2FAnti-valentines%20Facebook%20Post.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2FBeige%20Brown%20Add%20to%20Cart%20Instagram.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-181423.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-175724.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2Fscreenshot-20240524-175232.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2FRetro%20Gradient%20Quote%20Instagram.jpeg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2FRetro%20Cupcake%20Shop%20Quote.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2FPowder%20Blue%20Instagram%20Post.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2FEasy%20Hopping%20Logo.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2FColorful%20Retro%20Hippie%20Instagram.jpg",
-    "https://images.shoppal.ai/feed_image%2Fdefault%2FBlack%20Friday%20Minicart%20Facebook%20Post.jpg",
+    "https://img.favie.ai/deal/Anti-valentines%20Facebook%20Post.jpg",
+    "https://img.favie.ai/deal/Beige%20Brown%20Add%20to%20Cart%20Instagram.jpg",
+    "https://img.favie.ai/deal/screenshot-20240524-181423.jpg",
+    "https://img.favie.ai/deal/screenshot-20240524-175724.jpg",
+    "https://img.favie.ai/deal/screenshot-20240524-175232.jpg",
+    "https://img.favie.ai/deal/Retro%20Gradient%20Quote%20Instagram.jpeg",
+    "https://img.favie.ai/deal/Retro%20Cupcake%20Shop%20Quote.jpg",
+    "https://img.favie.ai/deal/Powder%20Blue%20Instagram%20Post.jpg",
+    "https://img.favie.ai/deal/Easy%20Hopping%20Logo.jpg",
+    "https://img.favie.ai/deal/Colorful%20Retro%20Hippie%20Instagram.jpg",
+    "https://img.favie.ai/deal/Black Friday Minicart Facebook Post.jpg",
 ]
 
 

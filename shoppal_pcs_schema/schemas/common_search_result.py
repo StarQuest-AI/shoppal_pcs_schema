@@ -9,16 +9,16 @@ from pydantic import BaseModel
 
 from shoppal_pcs_schema.schemas import product_detail
 
-DEFAULT_WEBSITE_ICON = "https://images.shoppal.ai/icon%2Flogo%E5%9C%B0%E7%90%83icon.png"
-DEFAULT_YOUTUBE_ICON = "https://images.shoppal.ai/icon%2Fyoutube_website_icon.png"
+DEFAULT_WEBSITE_ICON = "https://img.favie.ai/deal/logo%E5%9C%B0%E7%90%83icon.png"
+DEFAULT_YOUTUBE_ICON = "https://img.favie.ai/deal/youtube_website_icon.png"
 DEFAULT_WEBSITE_ICONS = [
-    "https://images.shoppal.ai/icon%2Flogo%E5%9C%B0%E7%90%83icon.png",
-    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F1.png",
-    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F2.png",
-    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F3.png",
-    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F4.png",
-    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F5.png",
-    "https://images.shoppal.ai/icon%2Fdefault-website-icon%2F6.png",
+    "https://img.favie.ai/deal/logo%E5%9C%B0%E7%90%83icon.png",
+    "https://img.favie.ai/deal/1.png",
+    "https://img.favie.ai/deal/2.png",
+    "https://img.favie.ai/deal/3.png",
+    "https://img.favie.ai/deal/4.png",
+    "https://img.favie.ai/deal/5.png",
+    "https://img.favie.ai/deal/6.png",
 ]
 
 
