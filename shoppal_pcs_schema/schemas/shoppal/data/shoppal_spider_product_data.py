@@ -22,6 +22,7 @@ class ShoppalSpiderProductData(BaseModel):
         None  # 原始抓取结果，如果为Rainforest则为API则为Response的json结果，如果为自研爬虫则为原始html
     )
     crawl_result: Optional[RainforestProductDetail] = None  # 商品解析结果，存储为JSON格式，遵循RainForest的数据模型
+    mission: Optional[str] = None  # 业务上的任务概念
     create_time: Optional[datetime] = datetime.now()  # 爬虫写入时间
     update_time: Optional[datetime] = datetime.now()  # 数据更新时间
     task_id: Optional[int] = None  # 爬虫任务ID
