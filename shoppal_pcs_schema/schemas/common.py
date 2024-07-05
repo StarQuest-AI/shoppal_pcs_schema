@@ -287,6 +287,7 @@ class SessionStartQuestionResult(BaseResponse):
         id: Optional[str] = None
         image_url: Optional[str] = None
         question_for_query: Optional[str] = None
+        source_name: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
