@@ -12928,5 +12928,5 @@ DEFAULT_FAVICON = {
     "xpmetaldetectors.com": "https://www.xpmetaldetectors.com/favicon.ico",
     "static.rad.eu": "https://rad.eu/favicon.ico",
     "support.trueipsolutions.com": "https://trueipsolutions.com/favicon.ico",
-    "tv-sound-monitors.philips.com": "https://www.philips.com/favicon.ico"
+    "tv-sound-monitors.philips.com": "https://www.philips.com/favicon.ico",
 }
