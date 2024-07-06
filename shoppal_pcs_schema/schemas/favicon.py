@@ -12510,6 +12510,7 @@ DEFAULT_FAVICON = {
     "o2.co.uk": "https://www.o2.co.uk/favicon.ico",
     "verywellmind.com": "https://www.verywellmind.com/favicon.ico",
     "eu.community.samsung.com": "https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/Favicon.png",
+    "samsung.com": "https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/Favicon.png",
     "sonycentresdirect.co.uk": "https://sonycentresdirect.co.uk/favicon.ico",
     "headset-store.co.uk": "https://www.headset-store.co.uk/favicon.ico",
     "aria2.github.io": "https://github.io/favicon.ico",
