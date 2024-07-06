@@ -12139,5 +12139,5 @@ DEFAULT_FAVICON = {
     "ronjonsurfshop.com": "https://ronjonsurfshop.com/favicon.ico",
     "ultrabeauty.shop": "https://ultrabeauty.shop/favicon.ico",
     "scanxsecurity.com": "https://scanxsecurity.com/favicon.ico",
-    "airserver.com": "https://airserver.com/favicon.ico"
+    "airserver.com": "https://airserver.com/favicon.ico",
 }
