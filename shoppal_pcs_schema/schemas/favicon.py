@@ -3650,7 +3650,7 @@ DEFAULT_FAVICON = {
     "peaktox.com": "https://www.peaktox.com/favicon.ico",
     "fanshop.axs.com": "https://axs.com/favicon.ico",
     "thedrive.com": "https://www.thedrive.com/favicon.ico",
-    "pcworld.com": "https://www.pcworld.com/favicon.ico",
+    "pcworld.com": "https://www.pcworld.com/wp-content/uploads/2021/09/cropped-cropped-PCWorld-Site-Icon.png?w=32",
     "myevergreenonline.com": "https://www.myevergreenonline.com/favicon.ico",
     "smallpdf.com": "https://smallpdf.com/favicon.ico",
     "ellos.us": "https://www.ellos.us/favicon.ico",
