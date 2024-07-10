@@ -180,6 +180,7 @@ class ProductBase(BaseModel):
     id: Optional[str] = None  # "asin" for amazon
     title: str
     link: Optional[str] = None
+    short_title: Optional[str] = None
 
 
 class ProductDetail(ProductBase):

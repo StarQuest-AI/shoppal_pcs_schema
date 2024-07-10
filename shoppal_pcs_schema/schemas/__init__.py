@@ -1,6 +1,7 @@
 from shoppal_pcs_schema.schemas.common import *
 from shoppal_pcs_schema.schemas.common_search_result import *
 from shoppal_pcs_schema.schemas.favicon import *
+from shoppal_pcs_schema.schemas.middle_step import *
 from shoppal_pcs_schema.schemas.product_detail import *
 from shoppal_pcs_schema.schemas.product_search_result import *
 from shoppal_pcs_schema.schemas.search_request import *
