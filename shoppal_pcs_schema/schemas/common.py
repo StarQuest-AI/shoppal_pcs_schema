@@ -118,7 +118,6 @@ POST_DEFAULT_COVER_IMAGES = [
 
 
 WEBPAGE_EXCLUDE_SITES = [
-    "amazon.*",
     "ebay.com",
     "temu.com",
     "shein.com",
@@ -137,7 +136,6 @@ WEBPAGE_EXCLUDE_SITES = [
     "taobao.com",
     "jd.com",
     "pinduoduo.com",
-    "youtube.com",
 ]
 
 
