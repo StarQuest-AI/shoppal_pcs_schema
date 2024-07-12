@@ -287,7 +287,7 @@ class SessionStartQuestionResult(BaseResponse):
         question_for_query: Optional[str] = None
         source_name: Optional[str] = None
         show_question: Optional[str] = None
-        search_query: Optional[str] = None
+        llm_query: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
