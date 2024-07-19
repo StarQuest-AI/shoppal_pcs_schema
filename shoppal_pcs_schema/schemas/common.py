@@ -118,7 +118,6 @@ POST_DEFAULT_COVER_IMAGES = [
 
 
 WEBPAGE_EXCLUDE_SITES = [
-    "amazon.*",
     "ebay.com",
     "temu.com",
     "shein.com",
@@ -137,7 +136,6 @@ WEBPAGE_EXCLUDE_SITES = [
     "taobao.com",
     "jd.com",
     "pinduoduo.com",
-    "youtube.com",
 ]
 
 
@@ -288,6 +286,8 @@ class SessionStartQuestionResult(BaseResponse):
         image_url: Optional[str] = None
         question_for_query: Optional[str] = None
         source_name: Optional[str] = None
+        show_question: Optional[str] = None
+        llm_query: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
