@@ -11136,7 +11136,7 @@ DEFAULT_FAVICON = {
     "bezalel.co": "https://bezalel.co/cdn/shop/t/71/assets/android-icon-192x192.png?v=56873952323300000201577985574",
     "boucleme.us": "https://boucleme.us/cdn/shop/files/B_logo_favicon.png?crop=center&height=32&v=1666787269&width=32",
     "quality-supplements.org": "https://api.crawlbase.com/themes/qualitysupp/favicon.ico",
-    "craftworld.com": "/cms/assets/favicon/favicon-196x196.png?v=acd0221483\"",
+    "craftworld.com": '/cms/assets/favicon/favicon-196x196.png?v=acd0221483"',
     "corddepot.com": "https://corddepot.com/wp-content/uploads/2013/08/CordFav.png",
     "truestorypr.co": "https://truestorypr.co/wp-content/uploads/2023/01/cropped-TSPR-Favicon-BM-512x512-1-32x32.png",
     "fireworks-mx-mac.updatestar.com": "https://www.updatestar.com/favicon.ico",
@@ -19628,7 +19628,7 @@ DEFAULT_FAVICON = {
     "fashiongo.tenereteam.com": "https://www.tenereteam.com/favicon.ico",
     "gtheos.com": "https://static.wixstatic.com/media/50c6cd_68c2c4a144c646678ffd77d2fea02fb0%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/50c6cd_68c2c4a144c646678ffd77d2fea02fb0%7Emv2.png",
     "elle.com": "https://api.crawlbase.com/_assets/design-tokens/elle/static/images/favicon.bf092aa.ico",
-    "adaptivetechsolutions.com": "https://cdn11.bigcommerce.com/s-lkrsufl0/product_images/favicon-32x32.png?t=1553577736\"",
+    "adaptivetechsolutions.com": 'https://cdn11.bigcommerce.com/s-lkrsufl0/product_images/favicon-32x32.png?t=1553577736"',
     "ifamily.vip": "https://ifamily.vip/wp-content/uploads/2022/01/IFAMILY-05.png",
     "hangersdirect.com": "https://www.hangersdirect.com/media/favicon/stores/3/200200.jpg",
     "dkrdesignlab.com": "https://dkrdesignlab.com/cdn/shop/files/dkr.jpg?crop=center&height=32&v=1707944071&width=32",
@@ -28964,5 +28964,5 @@ DEFAULT_FAVICON = {
     "shop.concept2.com": "https://concept2.com/favicon.ico",
     "dealsaving.com": "https://dealsaving.com/favicon.ico",
     "diaperstork.com": "https://diaperstork.com/favicon.ico",
-    "pamperedpoochandpals.etailpet.com": "https://pamperedpoochandpals.etailpet.com/favicon.ico"
+    "pamperedpoochandpals.etailpet.com": "https://pamperedpoochandpals.etailpet.com/favicon.ico",
 }
