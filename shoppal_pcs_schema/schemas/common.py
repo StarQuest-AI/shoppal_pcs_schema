@@ -15,6 +15,7 @@ from shoppal_pcs_schema.schemas.video_detail import VideoBaseInfos
 
 DEFAULT_ICON = "https://img.favie.ai/deal/favie-icon.png"
 REDDIT_ICON = "https://img.favie.ai/deal/reddit-icon.png"
+AMAZON_ICON = "https://www.amazon.com/favicon.ico"
 
 SESSION_START_QUESTIONS = [
     {
