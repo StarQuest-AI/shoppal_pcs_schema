@@ -7837,7 +7837,7 @@ DEFAULT_FAVICON = {
     "drfonline.org": "https://www.drfonline.org/favicon.ico",
     "us.sportmax.com": "https://us.sportmax.com/docroot/sportmax3/2024.607.1321-156/dist/images/favicons/favicon-16x16.png",
     "healthyhomeheroes.com": "https://healthyhomeheroes.com/wp-content/uploads/2024/03/cropped-Healthy-Home-Heores-icon-32x32.png",
-    "tiktok.com": "data:;base64,=",
+    "tiktok.com": "https://www.tiktok.com/favicon.ico",
     "offerup.com": "https://api.crawlbase.com/assets/images/app-icon/favicon.png",
     "icepurefilter.com": "https://icepurefilter.com/wp-content/uploads/2023/06/corner-mark-148x148.png",
     "clubcoffee.com": "https://www.clubcoffee.com/framework/uploads/2022/09/cropped-cropped-ClubCoffee_logo_button_CLR-32x32.png",
