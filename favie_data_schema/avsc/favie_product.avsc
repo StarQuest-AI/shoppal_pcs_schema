@@ -1,0 +1,84 @@
+{
+  "type": "record",
+  "name": "Record",
+  "fields": [
+    { "name": "f_sku_id", "type": ["null", "string"], "default": null },
+    { "name": "f_spu_id", "type": ["null", "string"], "default": null },
+    { "name": "site", "type": ["null", "string"], "default": null },
+    { "name": "sku_id", "type": ["null", "string"], "default": null },
+    { "name": "spu_id", "type": ["null", "string"], "default": null },
+    { "name": "title", "type": ["null", "string"], "default": null },
+    { "name": "link", "type": ["null", "string"], "default": null },
+    { "name": "sub_title", "type": ["null", "string"], "default": null },
+    { "name": "sub_title_link", "type": ["null", "string"], "default": null },
+    { "name": "description", "type": ["null", "string"], "default": null },
+    { "name": "description_external_link", "type": ["null", "string"], "default": null },
+    { "name": "rich_product_description", "type": ["null", "string"], "default": null },
+    { "name": "price","type": ["null", "Price"],"default": null},
+    { "name": "f_status", "type": ["null", "string"], "default": null },
+    { "name": "images","type": ["null","images"],"default": null},
+    { "name": "f_images","type": ["null","images"],"default": null},
+    {
+      "name": "f_categories",
+      "type": {"type": "array","items": "CategoryItem"},
+      "default": []
+    },
+    {
+      "name": "categories",
+      "type": {"type": "array","items": "CategoryItem"},
+      "default": []
+      
+    },
+    {
+      "name": "videos",
+      "type": {"type": "array","items": "Video"},
+      "default": []
+    },
+    {
+      "name": "f_brand",
+      "type": {"type": "array","items": "Brand"},
+      "default": []
+    },
+    {
+      "name": "brand",
+      "type": {"type": "array","items": "Brand"},
+      "default": []
+    },
+    {
+      "name": "feature_bullets",
+      "type": {"type": "array","items": "string"},
+      "default": []
+    },
+    {
+      "name": "attributes",
+      "type": {"type": "array","items": "AttributeItem"},
+      "default": []
+    },
+    {
+      "name": "specifications",
+      "type": {"type": "array","items": "AttributeItem"},
+      "default": []
+    },
+    {"name": "standard_attributes","type": ["null","StandardAttributes"],"default": null},
+    {
+      "name": "offers",
+      "type": {"type": "array","items": "Offer"},
+      "default": []
+    },
+    { "name": "seller", "type": ["null", "Seller"],"default": null},
+    { "name": "inventory","type": ["null","Inventory"],"default": null},
+    { "name": "keywords", "type": ["null", "string"], "default": null },
+    { "name": "search_alias","type": ["null","SearchAliasItem"],"default": null},
+    { "name": "deal","type": ["null","Deal"],"default": null},
+    { "name": "shipping","type": ["null","Shipping"],"default": null},
+    {"name": "fulfillment","type": ["null", "Fulfillment"],"default": null},
+    {"name": "returns_policy","type": ["null", "ReturnPolicy"],"default": null},
+    {
+      "name": "variants",
+      "type": {"type": "array","items": "SimpleProduct"},
+      "default": []
+    },
+    { "name": "promotion","type": ["null","Promotion"],"default": null },
+    { "name": "f_updates_at", "type": ["null", "string"], "default": null }
+  ]
+}

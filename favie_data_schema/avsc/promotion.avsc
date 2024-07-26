@@ -1,0 +1,13 @@
+{
+  "namespace": "favie.data",
+  "type": "record",
+  "name": "Fulfillment",
+  "doc": "Schema for Fulfillment",
+  "fields": [
+    {
+      "name": "why_buy",
+      "type": { "type": "array","items": "string"},
+      "default": []
+    }
+  ]
+}

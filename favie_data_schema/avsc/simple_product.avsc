@@ -1,0 +1,25 @@
+{
+  "namespace": "favie.data",
+  "type": "record",
+  "name": "SimpleProduct",
+  "doc": "Schema for SimpleProduct",
+  "fields": [
+    { "name": "f_item_id", "type": ["null", "string"], "default": null },
+    { "name": "source", "type": ["null", "string"], "default": null },
+    { "name": "item_id", "type": ["null", "string"], "default": null },
+    { "name": "title", "type": ["null", "string"], "default": null },
+    { "name": "link", "type": ["null", "string"], "default": null },
+    { "name": "price", "type": ["null", "double"], "default": null },
+    { "name": "currency", "type": ["null", "string"], "default": null },
+    {
+      "name": "images",
+      "type": { "type": "array","items": "favie.data.Image"},
+      "default": []
+    },
+    {
+      "name": "attributes",
+      "type": { "type": "array","items": "favie.data.Attribute"},
+      "default": []
+    }
+  ]
+}
