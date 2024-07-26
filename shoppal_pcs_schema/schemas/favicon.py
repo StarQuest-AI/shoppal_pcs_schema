@@ -13958,7 +13958,7 @@ DEFAULT_FAVICON = {
     "4kdownload.com": "https://static.4kdownload.com/main/img/favicon.14dc87052228.ico",
     "alohapoolserviceandsupply.com": "https://static.wixstatic.com/media/b2a48d_d0c96283796d418983a681fb6d881221%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/b2a48d_d0c96283796d418983a681fb6d881221%7Emv2.png",
     "heelys.com": "https://heelys.com/cdn/shop/t/20/assets/favicon-32x32.png?v=94673981811278686401714744541",
-    "adaptivetechsolutions.com": "https://cdn11.bigcommerce.com/s-lkrsufl0/product_images/favicon-32x32.png?t=1553577736\"",
+    "adaptivetechsolutions.com": 'https://cdn11.bigcommerce.com/s-lkrsufl0/product_images/favicon-32x32.png?t=1553577736"',
     "queclink.com": "https://www.queclink.com/wp-content/uploads/2022/09/cropped-wifi-32x32.png",
     "slateandtell.com": "https://www.slateandtell.com/favicon.png",
     "visualproducts.com": "https://visualproducts.com/wp-content/uploads/2022/02/cropped-android-chrome-512x512-1-32x32.png",
@@ -20889,5 +20889,5 @@ DEFAULT_FAVICON = {
     "myplumbeauty.com": "https://myplumbeauty.com/wp-content/uploads/2020/09/Plum-Beauty-Flower-Petals-100x100.png",
     "primaveraonline.com": "https://www.primaveraonline.com/wp-content/uploads/2022/11/Icon-114x114-pohs-100x100.png",
     "support.demandbase.com": "https://www.demandbase.com/favicon.ico",
-    "glwholesale.com": "https://glwholesale.com/favicon.ico"
+    "glwholesale.com": "https://glwholesale.com/favicon.ico",
 }
