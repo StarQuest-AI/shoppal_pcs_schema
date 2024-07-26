@@ -1,6 +1,7 @@
-from pydantic import BaseModel
-from typing import List, Dict, Optional, Union
+from typing import Dict, List, Optional, Union
+
 from delivery_price import DeliveryPrice
+from pydantic import BaseModel
 
 
 class Delivery(BaseModel):

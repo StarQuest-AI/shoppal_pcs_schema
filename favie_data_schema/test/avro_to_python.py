@@ -1,8 +1,10 @@
 import json
 import os
+from typing import Any, Dict
+
 from fastavro.schema import load_schema
-from typing import Dict, Any
 from pydantic import BaseModel
+
 
 def avro_type_to_python_type(avro_type: Any, namespace: str, imports: set) -> str:
     if isinstance(avro_type, str):
@@ -13,7 +15,7 @@ def avro_type_to_python_type(avro_type: Any, namespace: str, imports: set) -> st
             "float": "float",
             "double": "float",
             "boolean": "bool",
-            "bytes": "bytes"
+            "bytes": "bytes",
         }.get(avro_type, avro_type)
     elif isinstance(avro_type, dict):
         if avro_type["type"] == "array":
@@ -37,6 +39,7 @@ def avro_type_to_python_type(avro_type: Any, namespace: str, imports: set) -> st
 
     return "Any"
 
+
 def generate_pydantic_model(schema: Dict[str, Any], indent: int = 0, namespace: str = "", imports: set = None) -> str:
     if imports is None:
         imports = set()
@@ -46,12 +49,12 @@ def generate_pydantic_model(schema: Dict[str, Any], indent: int = 0, namespace: 
             f"{indent_str}    {field['name']}: {avro_type_to_python_type(field['type'], namespace, imports)} = None"
             for field in schema["fields"]
         )
-        return (
-            f"{indent_str}class {schema['name']}(BaseModel):\n"
-            f"{fields_str}\n"
-        )
+        return f"{indent_str}class {schema['name']}(BaseModel):\n" f"{fields_str}\n"
 
-def generate_pydantic_models(schema: Dict[str, Any], loaded_schemas: Dict[str, Any], namespace: str = "", imports: set = None) -> str:
+
+def generate_pydantic_models(
+    schema: Dict[str, Any], loaded_schemas: Dict[str, Any], namespace: str = "", imports: set = None
+) -> str:
     if imports is None:
         imports = set()
     models = []
@@ -61,9 +64,14 @@ def generate_pydantic_models(schema: Dict[str, Any], loaded_schemas: Dict[str, A
                 models.append(generate_pydantic_model(field["type"], indent=0, namespace=namespace, imports=imports))
             elif isinstance(field["type"], str) and field["type"] in loaded_schemas:
                 # Handle external references
-                models.append(generate_pydantic_model(loaded_schemas[field["type"]], indent=0, namespace=namespace, imports=imports))
+                models.append(
+                    generate_pydantic_model(
+                        loaded_schemas[field["type"]], indent=0, namespace=namespace, imports=imports
+                    )
+                )
         models.append(generate_pydantic_model(schema, indent=0, namespace=namespace, imports=imports))
     return "\n".join(models), imports
+
 
 def load_all_schemas(base_path: str, schema_files: Dict[str, str]) -> Dict[str, Dict[str, Any]]:
     loaded_schemas = {}
@@ -74,26 +82,23 @@ def load_all_schemas(base_path: str, schema_files: Dict[str, str]) -> Dict[str, 
             loaded_schemas[f"{schema['namespace']}.{schema['name']}"] = schema
     return loaded_schemas
 
+
 if __name__ == "__main__":
     base_path = "/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/avsc"
-    schema_files = {
-        "Price": "price.avsc",
-        "DeliveryPrice": "delivery_price.avsc",
-        "Delivery": "delivery.avsc"
-    }
+    schema_files = {"Price": "price.avsc", "DeliveryPrice": "delivery_price.avsc", "Delivery": "delivery.avsc"}
 
     loaded_schemas = load_all_schemas(base_path, schema_files)
     main_schema = loaded_schemas["favie.data.Delivery"]
 
     pydantic_code, imports = generate_pydantic_models(main_schema, loaded_schemas)
 
-    import_statements = "\n".join([f"from {namespace} import {name}" for namespace, name in (imp.rsplit(".", 1) for imp in imports)])
+    import_statements = "\n".join(
+        [f"from {namespace} import {name}" for namespace, name in (imp.rsplit(".", 1) for imp in imports)]
+    )
 
     pydantic_code = (
         "from pydantic import BaseModel\n"
-        "from typing import List, Dict, Optional, Union\n"
-        + import_statements + "\n\n"
-        + pydantic_code
+        "from typing import List, Dict, Optional, Union\n" + import_statements + "\n\n" + pydantic_code
     )
 
     output_path = "/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/schema/Offer.py"
