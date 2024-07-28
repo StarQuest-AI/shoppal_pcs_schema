@@ -147,7 +147,7 @@
         "is_private_brand": false,
         "recent_sales": 150,
         "bestsellers_rank": 1,
-        "model_number": "xxxd",
+        "product_model_number": "xxxd",
         "is_platform_choice": true
     },
     "offers": [
@@ -239,7 +239,12 @@
         "description": "While supplies last. Valid only when shipped and sold by Amazon.com"
     },
     "shipping": {
-        "price": 18.07,
+        "price": {
+            "raw": "Free shipping",
+            "currency": "USD",
+            "value": 0,
+            "is_free": true
+        },
         "currency": "USD",
         "service": "Authorities may apply import charges upon delivery",
         "ships_to": "Afghanistan, Albania, Algeria, Andorra, Angola, Anguilla, Antigua and Barbuda, Argentina, Armenia, Aruba, Australia, Austria, Azerbaijan Republic, Bahamas, Bahrain, Bangladesh, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bosnia and Herzegovina, Botswana, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Canada, Cape Verde Islands, Cayman Islands, Central African Republic, Chad, Chile, China, Colombia, Costa Rica, Cyprus, Czech Republic, Côte d'Ivoire (Ivory Coast), Democratic Republic of the Congo, Denmark, Djibouti, Dominican Republic, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Ethiopia, Fiji, Finland, France, Gabon Republic, Gambia, Georgia, Ghana, Gibraltar, Greece, Greenland, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Honduras, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kenya, Kiribati, Kuwait, Kyrgyzstan, Laos, Latvia, Lebanon, Lesotho, Liberia, Liechtenstein, Lithuania, Luxembourg, Macau, Macedonia, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Mauritania, Mauritius, Mexico, Moldova, Monaco, Mongolia, Montenegro, Montserrat, Morocco, Mozambique, Namibia, Nauru, Nepal, Netherlands, New Zealand, Nicaragua, Niger, Nigeria, Norway, Oman, Pakistan, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Poland, Portugal, Qatar, Republic of Croatia, Republic of the Congo, Romania, Rwanda, Saint Kitts-Nevis, Saint Lucia, Saint Vincent and the Grenadines, San Marino, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Solomon Islands, South Korea, Spain, Sri Lanka, Suriname, Swaziland, Sweden, Switzerland, Taiwan, Tajikistan, Tanzania, Thailand, Togo, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos Islands, Uganda, United Arab Emirates, United States, Uruguay, Uzbekistan, Vanuatu, Vatican City State, Vietnam, Wallis and Futuna, Western Samoa, Yemen, Zambia, Zimbabwe",

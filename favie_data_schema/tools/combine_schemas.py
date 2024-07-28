@@ -59,9 +59,13 @@ def main():
 
     args = parser.parse_args()
 
+    #print(f'source_dir = {args.source_directory},main_schame = {args.main_schema}')
+
     schema_files = get_files_in_directory(args.source_directory)
     combined_schemas = load_and_combine_schemas(schema_files)
 
+    #print(f"all schemas:{dict.keys(combined_schemas)}")
+    
     # Now resolve references in the main schema
     main_schema = combined_schemas[args.main_schema]
     resolved_main_schema = resolve_references(main_schema, combined_schemas)

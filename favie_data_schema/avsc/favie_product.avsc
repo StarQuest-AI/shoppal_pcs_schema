@@ -38,13 +38,13 @@
     },
     {
       "name": "f_brand",
-      "type": {"type": "array","items": "favie.data.Brand"},
-      "default": []
+      "type": ["null","favie.data.Brand"],
+      "default": null
     },
     {
       "name": "brand",
-      "type": {"type": "array","items": "favie.data.Brand"},
-      "default": []
+      "type": ["null","favie.data.Brand"],
+      "default": null
     },
     {
       "name": "feature_bullets",

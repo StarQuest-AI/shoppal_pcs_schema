@@ -358,9 +358,9 @@
     },
     {
       "name": "f_brand",
-      "type": {
-        "type": "array",
-        "items": {
+      "type": [
+        "null",
+        {
           "namespace": "favie.data",
           "type": "record",
           "name": "Brand",
@@ -384,14 +384,14 @@
             }
           ]
         }
-      },
-      "default": []
+      ],
+      "default": null
     },
     {
       "name": "brand",
-      "type": {
-        "type": "array",
-        "items": {
+      "type": [
+        "null",
+        {
           "namespace": "favie.data",
           "type": "record",
           "name": "Brand",
@@ -415,8 +415,8 @@
             }
           ]
         }
-      },
-      "default": []
+      ],
+      "default": null
     },
     {
       "name": "feature_bullets",
@@ -585,7 +585,7 @@
               "default": null
             },
             {
-              "name": "model_number",
+              "name": "product_model_number",
               "type": [
                 "null",
                 "string"
@@ -785,7 +785,7 @@
                       "default": null
                     },
                     {
-                      "name": "model_number",
+                      "name": "product_model_number",
                       "type": [
                         "null",
                         "string"
@@ -945,7 +945,7 @@
                       "name": "postive_feedback_percent",
                       "type": [
                         "null",
-                        "long"
+                        "double"
                       ],
                       "default": null
                     }
@@ -1053,7 +1053,7 @@
               "name": "postive_feedback_percent",
               "type": [
                 "null",
-                "long"
+                "double"
               ],
               "default": null
             }

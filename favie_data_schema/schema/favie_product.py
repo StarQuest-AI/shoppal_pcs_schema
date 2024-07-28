@@ -58,7 +58,7 @@ class StandardAttributes(BaseModel):
     is_private_brand: Optional[bool] = None
     recent_sales: Optional[int] = None
     bestsellers_rank: Optional[int] = None
-    model_number: Optional[str] = None
+    product_model_number: Optional[str] = None
     is_platform_choice: Optional[bool] = None
 
 
@@ -82,7 +82,7 @@ class Seller(BaseModel):
     id: Optional[str] = None
     rating: Optional[float] = None
     ratings_total: Optional[int] = None
-    postive_feedback_percent: Optional[int] = None
+    postive_feedback_percent: Optional[float] = None
 
 
 class Offer(BaseModel):
@@ -189,8 +189,8 @@ class FavieProduct(BaseModel):
     f_categories: List[CategoryItem] = []
     categories: List[CategoryItem] = []
     videos: List[Video] = []
-    f_brand: List[Brand] = []
-    brand: List[Brand] = []
+    f_brand: Optional[Brand] = None
+    brand: Optional[Brand] = None
     feature_bullets: List[str] = []
     attributes: List[AttributeItem] = []
     specifications: List[AttributeItem] = []
