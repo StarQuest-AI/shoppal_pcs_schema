@@ -22,6 +22,8 @@ jobs:
       - name: Install pydantic-avro
         run: pip install pydantic-avro
       
+      #指定一个目录，将目录下的arvo文件合并成一个avsc文件，并输出到目录下面的combine_output目录下，输出的文件名许指定
+      #python3 favie_data_schema/tools/combine_schemas.py --source-directory=/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/avsc --output-file=favie_product.avsc --main-schema=favie.data.FavieProduct
       - name: Generate Pydantic models
         run: |
           for file in $(find . -name '*.avsc'); do

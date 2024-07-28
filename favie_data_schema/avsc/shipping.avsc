@@ -4,7 +4,7 @@
   "name": "Shipping",
   "doc": "Schema for Shipping",
   "fields": [
-    { "name": "price", "type": ["null", "DeliveryPrice"], "default": null },
+    { "name": "price", "type": ["null", "favie.data.DeliveryPrice"], "default": null },
     { "name": "service", "type": ["null", "string"], "default": null },
     { "name": "ships_to", "type": ["null", "string"], "default": null },
     { "name": "location", "type": ["null", "string"], "default": null },

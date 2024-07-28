@@ -1,7 +1,7 @@
 import json
 import os
 from fastavro.schema import load_schema
-from typing import Dict, Any
+from typing import Dict, Any, List
 from pydantic import BaseModel
 
 def avro_type_to_python_type(avro_type: Any, namespace: str, imports: set) -> str:
@@ -76,13 +76,13 @@ def load_all_schemas(base_path: str, schema_files: Dict[str, str]) -> Dict[str, 
 
 if __name__ == "__main__":
     base_path = "/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/avsc"
-    schema_files = {
-        "Price": "price.avsc",
-        "DeliveryPrice": "delivery_price.avsc",
-        "Delivery": "delivery.avsc"
-    }
-
-    loaded_schemas = load_all_schemas(base_path, schema_files)
+    schema_files: List[str] = [
+        "delivery.avsc",
+        "delivery_price.avsc"
+    ]
+    
+        
+    loaded_schemas: Dict[str, Dict[str, Any]] = load_all_schemas(base_path, schema_files)
     main_schema = loaded_schemas["favie.data.Delivery"]
 
     pydantic_code, imports = generate_pydantic_models(main_schema, loaded_schemas)

@@ -1,8 +1,8 @@
 {
   "namespace": "favie.data",
   "type": "record",
-  "name": "Fulfillment",
-  "doc": "Schema for Fulfillment",
+  "name": "Promotion",
+  "doc": "Schema for Promotion",
   "fields": [
     {
       "name": "why_buy",

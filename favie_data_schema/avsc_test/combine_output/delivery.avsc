@@ -1,0 +1,79 @@
+{
+  "namespace": "favie.data",
+  "type": "record",
+  "name": "Delivery",
+  "doc": "Schema for Pr Delivery",
+  "fields": [
+    {
+      "name": "fulfilled_by_platform",
+      "type": [
+        "null",
+        "boolean"
+      ],
+      "default": null
+    },
+    {
+      "name": "countdown",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "comments",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "price",
+      "type": [
+        "null",
+        {
+          "namespace": "favie.data",
+          "type": "record",
+          "name": "DeliveryPrice",
+          "doc": "Schema for DeliveryPrice",
+          "fields": [
+            {
+              "name": "raw",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "currency",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": [
+                "null",
+                "long"
+              ],
+              "default": null
+            },
+            {
+              "name": "is_free",
+              "type": [
+                "null",
+                "boolean"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}
