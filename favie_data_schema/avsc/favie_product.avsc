@@ -4,6 +4,7 @@
   "namespace": "favie.data",
   "doc": "Favie product schema",
   "fields": [
+    { "name": "f_parser_name", "type": ["null", "string"], "default": null },
     { "name": "f_sku_id", "type": ["null", "string"], "default": null },
     { "name": "f_spu_id", "type": ["null", "string"], "default": null },
     { "name": "site", "type": ["null", "string"], "default": null },

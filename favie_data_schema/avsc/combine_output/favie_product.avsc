@@ -5,6 +5,14 @@
   "doc": "Favie product schema",
   "fields": [
     {
+      "name": "f_parser_name",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
       "name": "f_sku_id",
       "type": [
         "null",

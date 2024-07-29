@@ -1,7 +1,8 @@
+
 from datetime import date, datetime, time
 from decimal import Decimal
 from enum import Enum
-from typing import Dict, List, Optional, Union
+from typing import List, Optional, Dict, Union
 from uuid import UUID
 
 from pydantic import BaseModel, Field
@@ -169,6 +170,7 @@ class Promotion(BaseModel):
 
 
 class FavieProduct(BaseModel):
+    f_parser_name: Optional[str] = None
     f_sku_id: Optional[str] = None
     f_spu_id: Optional[str] = None
     site: Optional[str] = None
