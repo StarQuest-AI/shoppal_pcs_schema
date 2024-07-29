@@ -1,3 +1,3 @@
-from .schema.favie_product import FavieProduct
+from schema import FavieProduct
 
-__all__ = ["FavieProduct"]
+__all__: list[str] = ["FavieProduct"]
