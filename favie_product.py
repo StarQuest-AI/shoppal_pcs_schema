@@ -118,7 +118,7 @@ class SimpleProduct(BaseModel):
     link: Optional[str] = None
     price: Optional[float] = None
     currency: Optional[str] = None
-    images: Optional[Images] = None
+    images: List[Images] = []
     attributes: List[AttributeItem] = []
 
 class Promotion(BaseModel):

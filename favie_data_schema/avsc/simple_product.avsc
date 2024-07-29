@@ -13,8 +13,8 @@
     { "name": "currency", "type": ["null", "string"], "default": null },
     {
       "name": "images",
-      "type": { "type": "array","items": "favie.data.Images"},
-      "default": []
+      "type": ["null", "favie.data.Images"],
+      "default": null
     },
     {
       "name": "attributes",

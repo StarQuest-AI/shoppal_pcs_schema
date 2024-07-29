@@ -12,7 +12,7 @@ def test_parse_json():
     try:
         # 将 JSON 数据解析为 Pydantic 对象
         product = FavieProduct(**data)
-        print(product.json())
+        # print(product.model_dump_json())
     except ValidationError as e:
         print("Validation error:", e)
 

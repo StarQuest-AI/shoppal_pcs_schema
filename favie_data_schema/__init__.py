@@ -1,3 +1,1 @@
-from schema import FavieProduct
-
-__all__: list[str] = ["FavieProduct"]
+from favie_data_schema.schema import *

@@ -206,30 +206,7 @@
       "name": "f_images",
       "type": [
         "null",
-        {
-          "namespace": "favie.data",
-          "type": "record",
-          "name": "Images",
-          "doc": "Schema for Images",
-          "fields": [
-            {
-              "name": "main_image",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "images",
-              "type": {
-                "type": "array",
-                "items": "string"
-              },
-              "default": []
-            }
-          ]
-        }
+        "favie.data.Images"
       ],
       "default": null
     },
@@ -267,29 +244,7 @@
       "name": "categories",
       "type": {
         "type": "array",
-        "items": {
-          "type": "record",
-          "name": "CategoryItem",
-          "namespace": "favie.data",
-          "fields": [
-            {
-              "name": "name",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "id",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            }
-          ]
-        }
+        "items": "favie.data.CategoryItem"
       },
       "default": []
     },
@@ -399,30 +354,7 @@
       "name": "brand",
       "type": [
         "null",
-        {
-          "namespace": "favie.data",
-          "type": "record",
-          "name": "Brand",
-          "doc": "Schema for Brand",
-          "fields": [
-            {
-              "name": "name",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "link",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            }
-          ]
-        }
+        "favie.data.Brand"
       ],
       "default": null
     },
@@ -468,29 +400,7 @@
       "name": "specifications",
       "type": {
         "type": "array",
-        "items": {
-          "type": "record",
-          "name": "AttributeItem",
-          "namespace": "favie.data",
-          "fields": [
-            {
-              "name": "name",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "value",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            }
-          ]
-        }
+        "items": "favie.data.AttributeItem"
       },
       "default": []
     },
@@ -627,54 +537,7 @@
               "name": "price",
               "type": [
                 "null",
-                {
-                  "namespace": "favie.data",
-                  "type": "record",
-                  "name": "Price",
-                  "doc": "Schema for Price",
-                  "fields": [
-                    {
-                      "name": "lower_value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "upper_value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "currency",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "updates_at",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    }
-                  ]
-                }
+                "favie.data.Price"
               ],
               "default": null
             },
@@ -698,118 +561,7 @@
               "name": "standard_attributes",
               "type": [
                 "null",
-                {
-                  "namespace": "favie.data",
-                  "type": "record",
-                  "name": "StandardAttributes",
-                  "doc": "Schema for StandardAttributes",
-                  "fields": [
-                    {
-                      "name": "is_used",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_bundle",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_auction",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "has_coupon",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_preorder",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_best_seller",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_best_offer",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_marketplace_item",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_private_brand",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "recent_sales",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "bestsellers_rank",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "product_model_number",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_platform_choice",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    }
-                  ]
-                }
+                "favie.data.StandardAttributes"
               ],
               "default": null
             },
@@ -1011,62 +763,7 @@
       "name": "seller",
       "type": [
         "null",
-        {
-          "namespace": "favie.data",
-          "type": "record",
-          "name": "Seller",
-          "doc": "Schema for Seller",
-          "fields": [
-            {
-              "name": "name",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "link",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "id",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "rating",
-              "type": [
-                "null",
-                "double"
-              ],
-              "default": null
-            },
-            {
-              "name": "ratings_total",
-              "type": [
-                "null",
-                "long"
-              ],
-              "default": null
-            },
-            {
-              "name": "postive_feedback_percent",
-              "type": [
-                "null",
-                "double"
-              ],
-              "default": null
-            }
-          ]
-        }
+        "favie.data.Seller"
       ],
       "default": null
     },
@@ -1217,54 +914,7 @@
               "name": "deal_price",
               "type": [
                 "null",
-                {
-                  "namespace": "favie.data",
-                  "type": "record",
-                  "name": "Price",
-                  "doc": "Schema for Price",
-                  "fields": [
-                    {
-                      "name": "lower_value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "upper_value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "currency",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "updates_at",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    }
-                  ]
-                }
+                "favie.data.Price"
               ],
               "default": null
             },
@@ -1272,54 +922,7 @@
               "name": "was_price",
               "type": [
                 "null",
-                {
-                  "namespace": "favie.data",
-                  "type": "record",
-                  "name": "Price",
-                  "doc": "Schema for Price",
-                  "fields": [
-                    {
-                      "name": "lower_value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "upper_value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "currency",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "updates_at",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    }
-                  ]
-                }
+                "favie.data.Price"
               ],
               "default": null
             },
@@ -1327,54 +930,7 @@
               "name": "list_price",
               "type": [
                 "null",
-                {
-                  "namespace": "favie.data",
-                  "type": "record",
-                  "name": "Price",
-                  "doc": "Schema for Price",
-                  "fields": [
-                    {
-                      "name": "lower_value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "upper_value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "currency",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "updates_at",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    }
-                  ]
-                }
+                "favie.data.Price"
               ],
               "default": null
             },
@@ -1445,46 +1001,7 @@
               "name": "price",
               "type": [
                 "null",
-                {
-                  "namespace": "favie.data",
-                  "type": "record",
-                  "name": "DeliveryPrice",
-                  "doc": "Schema for DeliveryPrice",
-                  "fields": [
-                    {
-                      "name": "raw",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "currency",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "value",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "is_free",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
-                      "default": null
-                    }
-                  ]
-                }
+                "favie.data.DeliveryPrice"
               ],
               "default": null
             },
@@ -1703,62 +1220,17 @@
             },
             {
               "name": "images",
-              "type": {
-                "type": "array",
-                "items": {
-                  "namespace": "favie.data",
-                  "type": "record",
-                  "name": "Images",
-                  "doc": "Schema for Images",
-                  "fields": [
-                    {
-                      "name": "main_image",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "images",
-                      "type": {
-                        "type": "array",
-                        "items": "string"
-                      },
-                      "default": []
-                    }
-                  ]
-                }
-              },
-              "default": []
+              "type": [
+                "null",
+                "favie.data.Images"
+              ],
+              "default": null
             },
             {
               "name": "attributes",
               "type": {
                 "type": "array",
-                "items": {
-                  "type": "record",
-                  "name": "AttributeItem",
-                  "namespace": "favie.data",
-                  "fields": [
-                    {
-                      "name": "name",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    },
-                    {
-                      "name": "value",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
-                      "default": null
-                    }
-                  ]
-                }
+                "items": "favie.data.AttributeItem"
               },
               "default": []
             }
