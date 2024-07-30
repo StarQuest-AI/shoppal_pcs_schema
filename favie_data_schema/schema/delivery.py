@@ -1,5 +1,7 @@
 from typing import List, Optional
+
 from pydantic import BaseModel, Field
+
 
 class DeliveryPrice(BaseModel):
     raw: Optional[str] = None
@@ -7,9 +9,11 @@ class DeliveryPrice(BaseModel):
     value: Optional[int] = None
     is_free: Optional[bool] = None
 
+
 class DeliveryPrice1(BaseModel):
     currency: Optional[str] = None
     amount: Optional[str] = None
+
 
 class Delivery(BaseModel):
     fulfilled_by_platform: Optional[bool] = None
@@ -18,4 +22,3 @@ class Delivery(BaseModel):
     price0: List[DeliveryPrice] = None
     price1: List[DeliveryPrice] = None
     price2: List[DeliveryPrice1] = None
-

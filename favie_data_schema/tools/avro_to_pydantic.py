@@ -123,22 +123,23 @@ def avro_to_pydantic(avro_schema):
 
     return models
 
+
 def extract_type_name(type_str):
     # 匹配 Optional[List['...']]
     match = re.search(r"Optional\[List\['(.+?)'\]\]", type_str)
     if match:
         return f"List[{match.group(1).split('.')[-1]}]"
-    
+
     # 匹配 Optional[ForwardRef('...')]
     match = re.search(r"Optional\[ForwardRef\('(.+?)'\)\]", type_str)
     if match:
         return f"Optional[{match.group(1).split('.')[-1]}]"
-    
+
     # 匹配 List[ForwardRef('...')]
     match = re.search(r"List\[ForwardRef\('(.+?)'\)\]", type_str)
     if match:
         return f"List[{match.group(1).split('.')[-1]}]"
-    
+
     # 匹配 ForwardRef('...')
     match = re.search(r"ForwardRef\('(.+?)'\)", type_str)
     if match:
@@ -168,7 +169,7 @@ def extract_type_name(type_str):
     match = re.search(r"'\s*(.+?)\s*'", type_str)
     if match:
         return match.group(1).split(".")[-1]
-    
+
     # 如果没有匹配，返回原始字符串
     return type_str
 
@@ -180,13 +181,13 @@ def remove_namespace(field_type_str):
         if "." in inner_type:
             inner_type = inner_type.split(".")[-1]  # Keep only the type name without namespace
         field_type_str = f"Optional[{inner_type}]"
-        
+
     if "List[" in field_type_str:
         inner_type = field_type_str[5:-1]
         if "." in inner_type:
             inner_type = inner_type.split(".")[-1]  # Keep only the type name without namespace
         field_type_str = f"List[{inner_type}]"
-        
+
     if "." in field_type_str:
         field_type_str = field_type_str.split(".")[-1]  # Keep only the type name without namespace
 
