@@ -6,8 +6,8 @@
   "fields": [
     {
       "name": "why_buy",
-      "type": { "type": "array","items": "string"},
-      "default": []
+      "type": ["null",{ "type": "array","items": "string"}],
+      "default": null
     }
   ]
 }

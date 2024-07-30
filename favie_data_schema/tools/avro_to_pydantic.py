@@ -50,6 +50,12 @@ def build_dependency_graph(schema, dependencies, known_types):
                         dep_full_name = f"{t.get('namespace', '')}.{t['name']}".strip(".")
                         dependencies[full_name].add(dep_full_name)
                         build_dependency_graph(t, dependencies, known_types)
+                    elif isinstance(t, dict) and t.get("type") == "array":
+                        item_type = t["items"]
+                        if isinstance(item_type, dict) and item_type.get("type") == "record":
+                            dep_full_name = f"{item_type.get('namespace', '')}.{item_type['name']}".strip(".")
+                            dependencies[full_name].add(dep_full_name)
+                            build_dependency_graph(item_type, dependencies, known_types)
             elif isinstance(field_type, dict) and field_type.get("type") == "array":
                 item_type = field_type["items"]
                 if isinstance(item_type, dict) and item_type.get("type") == "record":
@@ -104,6 +110,10 @@ def avro_to_pydantic(avro_schema):
                     for t in field["type"]:
                         if isinstance(t, dict) and t.get("type") == "record":
                             parse_schema(t)
+                        elif isinstance(t, dict) and t.get("type") == "array":
+                            item_type = t["items"]
+                            if isinstance(item_type, dict) and item_type.get("type") == "record":
+                                parse_schema(item_type)
                 elif isinstance(field["type"], dict) and field["type"].get("type") == "array":
                     item_type = field["type"]["items"]
                     if isinstance(item_type, dict) and item_type.get("type") == "record":
@@ -113,37 +123,73 @@ def avro_to_pydantic(avro_schema):
 
     return models
 
-
 def extract_type_name(type_str):
-    # 使用正则表达式提取类型名称
+    # 匹配 Optional[List['...']]
+    match = re.search(r"Optional\[List\['(.+?)'\]\]", type_str)
+    if match:
+        return f"List[{match.group(1).split('.')[-1]}]"
+    
+    # 匹配 Optional[ForwardRef('...')]
     match = re.search(r"Optional\[ForwardRef\('(.+?)'\)\]", type_str)
     if match:
         return f"Optional[{match.group(1).split('.')[-1]}]"
-
-    match: re.Match[str] | None = re.search(r"List\[ForwardRef\('(.+?)'\)\]", type_str)
+    
+    # 匹配 List[ForwardRef('...')]
+    match = re.search(r"List\[ForwardRef\('(.+?)'\)\]", type_str)
     if match:
         return f"List[{match.group(1).split('.')[-1]}]"
-
+    
+    # 匹配 ForwardRef('...')
     match = re.search(r"ForwardRef\('(.+?)'\)", type_str)
     if match:
         return match.group(1).split(".")[-1]
+
+    # 匹配 List['...']
+    match = re.search(r"List\['(.+?)'\]", type_str)
+    if match:
+        return f"List[{match.group(1).split('.')[-1]}]"
+
+    # 匹配 Optional[List[...]]
+    match = re.search(r"Optional\[List\[(.+?)\]\]", type_str)
+    if match:
+        return f"List[{match.group(1)}]"
+
+    # 匹配 Optional[...]
+    match = re.search(r"Optional\[(.+?)\]", type_str)
+    if match:
+        return f"Optional[{match.group(1)}]"
+
+    # 匹配 List[...]
+    match = re.search(r"List\[(.+?)\]", type_str)
+    if match:
+        return f"List[{match.group(1)}]"
+
+    # 匹配 '...'
+    match = re.search(r"'\s*(.+?)\s*'", type_str)
+    if match:
+        return match.group(1).split(".")[-1]
+    
+    # 如果没有匹配，返回原始字符串
     return type_str
 
 
 def remove_namespace(field_type_str):
     field_type_str = extract_type_name(field_type_str)
-    if "." in field_type_str:
-        field_type_str = field_type_str.split(".")[-1]  # Keep only the type name without namespace
     if "Optional[" in field_type_str:
         inner_type = field_type_str[9:-1]
         if "." in inner_type:
             inner_type = inner_type.split(".")[-1]  # Keep only the type name without namespace
         field_type_str = f"Optional[{inner_type}]"
+        
     if "List[" in field_type_str:
         inner_type = field_type_str[5:-1]
         if "." in inner_type:
             inner_type = inner_type.split(".")[-1]  # Keep only the type name without namespace
         field_type_str = f"List[{inner_type}]"
+        
+    if "." in field_type_str:
+        field_type_str = field_type_str.split(".")[-1]  # Keep only the type name without namespace
+
     return field_type_str
 
 

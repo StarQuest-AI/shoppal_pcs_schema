@@ -29,48 +29,92 @@
       "default": null
     },
     {
-      "name": "price",
+      "name": "price0",
       "type": [
         "null",
         {
-          "namespace": "favie.data",
-          "type": "record",
-          "name": "DeliveryPrice",
-          "doc": "Schema for DeliveryPrice",
-          "fields": [
-            {
-              "name": "raw",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "currency",
-              "type": [
-                "null",
-                "string"
-              ],
-              "default": null
-            },
-            {
-              "name": "value",
-              "type": [
-                "null",
-                "long"
-              ],
-              "default": null
-            },
-            {
-              "name": "is_free",
-              "type": [
-                "null",
-                "boolean"
-              ],
-              "default": null
-            }
-          ]
+          "type": "array",
+          "items": {
+            "namespace": "favie.data",
+            "type": "record",
+            "name": "DeliveryPrice",
+            "doc": "Schema for DeliveryPrice",
+            "fields": [
+              {
+                "name": "raw",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name": "currency",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name": "value",
+                "type": [
+                  "null",
+                  "long"
+                ],
+                "default": null
+              },
+              {
+                "name": "is_free",
+                "type": [
+                  "null",
+                  "boolean"
+                ],
+                "default": null
+              }
+            ]
+          }
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "price1",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": "favie.data.DeliveryPrice"
+          }
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "price2",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "record",
+            "namespace": "favie.data",
+            "name": "DeliveryPrice1",
+            "fields": [
+              {
+                "name": "currency",
+                "type": ["null","string"],
+                "default": null
+              },
+              {
+                "name": "amount",
+                "type": ["null","string"],
+                "default": null
+              }
+            ]
+          }
         }
       ],
       "default": null

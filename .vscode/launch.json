@@ -11,8 +11,8 @@
             "program": "/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/tools/avro_to_pydantic.py",
             "console": "integratedTerminal",
             "args": [
-                "--avsc","/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/avsc/combine_output/favie_product.avsc",
-                "--output-file","/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/schema/favie_product.py"
+                "--avsc","/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/avsc_test/images.avsc",
+                "--output-file","/Users/pangbaohui/workspace/shoppal_pcs_schema/favie_data_schema/schema/images.py"
             ]
         }
     ]

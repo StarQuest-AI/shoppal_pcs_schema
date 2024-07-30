@@ -18,8 +18,8 @@
     },
     {
       "name": "attributes",
-      "type": { "type": "array","items": "favie.data.AttributeItem"},
-      "default": []
+      "type": ["null",{ "type": "array","items": "favie.data.AttributeItem"}],
+      "default": null
     }
   ]
 }
