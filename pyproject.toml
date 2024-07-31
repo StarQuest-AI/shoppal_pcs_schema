@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "shoppal-pcs-schema"
-version = "0.1.57"
+version = "0.1.58"
 description = ""
 authors = ["hezhe <hezhe@shoppal.ai>"]
 readme = "README.md"
