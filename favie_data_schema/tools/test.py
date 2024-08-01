@@ -1,4 +1,6 @@
 import re
+from typing import List, Optional,Union,ForwardRef
+
 
 def extract_type_name(type_str):
     # 匹配 Optional[List['...']]
@@ -60,3 +62,8 @@ print(extract_type_name("Optional[List[str]]"))  # 输出: List[str]
 print(extract_type_name("Optional[str]"))  # 输出: Optional[str]
 print(extract_type_name("List[str]"))  # 输出: List[str]
 print(extract_type_name("int"))  # 输出: int
+
+test = ForwardRef('hello')
+
+print(str(test))
+print(str.__name__)

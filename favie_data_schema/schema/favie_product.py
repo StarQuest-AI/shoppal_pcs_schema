@@ -6,7 +6,6 @@ class Price(BaseModel):
     upper_value: Optional[int] = None
     value: Optional[int] = None
     currency: Optional[str] = None
-    updates_at: Optional[str] = None
 
 class Images(BaseModel):
     main_image: Optional[str] = None
@@ -124,6 +123,12 @@ class SimpleProduct(BaseModel):
 class Promotion(BaseModel):
     why_buy: List[str] = None
 
+class Meta(BaseModel):
+    source_name: Optional[str] = None
+    source_time: Optional[str] = None
+    price_updates_at: Optional[str] = None
+    f_categories_updates_at: Optional[str] = None
+
 class Delivery(BaseModel):
     fulfilled_by_platform: Optional[bool] = None
     countdown: Optional[str] = None
@@ -144,7 +149,6 @@ class Offer(BaseModel):
     offer_sku_id: Optional[str] = None
 
 class FavieProduct(BaseModel):
-    f_parser_name: Optional[str] = None
     f_sku_id: Optional[str] = None
     f_spu_id: Optional[str] = None
     site: Optional[str] = None
@@ -182,4 +186,5 @@ class FavieProduct(BaseModel):
     variants: List[SimpleProduct] = None
     promotion: Optional[Promotion] = None
     f_updates_at: Optional[str] = None
+    f_meta: Optional[Meta] = None
 

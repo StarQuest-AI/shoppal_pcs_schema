@@ -1,0 +1,10 @@
+{
+  "namespace": "favie.data",
+  "type": "record",
+  "name": "Meta",
+  "doc": "Schema for DeliveryPrice",
+  "fields": [
+    { "name": "source_name", "type": ["null", "string"], "default": null },
+    { "name": "source_time", "type": ["null", "string"], "default": null }
+  ]
+}
