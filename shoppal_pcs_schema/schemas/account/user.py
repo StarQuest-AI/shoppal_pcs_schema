@@ -2,8 +2,10 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
+
 class User(BaseModel):
     """User model."""
+
     uid: int
     email: str
     firebase_uid: str
@@ -13,6 +15,7 @@ class User(BaseModel):
     description: Optional[str] = None
     avatar: Optional[str] = None
     phone_number: Optional[str] = None
+
 
 class UserUpdate(BaseModel):
     """Update user request model."""
