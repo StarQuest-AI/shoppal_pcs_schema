@@ -6,6 +6,7 @@ class Price(BaseModel):
     upper_value: Optional[int] = None
     value: Optional[int] = None
     currency: Optional[str] = None
+    updates_at: Optional[str] = None
 
 class Images(BaseModel):
     main_image: Optional[str] = None
@@ -126,8 +127,9 @@ class Promotion(BaseModel):
 class Meta(BaseModel):
     source_name: Optional[str] = None
     source_time: Optional[str] = None
-    price_updates_at: Optional[str] = None
-    f_categories_updates_at: Optional[str] = None
+    f_attributes_updates_at: Optional[str] = None
+    f_attributes_map_success: Optional[bool] = None
+    f_images_crawl_send_at: Optional[str] = None
 
 class Delivery(BaseModel):
     fulfilled_by_platform: Optional[bool] = None

@@ -141,6 +141,14 @@
                 "string"
               ],
               "default": null
+            },
+            {
+              "name": "updates_at",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
             }
           ]
         }
@@ -1314,7 +1322,7 @@
               "default": null
             },
             {
-              "name": "price_updates_at",
+              "name": "f_attributes_updates_at",
               "type": [
                 "null",
                 "string"
@@ -1322,7 +1330,15 @@
               "default": null
             },
             {
-              "name": "f_categories_updates_at",
+              "name": "f_attributes_map_success",
+              "type": [
+                "null",
+                "bool"
+              ],
+              "default": null
+            },
+            {
+              "name": "f_images_crawl_send_at",
               "type": [
                 "null",
                 "string"
