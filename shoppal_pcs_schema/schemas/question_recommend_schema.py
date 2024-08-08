@@ -22,7 +22,7 @@ class QRecRequest(BaseModel):
     Question Recommendation Request
     """
 
-    model: Optional[str]
+    model: str
     messages: list[Message]
 
 
