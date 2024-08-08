@@ -39,6 +39,13 @@ class JWTToken(BaseModel):
     token_type: str = "bearer"
     expires_in: int
 
+class VerfiyUser(BaseModel):
+    """Verify user model."""
+
+    uid: int
+    email: str
+    name: Optional[str] = None
+    user_type: Optional[UserType] = None
 
 class UnifyUser(User):
     """统一注册和未注册用户返回 model"""
