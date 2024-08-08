@@ -3,11 +3,13 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
+
 class UserType(str, Enum):
     """User type enum."""
 
     REGISTERED = "registered"
     UNREGISTERED = "unregistered"
+
 
 class User(BaseModel):
     """User model."""
@@ -39,6 +41,7 @@ class JWTToken(BaseModel):
     token_type: str = "bearer"
     expires_in: int
 
+
 class VerfiyUser(BaseModel):
     """Verify user model."""
 
@@ -46,6 +49,7 @@ class VerfiyUser(BaseModel):
     email: str
     name: Optional[str] = None
     user_type: Optional[UserType] = None
+
 
 class UnifyUser(User):
     """统一注册和未注册用户返回 model"""
