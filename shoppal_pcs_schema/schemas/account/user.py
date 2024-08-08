@@ -1,9 +1,17 @@
+from enum import Enum
 from typing import Optional
 
 from pydantic import BaseModel, Field
 
+class UserType(str, Enum):
+    """User type enum."""
+
+    REGISTERED = "registered"
+    UNREGISTERED = "unregistered"
+
 class User(BaseModel):
     """User model."""
+
     uid: int
     email: str
     firebase_uid: str
@@ -13,6 +21,7 @@ class User(BaseModel):
     description: Optional[str] = None
     avatar: Optional[str] = None
     phone_number: Optional[str] = None
+
 
 class UserUpdate(BaseModel):
     """Update user request model."""
@@ -31,9 +40,10 @@ class JWTToken(BaseModel):
     expires_in: int
 
 
-class VerfiyUser(BaseModel):
-    """Verify user model."""
+class UnifyUser(User):
+    """统一注册和未注册用户返回 model"""
 
     uid: int
-    email: str
-    name: Optional[str] = None
+    user_type: Optional[UserType] = UserType.REGISTERED
+    email: Optional[str] = None
+    firebase_uid: Optional[str] = None
