@@ -285,10 +285,13 @@ class SessionStartQuestionResult(BaseResponse):
         actions: Optional[list[FunctionAction]] = None
         id: Optional[str] = None
         image_url: Optional[str] = None
+        mobile_image_url: Optional[str] = None
         question_for_query: Optional[str] = None
+        llm_query: Optional[str] = None
         source_name: Optional[str] = None
         show_question: Optional[str] = None
-        llm_query: Optional[str] = None
+        username: Optional[str] = None
+        avatar: Optional[str] = None
 
     questions: Optional[list[Question]] = None
 
