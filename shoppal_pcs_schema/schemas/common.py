@@ -408,3 +408,32 @@ class ProductsRequest(BaseModel):
     """
 
     products: list[ProductDetail]
+
+
+class SearchWebRequest(BaseModel):
+    """
+    SearchWebRequest
+    """
+    class SearchWebQuery(BaseModel):
+        """
+        SearchWebQuery
+        """
+        query: str
+        site: Optional[str] = None
+
+    querys: list[SearchWebQuery] = []
+
+
+
+class SearchQueryRecommendResponse(BaseModel):
+    """
+    SearchQueryRecommendResponse
+    """
+    class SearchQueryRecommend(BaseModel):
+        """
+        SearchWebQuery
+        """
+        search_query: str
+        title: str
+
+    topics: list[SearchQueryRecommend]
