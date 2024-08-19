@@ -7,7 +7,7 @@ from typing import Optional
 from pydantic import BaseModel
 
 from favie_api_schema.schemas.product_detail import (ProductDetail,
-                                                       ProductPlatForm)
+                                                     ProductPlatForm)
 
 
 class MasterProduct(BaseModel):

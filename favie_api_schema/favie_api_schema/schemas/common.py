@@ -8,8 +8,8 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from favie_api_schema.schemas.common_search_result import (
-    GoogleSearchResult, PageSource)
+from favie_api_schema.schemas.common_search_result import (GoogleSearchResult,
+                                                           PageSource)
 from favie_api_schema.schemas.product_detail import ProductDetail
 from favie_api_schema.schemas.video_detail import VideoBaseInfos
 
